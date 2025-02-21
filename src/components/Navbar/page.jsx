@@ -50,7 +50,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <Image src="/next.svg" alt="Logo" width={180} height={50} className="h-12 w-auto" />
+            <Image src="/cobaztech.png" alt="Logo" width={400} height={150} className="h-20 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

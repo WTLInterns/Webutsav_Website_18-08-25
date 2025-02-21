@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { MdEmail } from "react-icons/md"
+import { MdEmail, MdPhone } from "react-icons/md"
 import Link from "next/link"
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="transform transition-all hover:scale-105">
           <Link href="/">
             <Image
-              src="/next.svg"
+              src="/cobaztech.png"
               alt="Digimedia Solutions"
               width={150}
               height={50}
@@ -19,18 +19,28 @@ const Footer = () => {
             />
           </Link>
           <p className="mt-4 text-sm text-gray-700 transition-transform duration-300 transform hover:scale-105 hover:text-blue-700">
-            Digimedia Solutions Pvt Ltd is your trusted partner for innovative digital marketing strategies that drive
-            results and elevate your brand.
+          Cobaztech is a results-driven digital marketing agency that helps businesses grow through tailored SEO, PPC, and social media strategies. We focus on delivering measurable success by driving targeted traffic and boosting brand visibility.
           </p>
-          <div className="flex items-center mt-4 transition-transform duration-300 transform hover:scale-110 hover:text-blue-600">
+          <div className="flex flex-col mt-4">
+          <div className="flex items-center transition-transform duration-300 transform hover:scale-110 hover:text-blue-600">
             <MdEmail className="mr-2 text-gray-800 transition-all duration-300 hover:scale-110" />
             <a
-              href="mailto:info@wtl.in"
+              href="mailto:info@cobaztech.com"
               className="text-blue-600 hover:underline transition-all duration-300 transform hover:scale-110 hover:text-blue-800"
             >
-              info@wtl.in
+              info@cobaztech.com
             </a>
           </div>
+          <div className="flex items-center mt-2 transition-transform duration-300 transform hover:scale-110 hover:text-blue-600">
+            <MdPhone className="mr-2 text-gray-800 transition-all duration-300 hover:scale-110" />
+            <a
+              href="tel:+91 8766922792"
+              className="text-blue-600 hover:underline transition-all duration-300 transform hover:scale-110 hover:text-blue-800"
+            >
+              +91 8766922792
+            </a>
+          </div>
+        </div>
         </div>
 
         {/* Our Solution */}
@@ -66,7 +76,7 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2">
             {[
-              { name: "About Company", href: "/about" },
+              { name: "About Us", href: "/AboutUs" },
               { name: "Blogs", href: "/Blog" },
               { name: "Contact Us", href: "/Contact" },
             ].map((nav) => (
@@ -87,12 +97,11 @@ const Footer = () => {
           <h3 className="text-xl font-semibold mb-4 text-[#2D3748] hover:text-blue-800 transition-colors duration-300 transform hover:scale-110">
             Address
           </h3>
-          <Link
-            href="/contact"
-            className="block cursor-pointer p-2 rounded-md transition-all duration-300 hover:bg-blue-100 hover:text-blue-800 transform hover:scale-105 mb-4"
+          <p
+            className="block p-2 rounded-md transition-all duration-300 hover:bg-blue-100 hover:text-blue-800 transform hover:scale-105 mb-4"
           >
-            Pune - Kharadi
-          </Link>
+            Downtown Road, Pune
+          </p>
           <div className="w-full h-48 rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:scale-105">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.287409771789!2d73.94191347496397!3d18.561076882540295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1386837ffd5%3A0xcba65bf9ace19de0!2sWTL%20Tourism%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1740069526162!5m2!1sen!2sin"
@@ -108,7 +117,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-gray-400 mt-8 pt-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-700 transition-all duration-300 transform hover:scale-105">
-        <p>&copy; {new Date().getFullYear()} Digimedia Solutions | All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Cobaztech | All rights reserved.</p>
         <div className="flex space-x-4 mt-2 md:mt-0">
           <Link
             href="/privacy-policy"

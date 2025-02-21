@@ -453,6 +453,23 @@ export default function WebDesigningDevelopment() {
           )}
         </div>
       </div>
+      <div className="bg-gradient-to-r from-amber-500 to-amber-600 py-16 px-4 text-center">
+        <motion.h2
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="text-4xl font-extrabold text-white tracking-wide mb-8"
+        >
+          Ready to Boost Your Online Presence with Google AdWords?
+        </motion.h2>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:bg-gray-100 transition-all duration-300 focus:outline-none"
+        >
+          Schedule Your Free Consultation
+        </motion.button>
+      </div>
     </div>
   );
 }

@@ -35,7 +35,7 @@ export default function BlogPage() {
     <div>
       {/* Background Section */}
       <div
-        className="relative w-full h-96 flex items-center px-6 sm:px-16 lg:px-32"
+        className="relative w-full h-96 flex items-center px-6 sm:px-16 lg:px-35"
         style={{
           backgroundImage: "url('../contact.jpg')",
           backgroundSize: "cover",

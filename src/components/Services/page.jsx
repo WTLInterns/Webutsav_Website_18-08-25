@@ -1,6 +1,6 @@
 "use client"
 
-import { Monitor, ShoppingCart, Database, Search, Share2, MapPin, BarChart3 } from "lucide-react"
+import { Monitor, ShoppingCart, Search, Share2, MapPin, BarChart3 } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
@@ -12,6 +12,7 @@ const services = [
     description:
       "Expert web design and development services that deliver stunning, responsive, innovative, and user-focused solutions for your business.",
     color: "bg-blue-500",
+    link: "/Services/Web_Designing_Development",
   },
   {
     id: 2,
@@ -20,15 +21,8 @@ const services = [
     description:
       "Professional ecommerce website design and development services. Create a seamless shopping experience with custom, responsive, and user-friendly solutions.",
     color: "bg-green-500",
+    link: "/Services/Ecommerce_Website_Designing",
   },
-  // {
-  //   id: 3,
-  //   icon: Database,
-  //   title: "ERP Development",
-  //   description:
-  //     "Custom ERP development solutions tailored for your business processes. Custom-built, scalable, and efficient systems to enhance productivity.",
-  //   color: "bg-orange-500",
-  // },
   {
     id: 3,
     icon: BarChart3,
@@ -36,6 +30,7 @@ const services = [
     description:
       "Maximize your online reach with targeted Google Ads campaigns. Drive traffic, increase conversions, and grow your business with expert PPC management.",
     color: "bg-red-500",
+    link: "/Services/Google_Adwords",
   },
   {
     id: 4,
@@ -44,6 +39,7 @@ const services = [
     description:
       "Boost your website's visibility with expert SEO services. Improve rankings, drive organic traffic, and reach your online prospects effectively.",
     color: "bg-emerald-500",
+    link: "/Services/Search_Engine_Optimisation",
   },
   {
     id: 5,
@@ -52,6 +48,7 @@ const services = [
     description:
       "Amplify your online presence with strategic social media marketing. Engage your audience, boost awareness, and drive conversions through social channels.",
     color: "bg-indigo-500",
+    link: "/Services/Social_Media_Marketing",
   },
   {
     id: 6,
@@ -60,6 +57,7 @@ const services = [
     description:
       "Enhance your local visibility with targeted local SEO strategies. Reach nearby customers and grow your business with optimized local search results.",
     color: "bg-pink-500",
+    link: "/Services/Local_Seo",
   },
 ]
 
@@ -142,7 +140,7 @@ const ServicesTimeline = () => {
                       </p>
                       <div className={`text-center md:text-left ${index % 2 === 0 ? "md:text-right" : ""}`}>
                         <Link
-                          href={`/services/${service.title.toLowerCase().replace(/ /g, "-")}`}
+                          href={service.link}
                           className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold text-base sm:text-lg group"
                         >
                           View Details
@@ -188,12 +186,12 @@ const ServicesTimeline = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <Link
+          {/* <Link
             href="/get-started"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-base sm:text-lg font-semibold px-6 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Get Started Now
-          </Link>
+          </Link> */}
         </motion.div>
       </div>
     </div>

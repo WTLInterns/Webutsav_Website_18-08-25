@@ -87,11 +87,11 @@ export default function WhyChooseUs() {
             ))}
           </motion.div>
 
-          <motion.div variants={itemVariants}>
+          {/* <motion.div variants={itemVariants}>
             <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
               Get Started Now
             </Button>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         <div className="relative">

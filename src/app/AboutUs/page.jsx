@@ -146,18 +146,18 @@ export default function AboutUs() {
           </div>
 
           <div className="text-center md:text-left max-w-lg">
-            <h2 className="text-4xl font-bold text-amber-500 mb-6">About Digimedia Solutions</h2>
+            <h2 className="text-4xl font-bold text-amber-500 mb-6">About Cobaztech</h2>
             <p className="text-gray-700 mb-4 text-lg">
               We have successfully completed more than 2,000 projects for over 300 clients, delivering impactful results
               through our insight-driven strategies.
             </p>
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-amber-500 text-white px-6 py-3 rounded-full font-semibold text-lg shadow-lg hover:bg-amber-600 transition-colors duration-300"
             >
               Learn More
-            </motion.button>
+            </motion.button> */}
           </div>
         </motion.div>
 
@@ -341,9 +341,9 @@ export default function AboutUs() {
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        {/* <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
           <Connect />
-        </section>
+        </section> */}
       </div>
     </>
   )

@@ -73,7 +73,7 @@ const Hero = () => {
           <Link className="px-6 py-3 bg-[#FFA500] hover:bg-[#FF9500] text-gray-900 font-medium rounded-md transition-colors duration-200" href="/Contact">
             Contact Us
           </Link>
-          <button
+          {/* <button
             onClick={toggleVideo}
             className="px-6 py-3 bg-white/20 hover:bg-white/30 text-white font-medium rounded-md transition-colors duration-200 flex items-center space-x-2"
           >
@@ -88,7 +88,7 @@ const Hero = () => {
                 <span>Play</span>
               </>
             )}
-          </button>
+          </button> */}
         </motion.div>
       </div>
     </div>
