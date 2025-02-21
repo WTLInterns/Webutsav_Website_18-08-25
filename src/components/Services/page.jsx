@@ -21,16 +21,16 @@ const services = [
       "Professional ecommerce website design and development services. Create a seamless shopping experience with custom, responsive, and user-friendly solutions.",
     color: "bg-green-500",
   },
+  // {
+  //   id: 3,
+  //   icon: Database,
+  //   title: "ERP Development",
+  //   description:
+  //     "Custom ERP development solutions tailored for your business processes. Custom-built, scalable, and efficient systems to enhance productivity.",
+  //   color: "bg-orange-500",
+  // },
   {
     id: 3,
-    icon: Database,
-    title: "ERP Development",
-    description:
-      "Custom ERP development solutions tailored for your business processes. Custom-built, scalable, and efficient systems to enhance productivity.",
-    color: "bg-orange-500",
-  },
-  {
-    id: 4,
     icon: BarChart3,
     title: "Google Adwords",
     description:
@@ -38,7 +38,7 @@ const services = [
     color: "bg-red-500",
   },
   {
-    id: 5,
+    id: 4,
     icon: Search,
     title: "Search Engine Optimization",
     description:
@@ -46,7 +46,7 @@ const services = [
     color: "bg-emerald-500",
   },
   {
-    id: 6,
+    id: 5,
     icon: Share2,
     title: "Social Media Marketing",
     description:
@@ -54,7 +54,7 @@ const services = [
     color: "bg-indigo-500",
   },
   {
-    id: 7,
+    id: 6,
     icon: MapPin,
     title: "Local SEO",
     description:

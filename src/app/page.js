@@ -4,7 +4,6 @@ import About from "@/components/About/page"
 import Services from "@/components/Services/page"
 import WhyChooseUs from "@/components/Why_Choose_Us/Why_Choose_Us"
 import PartnerBrands from "@/components/Partner_Brands/page"
-import Footer from "@/components/Footer/page"
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
       <Services/>
       <WhyChooseUs/>
       <PartnerBrands/>
-      <Footer/>
     </div>
   )
 }

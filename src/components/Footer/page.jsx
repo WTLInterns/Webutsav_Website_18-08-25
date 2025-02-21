@@ -1,9 +1,7 @@
-"use client";
-import React from 'react';
-import Image from 'next/image';
-import { FaGoogle, FaCreditCard } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
-import Link from 'next/link';
+"use client"
+import Image from "next/image"
+import { MdEmail } from "react-icons/md"
+import Link from "next/link"
 
 const Footer = () => {
   return (
@@ -11,35 +9,51 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Company Info */}
         <div className="transform transition-all hover:scale-105">
-          <Image src="/next.svg" alt="Digimedia Solutions" width={150} height={50} className="transition-transform duration-300 transform hover:scale-110" />
+          <Link href="/">
+            <Image
+              src="/next.svg"
+              alt="Digimedia Solutions"
+              width={150}
+              height={50}
+              className="transition-transform duration-300 transform hover:scale-110"
+            />
+          </Link>
           <p className="mt-4 text-sm text-gray-700 transition-transform duration-300 transform hover:scale-105 hover:text-blue-700">
-            Digimedia Solutions Pvt Ltd is your trusted partner for innovative digital marketing strategies that drive results and elevate your brand.
+            Digimedia Solutions Pvt Ltd is your trusted partner for innovative digital marketing strategies that drive
+            results and elevate your brand.
           </p>
           <div className="flex items-center mt-4 transition-transform duration-300 transform hover:scale-110 hover:text-blue-600">
             <MdEmail className="mr-2 text-gray-800 transition-all duration-300 hover:scale-110" />
-            <a href="mailto:info@dmspl.in" className="text-blue-600 hover:underline transition-all duration-300 transform hover:scale-110 hover:text-blue-800">
-              info@dmspl.in
+            <a
+              href="mailto:info@wtl.in"
+              className="text-blue-600 hover:underline transition-all duration-300 transform hover:scale-110 hover:text-blue-800"
+            >
+              info@wtl.in
             </a>
           </div>
-          {/* <div className="flex mt-4 space-x-2 transition-transform duration-300 transform hover:scale-110">
-            <FaGoogle size={32} className="text-blue-600 transition-all duration-300 transform hover:scale-125" />
-            <Image src="/google-play.png" alt="Google Play" width={100} height={32} className="transition-all duration-300 transform hover:scale-105" />
-          </div>
-          <div className="flex items-center mt-4 space-x-2 transition-all duration-300 transform hover:scale-110">
-            <FaCreditCard size={32} className="text-blue-600 transition-all duration-300 hover:scale-125" />
-            <Image src="/qr-code.png" alt="QR Code" width={50} height={50} className="transition-all duration-300 transform hover:scale-105" />
-          </div> */}
         </div>
 
         {/* Our Solution */}
         <div className="transform transition-all hover:scale-105">
           <h3 className="text-xl font-semibold mb-4 text-[#2D3748] hover:text-blue-800 transition-colors duration-300 transform hover:scale-110">
-            Our Solution
+            Our Services
           </h3>
           <ul className="space-y-2">
-            {["Web Designing & Development", "Ecommerce Website Designing", "ERP Development", "Google Adwords", "Search Engine Optimisation", "Local SEO", "Social Media Marketing"].map((item) => (
-              <li key={item} className="cursor-pointer p-2 rounded-md transition-all duration-300 hover:bg-blue-100 hover:text-blue-800 transform hover:scale-105">
-                {item}
+            {[
+              { name: "Web Designing & Development", href: "/Services/Web_Designing_Development" },
+              { name: "Ecommerce Website Designing", href: "/Services/Ecommerce_Website_Designing" },
+              { name: "Google Adwords", href: "/Services/Google_Adwords" },
+              { name: "Search Engine Optimisation", href: "/Services/Search_Engin_Optimisation" },
+              { name: "Local SEO", href: "/Services/Local_Seo" },
+              { name: "Social Media Marketing", href: "/Services/Social_Media_Marketing" },
+            ].map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  className="block cursor-pointer p-2 rounded-md transition-all duration-300 hover:bg-blue-100 hover:text-blue-800 transform hover:scale-105"
+                >
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -48,12 +62,21 @@ const Footer = () => {
         {/* Navigation */}
         <div className="transform transition-all hover:scale-105">
           <h3 className="text-xl font-semibold mb-4 text-[#2D3748] hover:text-blue-800 transition-colors duration-300 transform hover:scale-110">
-            Navigation
+            Quick Links
           </h3>
           <ul className="space-y-2">
-            {["Our Work", "About Company", "Blogs", "Contact Us", "Careers"].map((nav) => (
-              <li key={nav} className="cursor-pointer p-2 rounded-md transition-all duration-300 hover:bg-blue-100 hover:text-blue-800 transform hover:scale-105">
-                {nav}
+            {[
+              { name: "About Company", href: "/about" },
+              { name: "Blogs", href: "/Blog" },
+              { name: "Contact Us", href: "/Contact" },
+            ].map((nav) => (
+              <li key={nav.name}>
+                <Link
+                  href={nav.href}
+                  className="block cursor-pointer p-2 rounded-md transition-all duration-300 hover:bg-blue-100 hover:text-blue-800 transform hover:scale-105"
+                >
+                  {nav.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -64,25 +87,46 @@ const Footer = () => {
           <h3 className="text-xl font-semibold mb-4 text-[#2D3748] hover:text-blue-800 transition-colors duration-300 transform hover:scale-110">
             Address
           </h3>
-          <p className="cursor-pointer p-2 rounded-md transition-all duration-300 hover:bg-blue-100 hover:text-blue-800 transform hover:scale-105">
+          <Link
+            href="/contact"
+            className="block cursor-pointer p-2 rounded-md transition-all duration-300 hover:bg-blue-100 hover:text-blue-800 transform hover:scale-105 mb-4"
+          >
             Pune - Kharadi
-          </p>
+          </Link>
+          <div className="w-full h-48 rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:scale-105">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.287409771789!2d73.94191347496397!3d18.561076882540295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1386837ffd5%3A0xcba65bf9ace19de0!2sWTL%20Tourism%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1740069526162!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
 
       <div className="border-t border-gray-400 mt-8 pt-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-700 transition-all duration-300 transform hover:scale-105">
         <p>&copy; {new Date().getFullYear()} Digimedia Solutions | All rights reserved.</p>
         <div className="flex space-x-4 mt-2 md:mt-0">
-          <Link href="/privacy-policy" className="hover:underline hover:text-blue-600 transition-all duration-300 transform hover:scale-110">
+          <Link
+            href="/privacy-policy"
+            className="hover:underline hover:text-blue-600 transition-all duration-300 transform hover:scale-110"
+          >
             Privacy Policy
           </Link>
-          <Link href="/terms-of-use" className="hover:underline hover:text-blue-600 transition-all duration-300 transform hover:scale-110">
+          <Link
+            href="/terms-of-use"
+            className="hover:underline hover:text-blue-600 transition-all duration-300 transform hover:scale-110"
+          >
             Terms of Use
           </Link>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
+

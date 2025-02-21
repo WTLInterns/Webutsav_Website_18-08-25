@@ -96,8 +96,8 @@ export default function WhyChooseUs() {
 
         <div className="relative">
           <video
-            src="../background.mp4"
-            poster="../background.mp4"
+            src="../digital.mp4"
+            poster="../digital.mp4"
             className="rounded-lg shadow-xl w-full h-full object-cover"
             autoPlay
             loop
