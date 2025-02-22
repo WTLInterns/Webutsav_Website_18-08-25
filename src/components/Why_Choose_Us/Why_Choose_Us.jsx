@@ -96,8 +96,8 @@ export default function WhyChooseUs() {
 
         <div className="relative">
           <video
-            src="../digital.mp4"
-            poster="../digital.mp4"
+            src="https://res.cloudinary.com/dvpk4sbzi/video/upload/v1740211008/digital_gwbn3z.mp4"
+            poster="https://res.cloudinary.com/dvpk4sbzi/video/upload/v1740211008/digital_gwbn3z.mp4"
             className="rounded-lg shadow-xl w-full h-full object-cover"
             autoPlay
             loop

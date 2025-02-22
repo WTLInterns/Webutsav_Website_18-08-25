@@ -2,7 +2,6 @@
 
 import { useState, useCallback, useEffect } from "react"
 import Link from "next/link"
-import { Play, Pause } from "lucide-react"
 import { motion } from "framer-motion"
 
 const Hero = () => {
@@ -51,7 +50,7 @@ const Hero = () => {
   return (
     <div className="relative h-screen">
       <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover" loop muted playsInline>
-        <source src="../background.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/dvpk4sbzi/video/upload/v1740208926/3254066-uhd_3840_2160_25fps_oy3k7g.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 bg-black/30" />

@@ -15,28 +15,28 @@ export default function PartnerBrands() {
   const logos = [
     {
       id: 1,
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XDcBTKEy6pKvjP4o8cIxuFozawJLEx.png",
-      alt: "Bizfunds",
+      src: "/client/Aimcab.jpeg",
+      alt: "Aimcab",
     },
     {
       id: 2,
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XDcBTKEy6pKvjP4o8cIxuFozawJLEx.png",
-      alt: "GIS",
+      src: "/client/ajcabs.png",
+      alt: "ajcabs",
     },
     {
       id: 3,
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XDcBTKEy6pKvjP4o8cIxuFozawJLEx.png",
-      alt: "Hamilton",
+      src: "/client/shivgarjana_cabs.png",
+      alt: "shivgarjana",
     },
     {
       id: 4,
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XDcBTKEy6pKvjP4o8cIxuFozawJLEx.png",
+      src: "/client/parmeshwarcab.png",
       alt: "Haps Interior",
     },
     {
       id: 5,
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XDcBTKEy6pKvjP4o8cIxuFozawJLEx.png",
-      alt: "K2S Media",
+      src: "/client/wtl.jpeg",
+      alt: "Haps Interior",
     },
   ]
 

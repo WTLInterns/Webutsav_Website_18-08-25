@@ -120,7 +120,7 @@ const Footer = () => {
         <p>&copy; {new Date().getFullYear()} Cobaztech | All rights reserved.</p>
         <div className="flex space-x-4 mt-2 md:mt-0">
           <Link
-            href="/privacy-policy"
+            href="/Privacy"
             className="hover:underline hover:text-blue-600 transition-all duration-300 transform hover:scale-110"
           >
             Privacy Policy
