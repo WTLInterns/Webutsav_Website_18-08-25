@@ -56,6 +56,7 @@ const Footer = () => {
               { name: "Search Engine Optimisation", href: "/Services/Search_Engin_Optimisation" },
               { name: "Local SEO", href: "/Services/Local_Seo" },
               { name: "Social Media Marketing", href: "/Services/Social_Media_Marketing" },
+              { name: "Mobile Application Development", href: "/Services/Mobile_Application" },
             ].map((item) => (
               <li key={item.name}>
                 <Link
@@ -100,7 +101,7 @@ const Footer = () => {
           <p
             className="block p-2 rounded-md transition-all duration-300 hover:bg-blue-100 hover:text-blue-800 transform hover:scale-105 mb-4"
           >
-            Downtown Road, Pune
+            Wing-A, Downtown Rd, City Vista, Kharadi, Pune, Maharashtra 411014
           </p>
           <div className="w-full h-48 rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:scale-105">
             <iframe

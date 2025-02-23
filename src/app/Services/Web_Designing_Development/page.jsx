@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState ,useRef,useEffect} from "react";
 import Image from "next/image";
 import {
   FaPlus,
@@ -12,85 +12,192 @@ import {
   FaSearch,
   FaMapMarkerAlt,
   FaShareAlt,
+  FaMobileAlt 
 } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion ,useInView,useAnimation} from "framer-motion";
+import { Globe, LineChart, Laptop, Lock, Rocket, Code, Wrench } from "lucide-react"
 import Link from "next/link";
 
 const faqs = [
   {
-    question: "How long does it take to build a website?",
+    question: "E-commerce & Retail",
     answer:
-      "The timeline for building a website varies depending on the complexity of the project. A basic website may take 4-6 weeks, while a more complex site could take 3-4 months.",
+      "High-conversion online stores with secure payment integration..",
   },
   {
-    question: "Do you offer website redesign services?",
+    question: "Healthcare & Medical:",
     answer:
-      "Yes, we offer website redesign services. We can revamp your existing site to make it more modern, responsive, and SEO-friendly.",
+      "HIPAA-compliant websites with secure data handling",
   },
   {
-    question: "Will my website be mobile-friendly?",
+    question: "Real Estate & Property",
     answer:
-      "We design all our websites to be responsive, ensuring they look great and function well on all devices.",
+      "Property listing websites with interactive search features.",
   },
   {
-    question: "Can you help with SEO for my website?",
+    question: "Education & eLearning",
     answer:
-      "Yes, we offer SEO services to help your website rank higher in search engine results, driving more traffic to your site.",
+      "LMS-integrated websites for schools, universities, and training institutes.",
   },
   {
-    question: "What is the cost of web development?",
+    question: "Corporate & Business Websites",
     answer:
-      "The cost varies based on the project scope, design complexity, and functionality required. Contact us for a customized quote.",
+      "Professional and engaging websites that enhance brand credibility.",
   },
 ];
 
-const highlights = [
-  { image: "/images/domain.jpg", text: "Domain Name Registration" },
-  { image: "/images/hosting.jpg", text: "Website Hosting" },
-  { image: "/images/email.jpg", text: "Business Email Accounts" },
+const features = [
   {
-    image: "/images/plan.webp",
-    text: "Information Architecture: Planning the Sitemap",
+    title: "Custom Web Solutions",
+    description: "Unique, business-specific website designs that reflect your brand identity.",
+    icon: Globe,
   },
   {
-    image: "/images/contentediting.webp",
-    text: "Content Editing / Proof Reading",
+    title: "SEO-Optimized Websites",
+    description: "Built with search engine best practices for better rankings and visibility.",
+    icon: LineChart,
   },
   {
-    image: "/images/design.jpg",
-    text: "Unique designs: Beautiful, Clean and elegantly handcrafted websites.",
+    title: "Mobile-Friendly & Responsive",
+    description: "Ensuring seamless browsing across all devices, from desktops to smartphones.",
+    icon: Laptop,
   },
   {
-    image: "/images/responsive.webp",
-    text: "Responsive Designs: Mobile, Tablet and Desktop Friendly",
-  },
-  { image: "/images/royalty.webp", text: "Royalty Free Licensed Stock Images" },
-  {
-    image: "/images/social.webp",
-    text: "Facebook/Twitter/LinkedIn Integration",
+    title: "Fast & Secure",
+    description: "Optimized for speed, security, and performance to enhance user experience.",
+    icon: Lock,
   },
   {
-    image: "/images/browser.webp",
-    text: "Perfect on all Major Browsers: Internet Explorer, Firefox, Chrome and Safari",
+    title: "Scalable & Future-Ready",
+    description: "Websites designed to grow with your business.",
+    icon: Rocket,
   },
   {
-    image: "/images/majorbrowser.webp",
-    text: "Google Local Business Directory Submissions",
+    title: "Affordable Pricing",
+    description: "Cost-effective web development services for startups, SMEs, and enterprises.",
+    icon: Code,
   },
   {
-    image: "/images/seoptimization.webp",
-    text: "On-Page Search Engine Optimization",
+    title: "Ongoing Support & Maintenance",
+    description: "Reliable post-launch support to keep your website updated and secure.",
+    icon: Wrench,
   },
-  { image: "/images/submitiongoogle.webp", text: "Submission to Google" },
+]
+
+const services = [
   {
-    image: "/images/googleanalytics.webp",
-    text: "Google Analytics Integration",
+    title: "Custom Web Design & Development",
+    description: "We build customized, high-performance websites that enhance brand identity and deliver an outstanding user experience. Whether you need a simple corporate website or a complex enterprise solution, our web development services are designed to meet your specific needs.",
   },
   {
-    image: "/images/support.webp",
-    text: "Continuous Support after the Site is Made Live",
+    title: "eCommerce Website Development",
+    description: "Take your business online with a robust eCommerce website. CobazTech offers end-to-end eCommerce web development in Pune, Mumbai, and India, ensuring secure payment gateways, smooth navigation, and high conversion rates. We work with Shopify, WooCommerce, Magento, and custom-built platforms.",
   },
-];
+  {
+    title: "UI/UX Design & Development",
+    description: "User experience plays a crucial role in a website’s success. Our expert UI/UX designers create visually appealing, intuitive, and user-friendly designs that boost engagement and reduce bounce rates",
+  },
+  {
+    title: "CMS Website Development",
+    description: "We develop CMS-based websites using WordPress, Joomla, and Drupal, allowing businesses to manage content effortlessly. Our CMS solutions empower you to update, edit, and publish content without technical expertise.",
+  },
+  {
+    title: "Web Application Development",
+    description: "We develop CMS-based websites using WordPress, Joomla, and Drupal, allowing businesses to manage content effortlessly. Our CMS solutions empower you to update, edit, and publish content without technical expertise.",
+  },
+  {
+    title: "Website Maintenance & Support",
+    description: "Regular updates, security patches, and performance optimizations are essential to keep your website running smoothly. Our maintenance services ensure that your website remains secure, fast, and up to date",
+  },
+]
+
+const expertiseItems = [
+  { title: "Custom Website Design", description: "Unique and engaging websites tailored to your brand." },
+  { title: "Mobile-Responsive Development", description: "Optimized for seamless browsing on all devices." },
+  {
+    title: "SEO-Optimized Development",
+    description: "Websites built with search engines in mind for better rankings.",
+  },
+  { title: "Fast-Loading Pages", description: "Speed-optimized to enhance user experience and engagement." },
+  { title: "Secure Web Development", description: "Robust security measures to protect against cyber threats." },
+]
+
+const technologies = [
+  {
+    category: "Frontend Technologies",
+    items: [
+      { name: "HTML5", logo: "/Technologies/html5.webp" },
+      { name: "CSS3", logo: "/Technologies/CSS3.webp" },
+      { name: "JavaScript", logo: "/Technologies/javascript.webp" },
+      { name: "React.js", logo: "/Technologies/React_js.webp" },
+      { name: "Angular", logo: "/Technologies/angularjs.webp" },
+      { name: "Vue.js", logo: "/Technologies/Vue.webp" },
+    ],
+  },
+  {
+    category: "Backend Technologies",
+    items: [
+      { name: "PHP", logo: "/Technologies/PHP.webp" },
+      { name: "Node.js", logo: "/Technologies/Node.webp" },
+      { name: "Python", logo: "/Technologies/Python.webp" },
+      { name: "Java", logo: "/Technologies/java.webp" },
+      { name: "Laravel", logo: "/Technologies/Laravel.webp" },
+      { name: "Django", logo: "/Technologies/django.webp" },
+      { name: "Express.js", logo: "/Technologies/express.jpg" },
+    ],
+  },
+  {
+    category: "eCommerce Platforms",
+    items: [
+      { name: "Shopify", logo: "/Technologies/Shopify.webp" },
+      { name: "WooCommerce", logo: "/Technologies/woocommerce.webp" },
+      { name: "Magento", logo: "/Technologies/Magento.webp" },
+    ],
+  },
+  {
+    category: "CMS Solutions",
+    items: [
+      { name: "WordPress", logo: "/Technologies/WordPress.webp" },
+      { name: "Joomla", logo: "/Technologies/Joomla.webp" },
+      { name: "Drupal", logo: "/Technologies/drupal.webp" },
+    ],
+  },
+]
+
+
+const TechItem = ({ item }) => (
+  <motion.div className="flex items-center space-x-2" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+    <img src={item.logo || "/placeholder.svg"} alt={`${item.name} logo`} className="w-6 h-6" />
+    <span className="text-xs font-medium text-gray-800">{item.name}</span>
+  </motion.div>
+)
+
+const FadeInSection = ({ children }) => {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-50px" })
+  const mainControls = useAnimation()
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible")
+    }
+  }, [isInView, mainControls])
+
+  return (
+    <motion.div
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ duration: 0.5 }}
+    >
+      {children}
+    </motion.div>
+  )
+}
 
 export default function WebDesigningDevelopment() {
   const [formData, setFormData] = useState({
@@ -105,18 +212,13 @@ export default function WebDesigningDevelopment() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const phoneNumber = "91XXXXXXXXXX"; // Replace with your WhatsApp number
-    const text = `Hello, I would like to request a demo.%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Message:* ${formData.message}`;
-    window.open(`https://wa.me/${phoneNumber}?text=${text}`, "_blank");
-  };
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
+    
     <div className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <motion.div
@@ -126,7 +228,7 @@ export default function WebDesigningDevelopment() {
         transition={{ duration: 1 }}
       >
         <Image
-          src="/images/web-designing-development.webp"
+          src="/images/aboutus.jpg"
           alt="Google AdWords"
           layout="fill"
           objectFit="cover"
@@ -191,6 +293,11 @@ export default function WebDesigningDevelopment() {
                 icon: <FaShareAlt />,
                 href: "/Services/Social_Media_Marketing",
               },
+              {
+                name: "Mobile Application Development",
+                icon: <FaMobileAlt/>,
+                href: "/Services/Mobile_Application",
+              },
             ].map((service, index) => (
               <motion.li key={index} whileHover={{ x: 5 }}>
                 <Link
@@ -211,118 +318,120 @@ export default function WebDesigningDevelopment() {
 
         {/* Content */}
         <div className="w-full md:w-3/5 max-w-8xl mx-auto py-12">
-          <h2 className="text-5xl font-bold text-gray-800">
-            Get A High-Performance Website For Your Growing Business
-          </h2>
-          <p className="text-gray-600 mt-6 text-2xl">
-            Our expert professionals provide flawless websites by combining your
-            business objectives with innovative trends. Website designing and
-            development services that will provide you increased leads and
-            business growth and revenue.
+          <h1 className="text-4xl font-bold text-gray-800">
+          Web Design and Development Company in Pune | Best Web Development Services in India
+          </h1>
+          <p className="text-gray-600 mt-6 text-2xl" >
+          In today’s digital-first world, a well-designed, high-performing website is essential for business success. CobazTech, a leading web design and development company in Pune, specializes in creating stunning, SEO-friendly, and user-centric websites that help businesses thrive online.
           </p>
-          <p className="text-gray-600 mt-4 text-2xl">
-            Designing the layout of a website in a manner that enhances the
-            experience of the visitors, is known as web design. When this web
-            design is coded to be made interactive, responsive, and integrated
-            with all the essential functionalities, that set of activities is
-            known as web development.
+          <p className="text-gray-600 mt-4 text-2xl" >
+          From corporate websites and eCommerce platforms to complex web applications, we craft digital experiences that engage users, enhance brand visibility, and drive conversions. Our expertise in UI/UX design, custom development, and SEO optimization makes us the preferred choice for businesses in Pune, Mumbai, and across India.
           </p>
         </div>
       </div>
 
-      {/* Left & Right Content Wrapper */}
-      <div className="flex flex-wrap p-6">
-        {/* Form Section (Left) */}
-        <div className="w-full md:w-1/5 max-w-md bg-white p-6 shadow-lg rounded-lg mb-6 md:mb-0 h-2/4">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
-            Get a Demo
-          </h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label className="block text-gray-700 font-semibold mb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none"
-                placeholder="Enter your name"
-              />
+      <section className="w-full py-12 md:py-24 bg-gray-50">
+      <div className="container px-4 md:px-6 mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-12">Why Choose CobazTech for Web Design & Development?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div key={index} className="flex flex-col items-center text-center">
+              <feature.icon className="w-12 h-12 mb-4 text-blue-600" />
+              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <p className="text-gray-600">{feature.description}</p>
             </div>
-            <div>
-              <label className="block text-gray-700 font-semibold mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none"
-                placeholder="Enter your email"
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 font-semibold mb-2">
-                Message
-              </label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none"
-                placeholder="Write your message"
-                rows="4"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-red-500 text-white font-bold py-3 rounded-lg hover:bg-red-600 transition duration-300"
-            >
-              Send Now
-            </button>
-          </form>
-        </div>
-
-        {/* Right Content (Image + Text) */}
-        <div className="w-full md:w-3/5 max-w-8xl mx-auto py-1 pl-8 h-auto">
-          <div className="relative w-full h-[500px]">
-            <Image
-              src="/images/web.jpg"
-              alt="Web Design Image"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-          <h2 className="text-5xl font-bold text-gray-800 pt-6">
-            Proudly providing website design and development services to
-            businesses in Pune, India, and Dubai since 1999
-          </h2>
-          <p className="text-gray-600 mt-6 text-2xl">
-            Proudly serving businesses in Pune, India, and Dubai, as well as
-            clients around the world since 1999, we specialize in delivering
-            top-tier website design and development services. Our decades of
-            experience have equipped us with the expertise to craft visually
-            stunning, highly functional, and user-friendly websites that help
-            businesses thrive in the digital landscape. Whether you're a local
-            startup or a global enterprise, our commitment to excellence ensures
-            that your online presence not only meets but exceeds industry
-            standards, driving growth and success for your brand.
-          </p>
+          ))}
         </div>
       </div>
+    </section>
+
+    <section className="w-full py-10 bg-gradient-to-br from-blue-900 to-indigo-900 text-white">
+      <div className="container px-4 mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Comprehensive Web Services</h2>
+        <p className="text-center text-blue-200 mb-8 max-w-2xl mx-auto">
+          From design to development, we offer complete web solutions in Pune, Mumbai, and across India.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <div key={index} className="group">
+              <div className="flex items-baseline mb-2">
+                <span className="text-2xl font-bold text-blue-400 mr-2 group-hover:text-blue-300 transition-colors">
+                  {(index + 1).toString().padStart(2, "0")}
+                </span>
+                <h3 className="text-lg font-semibold group-hover:text-blue-300 transition-colors">{service.title}</h3>
+              </div>
+              <p className="text-sm text-blue-100 ml-8 border-l border-blue-700 pl-3 py-1 group-hover:border-blue-500 transition-colors">
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <FadeInSection>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+            Why CobazTech is Among the Best Web Design & Development Companies in Pune & Mumbai?
+          </h2>
+        </FadeInSection>
+
+        <FadeInSection>
+          <p className="text-lg mb-12 text-center max-w-4xl mx-auto">
+            CobazTech stands out as one of the best web design & development companies in Pune, Mumbai, and India,
+            delivering high-quality, business-driven web solutions. Our approach focuses on innovation, user experience,
+            and search engine optimization to help businesses establish a strong digital footprint.
+          </p>
+        </FadeInSection>
+
+        <FadeInSection>
+          <h3 className="text-2xl font-semibold mb-12 text-center">Our Expertise in Web Development</h3>
+        </FadeInSection>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {expertiseItems.map((item, index) => (
+            <FadeInSection key={index}>
+              <div className="border-l-4 border-blue-500 pl-6 py-4 h-full">
+                <h4 className="text-xl font-semibold mb-3">{item.title}</h4>
+                <p className="text-gray-600">{item.description}</p>
+              </div>
+            </FadeInSection>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="py-2 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">Technologies We Use</h2>
+        <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
+          Our developers are skilled in the latest technologies to build modern, scalable, and future-ready websites.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {technologies.map((tech, index) => (
+            <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold mb-3">{tech.category}</h3>
+              <div className="grid grid-cols-2 gap-4">
+                {tech.items.map((item, itemIndex) => (
+                  <TechItem key={itemIndex} item={item} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
       {/* FAQ Section */}
-      <div className="container mx-auto py-12 px-4 md:px-6 lg:px-8">
+      <div className="container mx-auto py-2 px-4 md:px-6 lg:px-8">
         <div className="p-6 mt-12">
           <h2 className="text-4xl font-bold text-gray-800 text-center mb-6">
-            Frequently Asked Questions
+          Industries We Serve with Web Development Solutions in Pune, Mumbai & India
           </h2>
+          <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
+          CobazTech caters to a diverse range of industries, providing tailored web development services to meet their unique business needs.
+        </p>
           <div className="max-w-4xl mx-auto">
             {faqs.map((faq, index) => (
               <div key={index} className="mb-4 border-b pb-4">
@@ -342,70 +451,15 @@ export default function WebDesigningDevelopment() {
         </div>
       </div>
 
-      {/* Highlight Section */}
-      <div className="py-10 px-5 text-center">
-        <motion.h2
-          className="text-2xl font-bold mb-6"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Here's Highlight of What You'll Get with Your Business Website:
-        </motion.h2>
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          {highlights.map((item, index) => (
-            <motion.div
-              key={index}
-              className="flex flex-col items-center"
-              whileHover={{ scale: 1.05 }}
-            >
-              <motion.div
-                className="w-20 h-20 rounded-full overflow-hidden mb-3"
-                whileHover={{ rotate: 10 }}
-              >
-                <Image
-                  src={item.image || "/placeholder.svg"}
-                  alt={item.text}
-                  width={80}
-                  height={80}
-                  className="object-cover"
-                />
-              </motion.div>
-              <motion.p
-                className="text-sm font-semibold"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >
-                {item.text}
-              </motion.p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
       {/* Work Process Section */}
-      <div className="flex flex-col items-center justify-center py-16 px-8 bg-gradient-to-b from-white to-yellow-50">
-        <motion.h4
-          className="text-amber-600 font-semibold text-lg mb-2"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Work Process
-        </motion.h4>
+      <div className="flex flex-col items-center justify-center py-4 px-8 bg-gradient-to-b from-white to-yellow-50">
         <motion.h2
           className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Our Google AdWords Process
+          How We Develop High-Performance Websites
         </motion.h2>
         <motion.p
           className="text-gray-600 text-center mb-12 max-w-3xl text-lg"
@@ -413,12 +467,10 @@ export default function WebDesigningDevelopment() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          We follow a systematic approach to ensure the success of your Google
-          AdWords campaigns, maximizing efficiency and delivering outstanding
-          results.
+          Our web development process is designed to deliver outstanding results.
         </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {["Research", "Strategy", "Implementation", "Optimization"].map(
+          {["Consultation & Strategy", "UI/UX Design & Prototyping", "Development & Coding", "Testing & Quality Assurance","Deployment & Launch","Ongoing Support & Maintenance"].map(
             (step, index) => (
               <motion.div
                 key={index}
@@ -433,20 +485,26 @@ export default function WebDesigningDevelopment() {
                     index === 0
                       ? "bg-blue-200 text-blue-600"
                       : index === 1
-                      ? "bg-green-200 text-green-600"
-                      : index === 2
-                      ? "bg-purple-200 text-purple-600"
-                      : "bg-red-200 text-red-600"
+                        ? "bg-green-200 text-green-600"
+                        : index === 2
+                          ? "bg-purple-200 text-purple-600"
+                          : index === 3
+                            ? "bg-red-200 text-red-600"
+                            : index === 4
+                              ? "bg-yellow-200 text-yellow-600"
+                              : "bg-pink-200 text-pink-600"
                   }`}
                 >
                   {`0${index + 1}`}
                 </div>
                 <h3 className="text-2xl font-bold mb-2">{step}</h3>
                 <p className="text-gray-600">
-                  {index === 0 && "Analyze market trends and target audience"}
-                  {index === 1 && "Develop a tailored AdWords strategy"}
-                  {index === 2 && "Set up and launch your campaigns"}
-                  {index === 3 && "Monitor and refine for peak performance"}
+                  {index === 0 && "Understanding your business goals and planning a customized solution."}
+                  {index === 1 && "Creating visually appealing, user-friendly designs."}
+                  {index === 2 && "Bringing the design to life with advanced technologies."}
+                  {index === 3 && "Conducting rigorous tests for performance, security, and compatibility."}
+                  {index === 4 && "Ensuring a seamless transition from development to live website."}
+                  {index === 5 && "Keeping your website updated, secure, and optimized for growth."}
                 </p>
               </motion.div>
             )
@@ -460,14 +518,17 @@ export default function WebDesigningDevelopment() {
           transition={{ duration: 1 }}
           className="text-4xl font-extrabold text-white tracking-wide mb-8"
         >
-          Ready to Boost Your Online Presence with Google AdWords?
+          Get the Best Web Design & Development Services in Pune, Mumbai & Across India
         </motion.h2>
+        <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto text">
+        If you're looking for a top web design and development company in Pune, CobazTech is your go-to solution. Our expert team specializes in building high-performance, visually stunning, and SEO-optimized websites tailored to your business needs.
+        </p>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:bg-gray-100 transition-all duration-300 focus:outline-none"
         >
-          Schedule Your Free Consultation
+          Let’s Build Your Website Today!
         </motion.button>
       </div>
     </div>

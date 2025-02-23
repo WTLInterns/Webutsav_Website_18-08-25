@@ -43,7 +43,7 @@ export default function PartnerBrands() {
   return (
     <section className="relative overflow-hidden py-20 bg-gradient-to-b from-orange-50/50 to-white" ref={containerRef}>
       {/* Background Logos with Parallax */}
-      <motion.div className="absolute inset-0 opacity-5" style={{ y }}>
+      <motion.div className="absolute inset-0 opacity-0" style={{ y }}>
         <div className="grid grid-cols-3 gap-8 p-8">
           {Array.from({ length: 12 }).map((_, i) => (
             <img

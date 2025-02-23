@@ -86,14 +86,14 @@ const Navbar = () => {
           </div>
 
           {/* Client Login Button */}
-          <Link
+          {/* <Link
             href="/login"
             className={`hidden md:inline-block ${
               isScrolled ? "bg-amber-400 text-white" : "bg-white text-amber-400"
             } hover:bg-amber-500 hover:text-white px-6 py-2 rounded-md transition-colors duration-300 transform hover:scale-105`}
           >
             Client Login
-          </Link>
+          </Link> */}
 
           {/* Mobile Menu Button */}
           <button
@@ -141,13 +141,13 @@ const Navbar = () => {
                 <MobileNavLink href="/Contact" onClick={closeMobileMenu}>
                   Contact
                 </MobileNavLink>
-                <Link
+                {/* <Link
                   href="/login"
                   className="block px-3 py-2 text-base font-medium text-white bg-amber-400 hover:bg-amber-500 rounded-md transition-colors duration-300 transform hover:scale-105"
                   onClick={closeMobileMenu}
                 >
                   Client Login
-                </Link>
+                </Link> */}
               </div>
             </motion.div>
           )}
@@ -194,6 +194,7 @@ const ServicesDropdown = () => (
       <DropdownLink href="/Services/Search_Engin_Optimisation">Search Engine Optimisation</DropdownLink>
       <DropdownLink href="/Services/Local_Seo">Local SEO</DropdownLink>
       <DropdownLink href="/Services/Social_Media_Marketing">Social Media Marketing</DropdownLink>
+      <DropdownLink href="/Services/Mobile_Application">Mobile Application Development</DropdownLink>
     </div>
   </motion.div>
 )
@@ -223,6 +224,9 @@ const MobileServicesDropdown = ({ closeMobileMenu }) => (
     </MobileNavLink>
     <MobileNavLink href="/Services/Social_Media_Marketing" onClick={closeMobileMenu}>
       Social Media Marketing
+    </MobileNavLink>
+    <MobileNavLink href="/Services/Mobile_Application" onClick={closeMobileMenu}>
+    Mobile Application Development
     </MobileNavLink>
   </motion.div>
 )

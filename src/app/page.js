@@ -3,7 +3,6 @@ import Hero from "@/components/Hero/page"
 import About from "@/components/About/page" 
 import Services from "@/components/Services/page"
 import WhyChooseUs from "@/components/Why_Choose_Us/Why_Choose_Us"
-import PartnerBrands from "@/components/Partner_Brands/page"
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <About/>
       <Services/>
       <WhyChooseUs/>
-      <PartnerBrands/>
     </div>
   )
 }

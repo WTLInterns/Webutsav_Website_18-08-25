@@ -41,7 +41,12 @@ export default function ContactPage() {
           </p>
           <div className="bg-white shadow-md p-4 rounded-lg flex items-center space-x-4">
             <span className="text-orange-500">📧</span>
-            <span className="text-black">info@wtl.in</span>
+            <a
+              href="mailto:info@cobaztech.com"
+              className="text-blue-600 hover:underline transition-all duration-300 transform hover:scale-110 hover:text-blue-800"
+            >
+              info@cobaztech.com
+            </a>
           </div>
           <div className="w-full h-64 rounded-lg overflow-hidden shadow-md">
             <iframe
@@ -53,7 +58,7 @@ export default function ContactPage() {
               loading="lazy"
             ></iframe>
           </div>
-          <p className="text-gray-600 text-sm">We're available from 09 am – 7 pm EST, 5 days a week.</p>
+          {/* <p className="text-gray-600 text-sm">We're available from 09 am – 7 pm EST, 5 days a week.</p> */}
         </div>
 
         {/* Contact Form */}

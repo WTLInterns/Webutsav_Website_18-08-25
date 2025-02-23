@@ -3,6 +3,7 @@ import "./globals.css"
 import Navbar from "@/components/Navbar/page"
 import PreLoader from "@/components/PreLoader/page"
 import Footer from "@/components/Footer/page"
+import PartnerBrands from "@/components/Partner_Brands/page"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,6 +58,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <PreLoader />
         {children}
+        <PartnerBrands/>
         <Footer />
       </body>
     </html>

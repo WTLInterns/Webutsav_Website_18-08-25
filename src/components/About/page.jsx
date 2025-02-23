@@ -44,27 +44,15 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-black">
-              About <span className="text-orange-500">Digimedia Solutions</span>
+              About <span className="text-orange-500">CobazTech</span>
             </h2>
 
             <div className="space-y-6 text-black -600">
               <p>
-                As a valued partner of many brands, we have effectively completed more than 2,000 projects for over 300
-                clients. This ensures maximum efficiency while delivering the expected results. Our strategies are based
-                on insights, hence results are always felt.
-              </p>
-
-              <p>
-                The company provides a wide range of services such as web design and development, e-commerce, ERP
-                development, and Google AdWords. We also offer search engine optimization (SEO), social media marketing,
-                and local SEO, enabling clients to be prepared with strategies that extend to all aspects of their
-                business.
-              </p>
-
-              <p>
-                Our understanding of various industries allows us to offer solutions that are both artistic and
-                informative. This combination enables us to create critical strategies that are tailored for each brand,
-                ensuring continuous growth.
+              CobazTech is a leading digital solutions provider based in Kharadi, Pune. We specialize in App
+                Development, Web Development, and Digital Marketing. With a proven track record of success, we have
+                successfully completed over 2,000 projects for more than 300 clients, delivering impactful results
+                through our insight-driven strategies.
               </p>
             </div>
 

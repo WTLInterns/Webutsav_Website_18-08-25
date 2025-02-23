@@ -95,7 +95,7 @@ export default function SocialMediaMarketing() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <Image src="/images/seo.webp" alt="Google AdWords" layout="fill" objectFit="cover" quality={100} />
+          <Image src="/images/aboutus.jpg" alt="Google AdWords" layout="fill" objectFit="cover" quality={100} />
           <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center px-6 md:px-12">
             <motion.p
               initial={{ opacity: 0, y: 20 }}

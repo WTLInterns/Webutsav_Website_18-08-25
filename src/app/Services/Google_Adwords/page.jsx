@@ -101,7 +101,7 @@ export default function GoogleAdwords() {
         transition={{ duration: 1 }}
       >
         <Image
-          src="/images/googleadwords.webp"
+          src="/images/aboutus.jpg"
           alt="Google AdWords"
           layout="fill"
           objectFit="cover"

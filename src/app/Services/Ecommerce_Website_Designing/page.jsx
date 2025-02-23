@@ -90,7 +90,7 @@ export default function EcommerceWebsiteDesigning() {
         transition={{ duration: 1 }}
       >
         <Image
-          src="/images/ecommerce.webp"
+          src="/images/aboutus.jpg"
           alt="Ecommerce Website Designing"
           layout="fill"
           objectFit="cover"
