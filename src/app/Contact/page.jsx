@@ -37,7 +37,7 @@ export default function BlogPage() {
       <div
         className="relative w-full h-96 flex items-center px-6 sm:px-16 lg:px-35"
         style={{
-          backgroundImage: "url('../contact.jpg')",
+          backgroundImage: "url('/images/aboutus.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed", 

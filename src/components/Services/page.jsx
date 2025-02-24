@@ -1,6 +1,6 @@
 "use client"
 
-import { Monitor, ShoppingCart, Search, Share2, MapPin, BarChart3 } from "lucide-react"
+import { Monitor, ShoppingCart, Search, Share2, MapPin, BarChart3, Smartphone } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
@@ -58,6 +58,15 @@ const services = [
       "Enhance your local visibility with targeted local SEO strategies. Reach nearby customers and grow your business with optimized local search results.",
     color: "bg-pink-500",
     link: "/Services/Local_Seo",
+  },
+  {
+    id: 7,
+    icon: Smartphone,
+    title: "Mobile Application Development",
+    description:
+      "Create powerful, user-friendly mobile applications for iOS and Android. Enhance your business with custom mobile solutions tailored to your needs.",
+    color: "bg-purple-500",
+    link: "/Services/Mobile_Application_Development",
   },
 ]
 

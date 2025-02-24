@@ -461,7 +461,7 @@ function TeamTabs() {
   const itTeam = [
     {
       name: "Rhugved Hegde",
-      role: "Frontend Developer/Team Leader",
+      role: "Team Leader",
       image: "/Team/Rhugved.JPG",
     },
     {

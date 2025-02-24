@@ -40,7 +40,7 @@ export default function BlogPage() {
         <div
           className="relative w-full h-[70vh] sm:h-[70vh] flex items-center px-4 sm:px-8 lg:px-16"
           style={{
-            backgroundImage: "url('/Blog/blog.jpg')",
+            backgroundImage: "url('/images/aboutus.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed", // Keeps background fixed while scrolling
