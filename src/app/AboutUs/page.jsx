@@ -437,11 +437,6 @@ function TeamTabs() {
       image: "/team/Tejas.JPG",
     },
     {
-      name: "Deeksha Tejwani",
-      role: "Digital Marketing Executive",
-      image: "/team/Deekshatejwani.JPG",
-    },
-    {
       name: "Navneet Parashar",
       role: "Digital Marketing Executive",
       image: "/team/navneet.JPG",
@@ -461,7 +456,7 @@ function TeamTabs() {
   const itTeam = [
     {
       name: "Rhugved Hegde",
-      role: "Team Leader",
+      role: "Team Lead",
       image: "/Team/Rhugved.JPG",
     },
     {
@@ -474,16 +469,16 @@ function TeamTabs() {
       role: "Full Stack Developer(Java)",
       image: "/Team/Shubham.JPG",
     },
-    {
-      name: "Hina Shaikh",
-      role: "Full Stack Developer(MERN)",
-      image: "/Team/",
-    },
-    {
-      name: "Omkar Kalbhor",
-      role: "Full Stack Developer(Java)",
-      image: "/Team/",
-    },
+    // {
+    //   name: "Hina Shaikh",
+    //   role: "Full Stack Developer(MERN)",
+    //   image: "/Team/",
+    // },
+    // {
+    //   name: "Omkar Kalbhor",
+    //   role: "Full Stack Developer(Java)",
+    //   image: "/Team/",
+    // },
     {
       name: "Aniket Bisure",
       role: "Full Stack Developer(MERN)",
@@ -534,6 +529,11 @@ function TeamTabs() {
       role: "Full Stack Developer(Java)",
       image: "/Team/Gautam.jpg",
     },
+    {
+      name: "Manasi Tambe",
+      role: "Full Stack Developer(MERN)",
+      image: "/Team/Manasi.jpeg",
+    }
   ]
 
   useEffect(() => {
