@@ -418,7 +418,7 @@ function TeamTabs() {
   const digitalTeam = [
     {
       name: "Ashutosh Pandey",
-      role: "Digital Marketing Executive Manager",
+      role: "Digital Marketing Manager",
       image: "/Team/Ashutosh.JPG",
     },
     {
@@ -521,7 +521,7 @@ function TeamTabs() {
     },
     {
       name: "Aakib Ansari",
-      role: "Full Stack Developer(Java)",
+      role: "Full Stack Developer(MERN)",
       image: "/Team/Aakib.jpg",
     },
     {

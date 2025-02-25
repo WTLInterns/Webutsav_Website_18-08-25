@@ -66,7 +66,7 @@ const services = [
     description:
       "Create powerful, user-friendly mobile applications for iOS and Android. Enhance your business with custom mobile solutions tailored to your needs.",
     color: "bg-purple-500",
-    link: "/Services/Mobile_Application_Development",
+    link: "/Services/Mobile_Application",
   },
 ]
 
