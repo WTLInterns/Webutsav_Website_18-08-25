@@ -284,7 +284,7 @@ export default function AboutUs() {
               transition={{ duration: 0.5 }}
               className="text-4xl font-bold text-center text-gray-800 mb-12"
             >
-              Meet Our Team
+              
             </motion.h2>
             <p className="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto">
               Our talented team is the backbone of CobazTech. We encourage adding high-quality photos of our team
@@ -413,7 +413,6 @@ export default function AboutUs() {
 
 function TeamTabs() {
   const [activeTab, setActiveTab] = useState("digital")
-  const [autoSwitch, setAutoSwitch] = useState(true)
 
   const digitalTeam = [
     {
@@ -424,32 +423,28 @@ function TeamTabs() {
     {
       name: "Ankita Shelke",
       role: "Digital Marketing Executive",
-      image: "/Team/Ankitashelke.jpg",
+      image: "/Team/Ankitashelke.JPG",
     },
     {
       name: "Purva bavale",
       role: "Digital Marketing Executive",
-      image: "/team/PurvaBavale.jpg",
+      image: "/Team/PurvaBavale.JPG",
     },
     {
       name: "Tejas Kamath",
       role: "Digital Marketing Executive",
-      image: "/team/Tejas.JPG",
+      image: "/Team/Tejas.JPG",
     },
-    {
-      name: "Navneet Parashar",
-      role: "Digital Marketing Executive",
-      image: "/team/navneet.JPG",
-    },
+    
     {
       name: "Avinash Kumbharkar",
       role: "Digital Marketing Executive",
-      image: "/team/AvinashKumbharkar.JPG",
+      image: "/Team/AvinashKumbharkar.JPG",
     },
     {
       name: "Ankita Wankhade",
       role: "Digital Marketing Executive",
-      image: "/team/AnkitaWankhade.JPG",
+      image: "/Team/AnkitaWankhade.JPG",
     },
   ]
 
@@ -460,91 +455,76 @@ function TeamTabs() {
       image: "/Team/Rhugved.JPG",
     },
     {
-      name: "Aishwarya Suryatale",
-      role: "Full Stack Developer(Java)",
-      image: "/Team/Aishwarya.JPG",
+      name: "Waseb Untwale",
+      role: "Team Lead",
+      image: "/Team/Waseb.JPG",
     },
     {
       name: "Shubham Jagtap",
       role: "Full Stack Developer(Java)",
       image: "/Team/Shubham.JPG",
     },
-    // {
-    //   name: "Hina Shaikh",
-    //   role: "Full Stack Developer(MERN)",
-    //   image: "/Team/",
-    // },
-    // {
-    //   name: "Omkar Kalbhor",
-    //   role: "Full Stack Developer(Java)",
-    //   image: "/Team/",
-    // },
-    {
-      name: "Aniket Bisure",
-      role: "Full Stack Developer(MERN)",
-      image: "/Team/Aniket.JPG",
-    },
-    {
-      name: "Tushar Kudale",
-      role: "Full Stack Developer(Java)",
-      image: "/Team/Tushar.jpg",
-    },
     {
       name: "Jaywant Mhala",
       role: "Full Stack Developer(Java)",
-      image: "/Team/Jaywant.jpg",
+      image: "/Team/Jaywant.JPG",
     },
     {
       name: "Hrushikesh Kapse",
       role: "Full Stack Developer(MERN)",
-      image: "/Team/Hrushikesh.jpg",
+      image: "/Team/Hrushikesh.JPG",
     },
     {
       name: "Rohit More",
       role: "Full Stack Developer(Java)",
-      image: "/Team/Rohit.jpg",
+      image: "/Team/Rohit.JPG",
     },
     {
       name: "Arbaj Shaikh",
       role: "Full Stack Developer(Java)",
-      image: "/Team/Arbaj.jpg",
+      image: "/Team/Arbaj.JPG",
     },
     {
       name: "Pragati Kokare",
       role: "Full Stack Developer(Java)",
-      image: "/Team/Pragati.jpg",
+      image: "/Team/Pragati.JPG",
     },
     {
       name: "Aakib Ansari",
       role: "Full Stack Developer(MERN)",
-      image: "/Team/Aakib.jpg",
+      image: "/Team/Aakib.JPG",
     },
     {
       name: "Imran Shaikh",
       role: "React Native Developer",
-      image: "/Team/Imran.jpg",
+      image: "/Team/Imran.JPG",
     },
     {
       name: "Gautam Rana",
       role: "Full Stack Developer(Java)",
-      image: "/Team/Gautam.jpg",
+      image: "/Team/Gautam.JPG",
+    },
+    {
+      name: "Abhishekh Pattekari",
+      role: "React Native Developer",
+      image: "/Team/Abhishekh.JPG",
     },
     {
       name: "Manasi Tambe",
       role: "Full Stack Developer(MERN)",
-      image: "/Team/Manasi.jpeg",
+      image: "/Team/Manasi.JPG",
+    },
+    {
+      name: "Nisha Takalkar",
+      role: "IT Lead Generation",
+      image: "/Team/Nisha1.JPG",
+    },
+    {
+      name: "Sonali Salvi",
+      role: "Sales Executive",
+      image: "/Team/Sonali.JPG",
     }
   ]
-
-  useEffect(() => {
-    let interval
-    if (autoSwitch) {
-      interval = setInterval(() => {
-        setActiveTab((prev) => (prev === "digital" ? "it" : "digital"))
-      }, 5000)
-    }
-    return () => clearInterval(interval)
-  }, [autoSwitch])
 
   return (
     <div>
@@ -555,7 +535,6 @@ function TeamTabs() {
           } rounded-full`}
           onClick={() => {
             setActiveTab("digital")
-            setAutoSwitch(false)
           }}
         >
           Digital Marketing Team
@@ -566,7 +545,6 @@ function TeamTabs() {
           } rounded-full`}
           onClick={() => {
             setActiveTab("it")
-            setAutoSwitch(false)
           }}
         >
           IT Team
@@ -574,24 +552,24 @@ function TeamTabs() {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {(activeTab === "digital" ? digitalTeam : itTeam).map((member, index) => (
-          <motion.div
+          <div
             key={index}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-white p-4 rounded-xl shadow-lg text-center"
+            className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center"
           >
-            <Image
-              src={member.image || "/placeholder.svg"}
-              alt={member.name}
-              width={120}
-              height={120}
-              className="w-32 h-32 rounded-full mx-auto mb-3 overflow-hidden object-cover"
-
-            />
-            <h3 className="text-lg font-semibold mb-1">{member.name}</h3>
+            <div className="relative mx-auto mb-3">
+              <div className="w-32 h-32 rounded-full mx-auto overflow-hidden border-2 border-transparent hover:border-gray-200 transition-all duration-300">
+                <Image
+                  src={member.image || "/placeholder.svg"}
+                  alt={member.name}
+                  width={120}
+                  height={120}
+                  className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+            </div>
+            <h3 className="text-lg font-semibold mb-1 transition-colors duration-300 hover:text-gray-700">{member.name}</h3>
             <p className="text-sm text-gray-600">{member.role}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

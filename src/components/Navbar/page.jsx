@@ -5,6 +5,7 @@ import Image from "next/image"
 import { useState, useEffect, useRef } from "react"
 import { ChevronDown, Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { Button } from "../../components/ui/button"
 
 const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
@@ -195,6 +196,7 @@ const ServicesDropdown = () => (
       <DropdownLink href="/Services/Local_Seo">Local SEO</DropdownLink>
       <DropdownLink href="/Services/Social_Media_Marketing">Social Media Marketing</DropdownLink>
       <DropdownLink href="/Services/Mobile_Application">Mobile Application Development</DropdownLink>
+      <DropdownLink href="/Services/car-expenses">Car Expenses</DropdownLink>
     </div>
   </motion.div>
 )
@@ -228,6 +230,9 @@ const MobileServicesDropdown = ({ closeMobileMenu }) => (
     <MobileNavLink href="/Services/Mobile_Application" onClick={closeMobileMenu}>
     Mobile Application Development
     </MobileNavLink>
+    <MobileNavLink href="/Services/car-expenses" onClick={closeMobileMenu}>
+    Car Expenses
+    </MobileNavLink>
   </motion.div>
 )
 
@@ -241,4 +246,3 @@ const DropdownLink = ({ href, children }) => (
 )
 
 export default Navbar
-

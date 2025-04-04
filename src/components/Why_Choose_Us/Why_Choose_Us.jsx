@@ -1,6 +1,6 @@
 "use client"
 import { Users2, Settings, Shield, Laptop } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "../../components/ui/button"
 import { motion } from "framer-motion"
 
 export default function WhyChooseUs() {
