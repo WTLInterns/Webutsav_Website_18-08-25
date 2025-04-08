@@ -423,19 +423,18 @@ function TeamTabs() {
     {
       name: "Ankita Shelke",
       role: "Digital Marketing Executive",
-      image: "/Team/Ankitashelke.JPG",
+      image: "/Team/AnkitaShelke.jpg",
     },
     {
-      name: "Purva bavale",
+      name: "Purva Bavale",
       role: "Digital Marketing Executive",
-      image: "/Team/PurvaBavale.JPG",
+      image: "/Team/PurvaBavale.jpg",
     },
     {
       name: "Tejas Kamath",
       role: "Digital Marketing Executive",
       image: "/Team/Tejas.JPG",
     },
-    
     {
       name: "Avinash Kumbharkar",
       role: "Digital Marketing Executive",
@@ -517,7 +516,7 @@ function TeamTabs() {
     {
       name: "Nisha Takalkar",
       role: "IT Lead Generation",
-      image: "/Team/Nisha1.JPG",
+      image: "/Team/Nisha1.jpg",
     },
   ]
 
