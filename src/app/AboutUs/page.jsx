@@ -514,6 +514,16 @@ function TeamTabs() {
       image: "/Team/Manasi.JPG",
     },
     {
+      name: "Pradnya Waghmare",
+      role: "Full Stack Developer(MERN)",
+      image: "/Team/Pradnya.jpg",
+    },
+    {
+      name: "Hina Shaikh",
+      role: "Full Stack Developer(MERN)",
+      image: "/Team/Hina.jpg",
+    },
+    {
       name: "Nisha Takalkar",
       role: "IT Lead Generation",
       image: "/Team/Nisha1.jpg",
