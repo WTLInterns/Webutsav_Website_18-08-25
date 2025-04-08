@@ -57,6 +57,7 @@ const Footer = () => {
               { name: "Local SEO", href: "/Services/Local_Seo" },
               { name: "Social Media Marketing", href: "/Services/Social_Media_Marketing" },
               { name: "Mobile Application Development", href: "/Services/Mobile_Application" },
+              { name: "Cab Expenses Tracker", href: "/Services/Cab_Expenses_Tracker" }
             ].map((item) => (
               <li key={item.name}>
                 <Link
