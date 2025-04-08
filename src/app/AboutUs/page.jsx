@@ -519,11 +519,6 @@ function TeamTabs() {
       role: "IT Lead Generation",
       image: "/Team/Nisha1.JPG",
     },
-    {
-      name: "Sonali Salvi",
-      role: "Sales Executive",
-      image: "/Team/Sonali.JPG",
-    }
   ]
 
   return (

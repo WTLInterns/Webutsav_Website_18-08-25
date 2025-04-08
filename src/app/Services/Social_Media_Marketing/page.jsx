@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "Why is Social Media Marketing Important?",
-    answer:"Social Media Marketing is essential because it allows businesses to directly engage with their audience, build relationships, and increase visibility. It’s a cost-effective way to reach a large, targeted audience and drive sales.",
+    answer:"Social Media Marketing is essential because it allows businesses to directly engage with their audience, build relationships, and increase visibility. It's a cost-effective way to reach a large, targeted audience and drive sales.",
   },
   {
     question: "How Can cobaztech Help My Business with Social Media Marketing?",
@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     question: "What Platforms Should My Business Be On?",
-    answer:"The platforms you should use depend on your target audience and business goals. We analyze your business and recommend the best platforms, whether it’s Facebook, Instagram, LinkedIn, or Twitter.",
+    answer:"The platforms you should use depend on your target audience and business goals. We analyze your business and recommend the best platforms, whether it's Facebook, Instagram, LinkedIn, or Twitter.",
   },
   {
     question: "How Do You Measure the Success of Social Media Campaigns?",
@@ -98,11 +98,11 @@ const services = [
 ]
 
 const expertiseItems = [
-  { title: "1.Social Media Strategy Development:We work closely with you to understand your business goals, target audience, and key performance indicators (KPIs). Based on this information, we develop a comprehensive "},
-  { title: "2. Content Creation and Management:Our team of content creators and social media experts crafts high-quality posts that resonate with your audience. We manage your accounts and ensure that your content is engaging, relevant, and visually appealing. We also plan content calendars to maintain consistent posting and timely updates."},
-  { title: "3. Paid Advertising Campaigns:We create and manage targeted paid campaigns on platforms like Facebook, Instagram, LinkedIn, and Twitter to help you reach the right audience. Our social media digital marketing strategies are designed to maximize conversions and drive results within your budget."},
-  { title: "4. Social Media Monitoring and Analytics:Our team monitors the performance of your social media accounts, tracking engagement, reach, and other key metrics. Using this data, we make adjustments to ensure your campaigns are always improving. We provide you with regular reports that show exactly how your social media marketing efforts are performing."},
-  { title: "5. Community Engagement:Social media is about building relationships. We engage with your followers by responding to comments, liking and sharing user-generated content, and initiating conversations. This fosters a sense of community and helps you build a loyal customer base."},
+  { title: "1. Social Media Strategy Development", description: "We work closely with you to understand your business goals, target audience, and key performance indicators (KPIs). Based on this information, we develop a comprehensive "},
+  { title: "2. Content Creation and Management", description: "Our team of content creators and social media experts crafts high-quality posts that resonate with your audience. We manage your accounts and ensure that your content is engaging, relevant, and visually appealing. We also plan content calendars to maintain consistent posting and timely updates."},
+  { title: "3. Paid Advertising Campaigns", description: "We create and manage targeted paid campaigns on platforms like Facebook, Instagram, LinkedIn, and Twitter to help you reach the right audience. Our social media digital marketing strategies are designed to maximize conversions and drive results within your budget."},
+  { title: "4. Social Media Monitoring and Analytics", description: "Our team monitors the performance of your social media accounts, tracking engagement, reach, and other key metrics. Using this data, we make adjustments to ensure your campaigns are always improving. We provide you with regular reports that show exactly how your social media marketing efforts are performing."},
+  { title: "5. Community Engagement", description: "Social media is about building relationships. We engage with your followers by responding to comments, liking and sharing user-generated content, and initiating conversations. This fosters a sense of community and helps you build a loyal customer base."},
 ]
 
 const technologies = [
@@ -305,7 +305,7 @@ export default function SocialMediaMarketing() {
           Social Media Marketing Services by cobaztech
           </h1>
           <p className="text-gray-600 mt-6 text-2xl" >
-          In today’s digital age, businesses can’t afford to ignore the power of social media. With billions of active users on platforms like Facebook, Instagram, Twitter, and LinkedIn, Social Media Marketing (SMM) has become one of the most effective ways to connect with potential customers, build brand awareness, and drive traffic to your website. At cobaztech, we specialize in providing Social Media Marketing services that help businesses grow their presence online, engage with their audience, and increase their ROI.
+          In today's digital age, businesses can't afford to ignore the power of social media. With billions of active users on platforms like Facebook, Instagram, Twitter, and LinkedIn, Social Media Marketing (SMM) has become one of the most effective ways to connect with potential customers, build brand awareness, and drive traffic to your website. At cobaztech, we specialize in providing Social Media Marketing services that help businesses grow their presence online, engage with their audience, and increase their ROI.
           </p>
           <p className="text-gray-600 mt-6 text-2xl" >
           As the best social media marketing company in Pune, we provide comprehensive and tailored social media digital marketing strategies that align with your business goals. Whether you're a small business or an established enterprise, we can help you unlock the full potential of social media to drive measurable results
@@ -332,7 +332,7 @@ export default function SocialMediaMarketing() {
       <div className="container px-4 mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Why Choose Social Media Marketing? </h2>
         <p className="text-center text-blue-200 mb-8 max-w-2xl mx-auto">
-        Social media platforms offer businesses unique opportunities to connect directly with their target audience. Here’s why Social Media Marketing is essential for your business:
+        Social media platforms offer businesses unique opportunities to connect directly with their target audience. Here's why Social Media Marketing is essential for your business:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
@@ -362,7 +362,7 @@ export default function SocialMediaMarketing() {
 
         <FadeInSection>
           <p className="text-lg mb-12 text-center max-w-4xl mx-auto">
-          At cobaztech, we offer a wide range of Social Media Marketing services tailored to meet the unique needs of each business. Our strategies are designed to enhance engagement, increase visibility, and build a loyal customer base. Here’s what we can do for you
+          At cobaztech, we offer a wide range of Social Media Marketing services tailored to meet the unique needs of each business. Our strategies are designed to enhance engagement, increase visibility, and build a loyal customer base. Here's what we can do for you
           </p>
         </FadeInSection>
 
@@ -374,7 +374,7 @@ export default function SocialMediaMarketing() {
           {expertiseItems.map((item, index) => (
             <FadeInSection key={index}>
               <div className="border-l-4 border-blue-500 pl-6 py-4 h-full">
-                <h4 className="text-xl font-semibold mb-3">{item.title}</h4>
+                <h4 className="text-xl font-bold mb-3">{item.title}</h4>
                 <p className="text-gray-600">{item.description}</p>
               </div>
             </FadeInSection>
@@ -471,7 +471,7 @@ export default function SocialMediaMarketing() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          A well-organized local SEO checklist is vital for ensuring that all aspects of your local SEO strategy are covered. Here’s a helpful checklist for local businesses looking to optimize their local SEO efforts:
+          A well-organized local SEO checklist is vital for ensuring that all aspects of your local SEO strategy are covered. Here's a helpful checklist for local businesses looking to optimize their local SEO efforts:
         </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[" ", "", " ", " "].map(
