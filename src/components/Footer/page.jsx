@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="transform transition-all hover:scale-105">
           <Link href="/">
             <Image
-              src="/cobaztech.png"
+              src="/Webutsav.png"
               alt="Digimedia Solutions"
               width={150}
               height={50}
@@ -19,16 +19,16 @@ const Footer = () => {
             />
           </Link>
           <p className="mt-4 text-sm text-gray-700 transition-transform duration-300 transform hover:scale-105 hover:text-blue-700">
-          Cobaztech is a results-driven digital marketing agency that helps businesses grow through tailored SEO, PPC, and social media strategies. We focus on delivering measurable success by driving targeted traffic and boosting brand visibility.
+          Webutsav is a results-driven digital marketing agency that helps businesses grow through tailored SEO, PPC, and social media strategies. We focus on delivering measurable success by driving targeted traffic and boosting brand visibility.
           </p>
           <div className="flex flex-col mt-4">
           <div className="flex items-center transition-transform duration-300 transform hover:scale-110 hover:text-blue-600">
             <MdEmail className="mr-2 text-gray-800 transition-all duration-300 hover:scale-110" />
             <a
-              href="mailto:info@cobaztech.com"
+              href="mailto:info@webutsav.com"
               className="text-blue-600 hover:underline transition-all duration-300 transform hover:scale-110 hover:text-blue-800"
             >
-              info@cobaztech.com
+              info@webutsav.com
             </a>
           </div>
           <div className="flex items-center mt-2 transition-transform duration-300 transform hover:scale-110 hover:text-blue-600">
@@ -119,7 +119,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-gray-400 mt-8 pt-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-700 transition-all duration-300 transform hover:scale-105">
-        <p>&copy; {new Date().getFullYear()} Cobaztech | All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Webutsav | All rights reserved.</p>
         <div className="flex space-x-4 mt-2 md:mt-0">
           <Link
             href="/Privacy"

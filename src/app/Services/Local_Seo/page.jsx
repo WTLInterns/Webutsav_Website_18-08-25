@@ -32,16 +32,16 @@ const faqs = [
     answer:"While regular SEO focuses on general rankings, local SEO targets location-specific searches. Local SEO strategies include optimizing for local keywords, improving your GMB profile, and building local citations.",
   },
   {
-    question: "How Can cobaztech Help Improve My Local SEO?",
-    answer:"cobaztech offers expert local SEO optimization services to help you improve your online presence, rank higher in local searches, and attract more local customers through customized SEO strategies.",
+    question: "How Can Webutsav Help Improve My Local SEO?",
+    answer:"Webutsav offers expert local SEO optimization services to help you improve your online presence, rank higher in local searches, and attract more local customers through customized SEO strategies.",
   },
   {
     question: "How Long Does It Take to See Results from Local SEO?",
     answer:"Local SEO is a long-term strategy, and it can take 3 to 6 months to start seeing significant results. However, by consistently following best practices, you can expect gradual improvements in rankings and visibility.",
   },
   {
-    question: "Can cobaztech Help with Local SEO for Businesses Outside Pune?",
-    answer:"Yes! cobaztech offers local SEO services for businesses across India, focusing on specific cities and regions to help you achieve local search visibility.",
+    question: "Can Webutsav Help with Local SEO for Businesses Outside Pune?",
+    answer:"Yes! Webutsav offers local SEO services for businesses across India, focusing on specific cities and regions to help you achieve local search visibility.",
   },
 ];
 
@@ -306,10 +306,10 @@ export default function LocalSEO() {
         {/* Content */}
         <div className="w-full md:w-3/5 max-w-8xl mx-auto py-12">
           <h1 className="text-4xl font-bold text-gray-800">
-          Local SEO Services by cobaztech
+          Local SEO Services by Webutsav
           </h1>
           <p className="text-gray-600 mt-6 text-2xl" >
-          As businesses continue to adapt to the digital landscape, local SEO has become an essential strategy for improving online visibility, driving targeted traffic, and boosting growth. At cobaztech, we offer Local SEO services designed to help your business rank higher in local search results, ensuring that you stand out in your specific geographic area. Our Local SEO optimization services are tailored to meet the needs of businesses in Pune and beyond, providing a competitive edge in a highly localized market.
+          As businesses continue to adapt to the digital landscape, local SEO has become an essential strategy for improving online visibility, driving targeted traffic, and boosting growth. At Webutsav, we offer Local SEO services designed to help your business rank higher in local search results, ensuring that you stand out in your specific geographic area. Our Local SEO optimization services are tailored to meet the needs of businesses in Pune and beyond, providing a competitive edge in a highly localized market.
           </p>
           <h2 className="text-4xl font-bold text-gray-800 pt-2">
           What is Local SEO?
@@ -398,7 +398,7 @@ export default function LocalSEO() {
           FAQs on Local SEO Services
           </h2>
           {/* <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
-          CobazTech provides Google Ads solutions for businesses across various industries
+          Webutsav provides Google Ads solutions for businesses across various industries
         </p> */}
           <div className="max-w-4xl mx-auto">
             {faqs.map((faq, index) => (
@@ -527,10 +527,10 @@ export default function LocalSEO() {
           transition={{ duration: 1 }}
           className="text-4xl font-extrabold text-white tracking-wide mb-8"
         >
-          cobaztech – The Best Search Local SEO Company in Pune, Maharashtra
+          Webutsav – The Best Search Local SEO Company in Pune, Maharashtra
         </motion.h2>
         <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto text">
-        cobaztech is a trusted Local search engine optimization SEO company Pune, Maharashtra, offering expert solutions to boost your website rankings. Our team ensures top-notch SEO strategies tailored to your business needs.
+        Webutsav is a trusted Local search engine optimization SEO company Pune, Maharashtra, offering expert solutions to boost your website rankings. Our team ensures top-notch SEO strategies tailored to your business needs.
         </p>
         <motion.button
           whileHover={{ scale: 1.05 }}

@@ -107,14 +107,14 @@ export default function CabExpenseTracker() {
   "name": "Cab Expense Tracker Software",
   "operatingSystem": "Web",
   "applicationCategory": "BusinessApplication",
-  "description": "CobazTech's Cab Expense Tracker Software helps travel agencies and fleet owners manage cab expenses like fuel, tolls, repairs, and documents efficiently, especially tailored for the Indian market.",
-  "url": "https://cobaztech.com/cab-expense-tracker",
+  "description": "Webutsav's Cab Expense Tracker Software helps travel agencies and fleet owners manage cab expenses like fuel, tolls, repairs, and documents efficiently, especially tailored for the Indian market.",
+  "url": "https://webutsav.com/cab-expense-tracker",
   "author": {
     "@type": "Organization",
-    "name": "CobazTech",
-    "url": "https://cobaztech.com"
+    "name": "Webutsav",
+    "url": "https://webutsav.com"
   },
-  "image": "https://cobaztech.com/images/software-logo.png",
+  "image": "https://webutsav.com/images/software-logo.png",
   "offers": {
     "@type": "Offer",
     "price": "Contact for Pricing",
@@ -135,13 +135,13 @@ export default function CabExpenseTracker() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://cobaztech.com/"
+        "item": "https://webutsav.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Cab Expense Tracker",
-        "item": "https://cobaztech.com/cab-expense-tracker"
+        "item": "https://webutsav.com/cab-expense-tracker"
       }
     ]
   },
@@ -158,27 +158,27 @@ export default function CabExpenseTracker() {
     "step": [
       {
         "@type": "HowToStep",
-        "url": "https://cobaztech.com/cab-expense-tracker#signup",
+        "url": "https://webutsav.com/cab-expense-tracker#signup",
         "name": "Sign Up for an Account"
       },
       {
         "@type": "HowToStep",
-        "url": "https://cobaztech.com/cab-expense-tracker#setup",
+        "url": "https://webutsav.com/cab-expense-tracker#setup",
         "name": "Set Up Your Fleet"
       },
       {
         "@type": "HowToStep",
-        "url": "https://cobaztech.com/cab-expense-tracker#log-expenses",
+        "url": "https://webutsav.com/cab-expense-tracker#log-expenses",
         "name": "Start Logging Expenses"
       },
       {
         "@type": "HowToStep",
-        "url": "https://cobaztech.com/cab-expense-tracker#reports",
+        "url": "https://webutsav.com/cab-expense-tracker#reports",
         "name": "Review Reports and Optimize"
       }
     ]
   },
-  "faqPage": "https://cobaztech.com/cab-expense-tracker#faq"
+  "faqPage": "https://webutsav.com/cab-expense-tracker#faq"
 }
           `}
         </script>
@@ -262,12 +262,12 @@ export default function CabExpenseTracker() {
                 <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-3 mb-6">
                   <FaCar className="text-4xl text-amber-600" />
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-800">
-                    Welcome to CobazTech - Cab Expense Tracker Software for Efficient Fleet Management
+                    Welcome to Webutsav - Cab Expense Tracker Software for Efficient Fleet Management
                   </h1>
                 </div>
                 <div className="space-y-6">
                   <p className="text-gray-600 text-lg">
-                    CobazTech, an IT company based in Pune, is at the forefront of developing innovative solutions for businesses. We specialize in mobile app development, web development (both backend and frontend), and digital marketing. With our latest project, we aim to revolutionize the way cab drivers, fleet managers, and travel agencies manage their daily expenses. Our Cab Expense Tracker Software is specifically designed to streamline expense management, reduce costs, and enhance the financial efficiency of businesses in the transportation industry.
+                    Webutsav, an IT company based in Pune, is at the forefront of developing innovative solutions for businesses. We specialize in mobile app development, web development (both backend and frontend), and digital marketing. With our latest project, we aim to revolutionize the way cab drivers, fleet managers, and travel agencies manage their daily expenses. Our Cab Expense Tracker Software is specifically designed to streamline expense management, reduce costs, and enhance the financial efficiency of businesses in the transportation industry.
                   </p>
                   <p className="text-gray-600 text-lg">
                     In this comprehensive guide, we'll explore everything you need to know about Cab Expense Tracker Software, how it works, and why it's the ideal solution for the modern Indian cab and travel business. Whether you're an independent driver or manage a fleet of vehicles, our software offers unmatched benefits.
@@ -550,7 +550,7 @@ export default function CabExpenseTracker() {
 
               <div className="space-y-4">
                 <p className="text-gray-600 text-lg mb-6">
-                  India's cab and travel industry is one of the fastest-growing sectors, with thousands of new vehicles hitting the roads every day. Managing a fleet or even a single vehicle requires meticulous expense tracking, and that's where CobazTech's Cab Expense Tracker Software comes in. Here's why our software is the best choice for your business:
+                  India's cab and travel industry is one of the fastest-growing sectors, with thousands of new vehicles hitting the roads every day. Managing a fleet or even a single vehicle requires meticulous expense tracking, and that's where Webutsav's Cab Expense Tracker Software comes in. Here's why our software is the best choice for your business:
                 </p>
 
                 <ul className="space-y-4">
@@ -575,7 +575,7 @@ export default function CabExpenseTracker() {
                   <li className="flex items-start">
                     <span className="text-red-500 font-bold mr-2">●</span>
                     <p className="text-gray-600 text-lg">
-                      <span className="font-semibold">24/7 Customer Support:</span> CobazTech is committed to providing excellent customer support. Our team is available around the clock to help you with any issues or questions you may have.
+                      <span className="font-semibold">24/7 Customer Support:</span> Webutsav is committed to providing excellent customer support. Our team is available around the clock to help you with any issues or questions you may have.
                     </p>
                   </li>
                 </ul>
@@ -583,7 +583,7 @@ export default function CabExpenseTracker() {
             </div>
           </motion.div>
 
-          {/* Section 6: Getting Started with CobazTech's Cab Expense Tracker Software */}
+          {/* Section 6: Getting Started with Webutsav's Cab Expense Tracker Software */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -605,7 +605,7 @@ export default function CabExpenseTracker() {
                   </motion.div>
                 </div>
                 <h2 className="text-3xl font-bold text-gray-800">
-                  Getting Started with CobazTech's Cab Expense Tracker Software
+                  Getting Started with Webutsav's Cab Expense Tracker Software
                 </h2>
               </div>
 
@@ -896,7 +896,7 @@ export default function CabExpenseTracker() {
                     </div>
                   </div>
                   <p className="text-gray-600">
-                    "Using CobazTech's Cab Expense Tracker Software has revolutionized the way we track our expenses. The real-time data and easy-to-use dashboard have allowed us to make smarter decisions, cut unnecessary costs, and maximize our profits. Highly recommended!"
+                    "Using Webutsav's Cab Expense Tracker Software has revolutionized the way we track our expenses. The real-time data and easy-to-use dashboard have allowed us to make smarter decisions, cut unnecessary costs, and maximize our profits. Highly recommended!"
                   </p>
                 </motion.div>
                 
@@ -961,16 +961,16 @@ export default function CabExpenseTracker() {
                   </motion.div>
                 </div>
                 <h2 className="text-3xl font-bold text-gray-800">
-                  Conclusion: Why Choose Cab Expense Tracker Software by CobazTech?
+                  Conclusion: Why Choose Cab Expense Tracker Software by Webutsav?
                 </h2>
               </div>
 
               <div className="space-y-6">
                 <p className="text-gray-600 text-lg">
-                  If you are a cab driver, fleet manager, or travel agency looking to streamline your financial operations, Cab Expense Tracker Software by CobazTech is the ultimate solution. Designed with ease of use and efficiency in mind, our software helps businesses in India reduce operational costs, increase profitability, and improve overall financial management.
+                  If you are a cab driver, fleet manager, or travel agency looking to streamline your financial operations, Cab Expense Tracker Software by Webutsav is the ultimate solution. Designed with ease of use and efficiency in mind, our software helps businesses in India reduce operational costs, increase profitability, and improve overall financial management.
                 </p>
                 <p className="text-gray-600 text-lg">
-                  From real-time tracking of fuel costs to seamless cloud-based storage, our software is built to support the unique needs of the Indian transportation industry. By making expense management easier, more accurate, and more efficient, CobazTech is empowering businesses to succeed in today's fast-paced world.
+                  From real-time tracking of fuel costs to seamless cloud-based storage, our software is built to support the unique needs of the Indian transportation industry. By making expense management easier, more accurate, and more efficient, Webutsav is empowering businesses to succeed in today's fast-paced world.
                 </p>
                 <motion.div
                   whileHover={{ scale: 1.02 }}
@@ -1023,7 +1023,7 @@ export default function CabExpenseTracker() {
                   {openFAQ === 0 && (
                     <div className="px-5 pb-5">
                       <p className="text-gray-600">
-                        CobazTech's Cab Expense Tracker is a smart tool that helps travel agencies and cab businesses track fuel, tolls, repairs, and other vehicle-related expenses efficiently.
+                        Webutsav's Cab Expense Tracker is a smart tool that helps travel agencies and cab businesses track fuel, tolls, repairs, and other vehicle-related expenses efficiently.
                       </p>
                     </div>
                   )}
@@ -1120,11 +1120,11 @@ export default function CabExpenseTracker() {
                   transition={{ duration: 0.5 }}
                 >
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                    ✨ CobazTech – The Best Cab Expense Tracker Software in India ✨
+                    ✨ Webutsav – The Best Cab Expense Tracker Software in India ✨
                   </h2>
                 </motion.div>
                 <p className="text-white text-lg md:text-xl mb-10 max-w-3xl mx-auto">
-                  CobazTech is a trusted IT company in Pune offering innovative solutions in mobile and web development, digital marketing, and more. Transform your fleet management with our cutting-edge expense tracking software.
+                  Webutsav is a trusted IT company in Pune offering innovative solutions in mobile and web development, digital marketing, and more. Transform your fleet management with our cutting-edge expense tracking software.
                 </p>
                 <motion.button
                   whileHover={{ scale: 1.05, backgroundColor: '#ffffff', color: '#f59e0b' }}

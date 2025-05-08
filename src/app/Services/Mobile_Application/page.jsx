@@ -304,13 +304,13 @@ export default function MobileApplication() {
         {/* Content */}
         <div className="w-full md:w-3/5 max-w-8xl mx-auto py-12">
           <h1 className="text-4xl font-bold text-gray-800">
-          Mobile Application Development Services by cobaztech
+          Mobile Application Development Services by Webutsav
           </h1>
           <p className="text-gray-600 mt-6 text-2xl" >
-          In today's mobile-first world, having a mobile application for your business is more essential than ever. Whether you're looking to enhance customer engagement, streamline operations, or boost sales, a custom mobile app can offer unparalleled benefits. At cobaztech, we specialize in Mobile Application Development services tailored to your unique business needs. As a leading mobile application development company in Pune, we are committed to helping businesses of all sizes create high-quality mobile apps that drive growth and improve user experiences.
+          In today's mobile-first world, having a mobile application for your business is more essential than ever. Whether you're looking to enhance customer engagement, streamline operations, or boost sales, a custom mobile app can offer unparalleled benefits. At Webutsav, we specialize in Mobile Application Development services tailored to your unique business needs. As a leading mobile application development company in Pune, we are committed to helping businesses of all sizes create high-quality mobile apps that drive growth and improve user experiences.
           </p>
           <p className="text-gray-600 mt-6 text-2xl" >
-          From conceptualization to launch, our team of skilled developers ensures your mobile app is designed and developed to meet the highest standards. Whether you're looking for enterprise mobile application development or need a custom app for your local business, cobaztech is here to bring your vision to life.
+          From conceptualization to launch, our team of skilled developers ensures your mobile app is designed and developed to meet the highest standards. Whether you're looking for enterprise mobile application development or need a custom app for your local business, Webutsav is here to bring your vision to life.
           </p>
         </div>
       </div>
@@ -360,7 +360,7 @@ export default function MobileApplication() {
           <h4 className="text-2xl font-semibold mb-12 text-center">Our Expertise in Mobile Application Development</h4>
         </FadeInSection>
         <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto text">
-        At cobaztech, we have extensive expertise in creating custom mobile applications for a variety of industries. Our team has experience working with businesses across various sectors, including retail, healthcare, finance, education, and entertainment.
+        At Webutsav, we have extensive expertise in creating custom mobile applications for a variety of industries. Our team has experience working with businesses across various sectors, including retail, healthcare, finance, education, and entertainment.
 We specialize in building both native mobile applications (iOS and Android) and cross-platform apps that work seamlessly across multiple devices. Additionally, we offer solutions like enterprise mobile application development to help large organizations streamline their operations, improve productivity, and enhance customer service
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -384,7 +384,7 @@ We specialize in building both native mobile applications (iOS and Android) and 
           Frequently Asked Questions (FAQs) About Mobile Application Development
           </h2>
           {/* <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
-          CobazTech provides Google Ads solutions for businesses across various industries
+          Webutsav provides Google Ads solutions for businesses across various industries
         </p> */}
           <div className="max-w-4xl mx-auto">
             {faqs.map((faq, index) => (
@@ -513,10 +513,10 @@ We specialize in building both native mobile applications (iOS and Android) and 
           transition={{ duration: 1 }}
           className="text-4xl font-extrabold text-white tracking-wide mb-8"
         >
-          cobaztech – The Best Mobile Application Development Company in Pune, Maharashtra
+          Webutsav – The Best Mobile Application Development Company in Pune, Maharashtra
         </motion.h2>
         <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto text">
-        cobaztech is a trusted Mobile Application Development company Pune, Maharashtra, offering expert solutions to boost your website rankings. Our team ensures top-notch SEO strategies tailored to your business needs.
+        Webutsav is a trusted Mobile Application Development company Pune, Maharashtra, offering expert solutions to boost your website rankings. Our team ensures top-notch SEO strategies tailored to your business needs.
         </p>
         <motion.button
           whileHover={{ scale: 1.05 }}

@@ -91,7 +91,7 @@ const services = [
   },
   {
     title: "eCommerce Website Development",
-    description: "Take your business online with a robust eCommerce website. CobazTech offers end-to-end eCommerce web development in Pune, Mumbai, and India, ensuring secure payment gateways, smooth navigation, and high conversion rates. We work with Shopify, WooCommerce, Magento, and custom-built platforms.",
+    description: "Take your business online with a robust eCommerce website. Webutsav offers end-to-end eCommerce web development in Pune, Mumbai, and India, ensuring secure payment gateways, smooth navigation, and high conversion rates. We work with Shopify, WooCommerce, Magento, and custom-built platforms.",
   },
   {
     title: "UI/UX Design & Development",
@@ -322,7 +322,7 @@ export default function WebDesigningDevelopment() {
           Web Design and Development Company in Pune | Best Web Development Services in India
           </h1>
           <p className="text-gray-600 mt-6 text-2xl" >
-          In today’s digital-first world, a well-designed, high-performing website is essential for business success. CobazTech, a leading web design and development company in Pune, specializes in creating stunning, SEO-friendly, and user-centric websites that help businesses thrive online.
+          In today’s digital-first world, a well-designed, high-performing website is essential for business success. Webutsav, a leading web design and development company in Pune, specializes in creating stunning, SEO-friendly, and user-centric websites that help businesses thrive online.
           </p>
           <p className="text-gray-600 mt-4 text-2xl" >
           From corporate websites and eCommerce platforms to complex web applications, we craft digital experiences that engage users, enhance brand visibility, and drive conversions. Our expertise in UI/UX design, custom development, and SEO optimization makes us the preferred choice for businesses in Pune, Mumbai, and across India.
@@ -332,7 +332,7 @@ export default function WebDesigningDevelopment() {
 
       <section className="w-full py-12 md:py-24 bg-gray-50">
       <div className="container px-4 md:px-6 mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Why Choose CobazTech for Web Design & Development?</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Why Choose Webutsav for Web Design & Development?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center">
@@ -373,13 +373,13 @@ export default function WebDesigningDevelopment() {
       <div className="max-w-7xl mx-auto">
         <FadeInSection>
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-            Why CobazTech is Among the Best Web Design & Development Companies in Pune & Mumbai?
+            Why Webutsav is Among the Best Web Design & Development Companies in Pune & Mumbai?
           </h2>
         </FadeInSection>
 
         <FadeInSection>
           <p className="text-lg mb-12 text-center max-w-4xl mx-auto">
-            CobazTech stands out as one of the best web design & development companies in Pune, Mumbai, and India,
+            Webutsav stands out as one of the best web design & development companies in Pune, Mumbai, and India,
             delivering high-quality, business-driven web solutions. Our approach focuses on innovation, user experience,
             and search engine optimization to help businesses establish a strong digital footprint.
           </p>
@@ -430,7 +430,7 @@ export default function WebDesigningDevelopment() {
           Industries We Serve with Web Development Solutions in Pune, Mumbai & India
           </h2>
           <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
-          CobazTech caters to a diverse range of industries, providing tailored web development services to meet their unique business needs.
+          Webutsav caters to a diverse range of industries, providing tailored web development services to meet their unique business needs.
         </p>
           <div className="max-w-4xl mx-auto">
             {faqs.map((faq, index) => (
@@ -521,7 +521,7 @@ export default function WebDesigningDevelopment() {
           Get the Best Web Design & Development Services in Pune, Mumbai & Across India
         </motion.h2>
         <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto text">
-        If you're looking for a top web design and development company in Pune, CobazTech is your go-to solution. Our expert team specializes in building high-performance, visually stunning, and SEO-optimized websites tailored to your business needs.
+        If you're looking for a top web design and development company in Pune, Webutsav is your go-to solution. Our expert team specializes in building high-performance, visually stunning, and SEO-optimized websites tailored to your business needs.
         </p>
         <motion.button
           whileHover={{ scale: 1.05 }}

@@ -319,7 +319,7 @@ export default function GoogleAdwords() {
           Google AdWords Company in Pune | Best Google AdWords Agency in India
           </h1>
           <p className="text-gray-600 mt-6 text-2xl" >
-          Are you looking for instant visibility, quality leads, and high ROI for your business? CobazTech, a leading Google AdWords company in Pune, provides expert PPC (Pay-Per-Click) advertising solutions to help businesses maximize their online presence.
+          Are you looking for instant visibility, quality leads, and high ROI for your business? Webutsav, a leading Google AdWords company in Pune, provides expert PPC (Pay-Per-Click) advertising solutions to help businesses maximize their online presence.
           </p>
           <p className="text-gray-600 mt-4 text-2xl" >
           With years of experience in Google Ads campaign management, we create highly targeted ads that drive conversions, website traffic, and brand awareness. Whether you’re a startup, SME, or large enterprise, our Google AdWords agency in Pune ensures every rupee spent delivers measurable results.
@@ -329,7 +329,7 @@ export default function GoogleAdwords() {
 
       <section className="w-full py-12 md:py-24 bg-gray-50">
       <div className="container px-4 md:px-6 mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Why Choose CobazTech as Your Google AdWords Agency in Pune, Mumbai & India?</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Why Choose Webutsav as Your Google AdWords Agency in Pune, Mumbai & India?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center">
@@ -376,7 +376,7 @@ export default function GoogleAdwords() {
 
         <FadeInSection>
           <p className="text-lg mb-12 text-center max-w-4xl mx-auto">
-          CobazTech stands out as a top Google AdWords agency in Pune, Mumbai, and India due to our expertise in PPC advertising, data-driven strategies, and result-oriented approach.
+          Webutsav stands out as a top Google AdWords agency in Pune, Mumbai, and India due to our expertise in PPC advertising, data-driven strategies, and result-oriented approach.
           </p>
         </FadeInSection>
 
@@ -405,7 +405,7 @@ export default function GoogleAdwords() {
           Industries We Serve with Google AdWords in Pune, Mumbai & India
           </h2>
           <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
-          CobazTech provides Google Ads solutions for businesses across various industries
+          Webutsav provides Google Ads solutions for businesses across various industries
         </p>
           <div className="max-w-4xl mx-auto">
             {faqs.map((faq, index) => (
@@ -537,7 +537,7 @@ export default function GoogleAdwords() {
           Get the Best Google AdWords Services in Pune, Mumbai & India
         </motion.h2>
         <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto text">
-        If you’re looking for a top Google AdWords company in Pune, CobazTech is your trusted partner. Our expert Google Ads managers create winning PPC campaigns that maximize leads and sales while keeping costs low.
+        If you’re looking for a top Google AdWords company in Pune, Webutsav is your trusted partner. Our expert Google Ads managers create winning PPC campaigns that maximize leads and sales while keeping costs low.
         </p>
         <motion.button
           whileHover={{ scale: 1.05 }}

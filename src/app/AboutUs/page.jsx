@@ -199,7 +199,7 @@ export default function AboutUs() {
           </div>
         </section>
 
-        {/* About CobazTech section */}
+        {/* About Webutsav section */}
         <div className="w-full bg-gradient-to-b from-yellow-50 to-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
             <div className="w-full md:w-1/2 mb-8 md:mb-0">
@@ -212,10 +212,10 @@ export default function AboutUs() {
               />
             </div>
             <div className="w-full md:w-1/2 md:pl-12">
-              <h2 className="text-4xl font-bold text-amber-500 mb-6">About CobazTech</h2>
-              <h4 className="text-2xl font-semibold mb-4">Welcome to CobazTech – Where Innovation Meets Excellence!</h4>
+              <h2 className="text-4xl font-bold text-amber-500 mb-6">About Webutsav</h2>
+              <h4 className="text-2xl font-semibold mb-4">Welcome to Webutsav – Where Innovation Meets Excellence!</h4>
               <p className="text-gray-700 mb-4 text-lg">
-                CobazTech is a leading digital solutions provider based in Kharadi, Pune. We specialize in App
+                Webutsav is a leading digital solutions provider based in Kharadi, Pune. We specialize in App
                 Development, Web Development, and Digital Marketing. With a proven track record of success, we have
                 successfully completed over 2,000 projects for more than 300 clients, delivering impactful results
                 through our insight-driven strategies.
@@ -287,7 +287,7 @@ export default function AboutUs() {
               
             </motion.h2>
             <p className="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-              Our talented team is the backbone of CobazTech. We encourage adding high-quality photos of our team
+              Our talented team is the backbone of Webutsav. We encourage adding high-quality photos of our team
               members, along with their names and designations, to showcase the expertise behind our success.
             </p>
             <TeamTabs />

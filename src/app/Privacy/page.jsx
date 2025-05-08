@@ -2,13 +2,13 @@ export default function PrivacyPolicy() {
   return (
     <div className="pt-20 pb-10 bg-black">
       <div className="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg text-black">
-        <h1 className="text-4xl font-extrabold mb-6 text-center text-blue-600">Privacy Policy of CobazTech</h1>
+        <h1 className="text-4xl font-extrabold mb-6 text-center text-blue-600">Privacy Policy of Webutsav</h1>
         <p className="text-gray-500 text-center mb-4">Effective Date: 22/02/2025</p>
 
         <section className="mt-6 border-b pb-4">
           <h2 className="text-2xl font-semibold text-gray-800">1. Introduction</h2>
           <p className="text-gray-600 mt-2">
-            Welcome to CobazTech. We respect your privacy and are committed to protecting your personal data. This
+            Welcome to Webutsav. We respect your privacy and are committed to protecting your personal data. This
             Privacy Policy explains how we collect, use, and disclose information when you use our website, services,
             and digital platforms.
           </p>
@@ -77,7 +77,7 @@ export default function PrivacyPolicy() {
         <section className="mt-6 border-b pb-4">
           <h2 className="text-2xl font-semibold text-gray-800">6. Third-Party Services</h2>
           <p className="text-gray-600">
-            CobazTech may integrate third-party services such as payment gateways, analytics tools, and social media
+            Webutsav may integrate third-party services such as payment gateways, analytics tools, and social media
             plugins. These third parties may collect data according to their own privacy policies. We encourage users to
             review the privacy policies of third-party services before engaging with them.
           </p>
@@ -101,13 +101,13 @@ export default function PrivacyPolicy() {
             411014
           </p>
           <p className="text-gray-700">
-            <strong>Email:</strong> Info@Cobaztech.com
+            <strong>Email:</strong> info@webutsav.com
           </p>
           <p className="text-gray-700">
             <strong>Phone:</strong> +91 9145730054
           </p>
           <p className="text-gray-600 mt-4">
-            By using CobazTech's services, you acknowledge that you have read and understood this Privacy Policy.
+            By using Webutsav's services, you acknowledge that you have read and understood this Privacy Policy.
           </p>
         </section>
       </div>

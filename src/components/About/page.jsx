@@ -44,12 +44,12 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-black">
-              About <span className="text-orange-500">CobazTech</span>
+              About <span className="text-orange-500">Webutsav</span>
             </h2>
 
             <div className="space-y-6 text-black -600">
               <p>
-              CobazTech is a leading digital solutions provider based in Kharadi, Pune. We specialize in App
+              Webutsav is a leading digital solutions provider based in Kharadi, Pune. We specialize in App
                 Development, Web Development, and Digital Marketing. With a proven track record of success, we have
                 successfully completed over 2,000 projects for more than 300 clients, delivering impactful results
                 through our insight-driven strategies.

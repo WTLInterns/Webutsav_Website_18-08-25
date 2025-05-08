@@ -28,8 +28,8 @@ const faqs = [
     answer:"Social Media Marketing is essential because it allows businesses to directly engage with their audience, build relationships, and increase visibility. It's a cost-effective way to reach a large, targeted audience and drive sales.",
   },
   {
-    question: "How Can cobaztech Help My Business with Social Media Marketing?",
-    answer:"cobaztech provides comprehensive Social Media Marketing services, including strategy development, content creation, paid advertising, social media monitoring, and community engagement. We help businesses in Pune and Kharadi build a strong social media presence and drive measurable results.",
+    question: "How Can Webutsav Help My Business with Social Media Marketing?",
+    answer:"Webutsav provides comprehensive Social Media Marketing services, including strategy development, content creation, paid advertising, social media monitoring, and community engagement. We help businesses in Pune and Kharadi build a strong social media presence and drive measurable results.",
   },
   {
     question: "What Platforms Should My Business Be On?",
@@ -302,10 +302,10 @@ export default function SocialMediaMarketing() {
         {/* Content */}
         <div className="w-full md:w-3/5 max-w-8xl mx-auto py-12">
           <h1 className="text-4xl font-bold text-gray-800">
-          Social Media Marketing Services by cobaztech
+          Social Media Marketing Services by Webutsav
           </h1>
           <p className="text-gray-600 mt-6 text-2xl" >
-          In today's digital age, businesses can't afford to ignore the power of social media. With billions of active users on platforms like Facebook, Instagram, Twitter, and LinkedIn, Social Media Marketing (SMM) has become one of the most effective ways to connect with potential customers, build brand awareness, and drive traffic to your website. At cobaztech, we specialize in providing Social Media Marketing services that help businesses grow their presence online, engage with their audience, and increase their ROI.
+          In today's digital age, businesses can't afford to ignore the power of social media. With billions of active users on platforms like Facebook, Instagram, Twitter, and LinkedIn, Social Media Marketing (SMM) has become one of the most effective ways to connect with potential customers, build brand awareness, and drive traffic to your website. At Webutsav, we specialize in providing Social Media Marketing services that help businesses grow their presence online, engage with their audience, and increase their ROI.
           </p>
           <p className="text-gray-600 mt-6 text-2xl" >
           As the best social media marketing company in Pune, we provide comprehensive and tailored social media digital marketing strategies that align with your business goals. Whether you're a small business or an established enterprise, we can help you unlock the full potential of social media to drive measurable results
@@ -362,7 +362,7 @@ export default function SocialMediaMarketing() {
 
         <FadeInSection>
           <p className="text-lg mb-12 text-center max-w-4xl mx-auto">
-          At cobaztech, we offer a wide range of Social Media Marketing services tailored to meet the unique needs of each business. Our strategies are designed to enhance engagement, increase visibility, and build a loyal customer base. Here's what we can do for you
+          At Webutsav, we offer a wide range of Social Media Marketing services tailored to meet the unique needs of each business. Our strategies are designed to enhance engagement, increase visibility, and build a loyal customer base. Here's what we can do for you
           </p>
         </FadeInSection>
 
@@ -391,7 +391,7 @@ export default function SocialMediaMarketing() {
           FAQs About Social Media Marketing
           </h2>
           {/* <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
-          CobazTech provides Google Ads solutions for businesses across various industries
+          Webutsav provides Google Ads solutions for businesses across various industries
         </p> */}
           <div className="max-w-4xl mx-auto">
             {faqs.map((faq, index) => (
@@ -520,10 +520,10 @@ export default function SocialMediaMarketing() {
           transition={{ duration: 1 }}
           className="text-4xl font-extrabold text-white tracking-wide mb-8"
         >
-          cobaztech – The Best Social Media Digital Marketing Company in Pune, Maharashtra
+          Webutsav – The Best Social Media Digital Marketing Company in Pune, Maharashtra
         </motion.h2>
         <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto text">
-        cobaztech is a trusted Social Media Digital Marketing company Pune, Maharashtra, offering expert solutions to boost your website rankings. Our team ensures top-notch SEO strategies tailored to your business needs.
+        Webutsav is a trusted Social Media Digital Marketing company Pune, Maharashtra, offering expert solutions to boost your website rankings. Our team ensures top-notch SEO strategies tailored to your business needs.
         </p>
         <motion.button
           whileHover={{ scale: 1.05 }}

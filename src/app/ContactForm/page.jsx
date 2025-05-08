@@ -96,10 +96,10 @@ export default function ContactPage() {
           <div className="bg-white shadow-md p-4 rounded-lg flex items-center space-x-4">
             <span className="text-orange-500">📧</span>
             <a
-              href="mailto:info@cobaztech.com"
+              href="mailto:info@webutsav.com"
               className="text-blue-600 hover:underline transition-all duration-300 transform hover:scale-110 hover:text-blue-800"
             >
-              info@cobaztech.com
+              info@webutsav.com
             </a>
           </div>
           <div className="w-full h-64 rounded-lg overflow-hidden shadow-md">

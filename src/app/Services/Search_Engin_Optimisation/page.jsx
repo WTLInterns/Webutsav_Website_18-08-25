@@ -36,8 +36,8 @@ const faqs = [
     answer:"While basic SEO can be done independently, hiring experts ensures better results and long-term success",
   },
   {
-    question: "Why choose cobaztech for SEO services?",
-    answer:"cobaztech provides customized SEO solutions, ensuring your business achieves top rankings with search engine optimization Pune strategies.",
+    question: "Why choose Webutsav for SEO services?",
+    answer:"Webutsav provides customized SEO solutions, ensuring your business achieves top rankings with search engine optimization Pune strategies.",
   },
   // {
   //   question: "Finance & Banking ",
@@ -404,7 +404,7 @@ export default function SocialMediaMarketing() {
           FAQs About Search Engine Optimization
           </h2>
           {/* <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
-          CobazTech provides Google Ads solutions for businesses across various industries
+          Webutsav provides Google Ads solutions for businesses across various industries
         </p> */}
           <div className="max-w-4xl mx-auto">
             {faqs.map((faq, index) => (
@@ -533,10 +533,10 @@ export default function SocialMediaMarketing() {
           transition={{ duration: 1 }}
           className="text-4xl font-extrabold text-white tracking-wide mb-8"
         >
-          cobaztech – The Best Search Engine Optimization SEO Company in Pune, Maharashtra
+          Webutsav – The Best Search Engine Optimization SEO Company in Pune, Maharashtra
         </motion.h2>
         <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto text">
-        cobaztech is a trusted search engine optimization SEO company Pune, Maharashtra, offering expert solutions to boost your website rankings. Our team ensures top-notch SEO strategies tailored to your business needs.
+        Webutsav is a trusted search engine optimization SEO company Pune, Maharashtra, offering expert solutions to boost your website rankings. Our team ensures top-notch SEO strategies tailored to your business needs.
         </p>
         <motion.button
           whileHover={{ scale: 1.05 }}

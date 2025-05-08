@@ -89,7 +89,7 @@ const services = [
   },
   {
     title: "Shopify, WooCommerce, & Magento Development",
-    description: "CobazTech specializes in Shopify development, WooCommerce customization, and Magento eCommerce solutions, ensuring feature-rich, scalable, and easy-to-manage online stores.",
+    description: "Webutsav specializes in Shopify development, WooCommerce customization, and Magento eCommerce solutions, ensuring feature-rich, scalable, and easy-to-manage online stores.",
   },
   {
     title: "Payment Gateway & API Integration",
@@ -317,7 +317,7 @@ export default function EcommerceWebsiteDesigning() {
           Ecommerce Website Designing Company in Pune| Best Ecommerce Website Development in India
           </h1>
           <p className="text-gray-600 mt-6 text-2xl" >
-          In the fast-evolving digital marketplace, having a professionally designed eCommerce website is essential for business growth. At CobazTech, a trusted eCommerce website designing company in Pune, we specialize in creating stunning, high-performing, and conversion-driven online stores tailored to your business needs.
+          In the fast-evolving digital marketplace, having a professionally designed eCommerce website is essential for business growth. At Webutsav, a trusted eCommerce website designing company in Pune, we specialize in creating stunning, high-performing, and conversion-driven online stores tailored to your business needs.
           </p>
           <p className="text-gray-600 mt-4 text-2xl" >
           Whether you're launching a new eCommerce business or upgrading an existing one, our team provides cutting-edge eCommerce website development solutions that are mobile-friendly, SEO-optimized, and feature-rich.
@@ -327,7 +327,7 @@ export default function EcommerceWebsiteDesigning() {
 
       <section className="w-full py-12 md:py-24 bg-gray-50">
       <div className="container px-4 md:px-6 mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Why Choose CobazTech for Ecommerce Website Development in Pune, Mumbai & India?</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Why Choose Webutsav for Ecommerce Website Development in Pune, Mumbai & India?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center">
@@ -374,7 +374,7 @@ export default function EcommerceWebsiteDesigning() {
 
         <FadeInSection>
           <p className="text-lg mb-12 text-center max-w-4xl mx-auto">
-          CobazTech stands out as one of the best eCommerce website designing companies in Pune, Mumbai, and India due to our expertise in custom website design, advanced technologies, and conversion-focused development.
+          Webutsav stands out as one of the best eCommerce website designing companies in Pune, Mumbai, and India due to our expertise in custom website design, advanced technologies, and conversion-focused development.
           </p>
         </FadeInSection>
 
@@ -423,7 +423,7 @@ export default function EcommerceWebsiteDesigning() {
           Industries We Serve with Ecommerce Website Development in Pune, Mumbai & India
           </h2>
           <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
-          CobazTech provides eCommerce website solutions for businesses across various industries
+          Webutsav provides eCommerce website solutions for businesses across various industries
         </p>
           <div className="max-w-4xl mx-auto">
             {faqs.map((faq, index) => (
@@ -518,7 +518,7 @@ export default function EcommerceWebsiteDesigning() {
           Get the Best Ecommerce Website Designing Services in Pune, Mumbai & India
         </motion.h2>
         <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto text">
-        If you're searching for a top eCommerce website designing company in Pune, CobazTech is your best choice. Our expert developers create scalable, secure, and feature-rich online stores that drive conversions and business growth.
+        If you're searching for a top eCommerce website designing company in Pune, Webutsav is your best choice. Our expert developers create scalable, secure, and feature-rich online stores that drive conversions and business growth.
         </p>
         <motion.button
           whileHover={{ scale: 1.05 }}
