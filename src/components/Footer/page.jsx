@@ -128,7 +128,7 @@ const Footer = () => {
             Privacy Policy
           </Link>
           <Link
-            href="/terms-of-use"
+            href="/"
             className="hover:underline hover:text-blue-600 transition-all duration-300 transform hover:scale-110"
           >
             Terms of Use

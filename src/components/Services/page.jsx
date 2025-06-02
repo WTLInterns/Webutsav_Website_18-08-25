@@ -39,7 +39,7 @@ const services = [
     description:
       "Boost your website's visibility with expert SEO services. Improve rankings, drive organic traffic, and reach your online prospects effectively.",
     color: "bg-emerald-500",
-    link: "/Services/Search_Engine_Optimisation",
+    link: "/Services/Search_Engin_Optimisation",
   },
   {
     id: 5,
