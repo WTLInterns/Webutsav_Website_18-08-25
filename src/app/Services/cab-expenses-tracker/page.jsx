@@ -32,37 +32,37 @@ const sidebarServices = [
   {
     name: "Web Designing & Development",
     icon: <FaGlobe />,
-    href: "/Services/Web_Designing_Development",
+    href: "/Services/web-designing-development",
   },
   {
     name: "Ecommerce Website Designing",
     icon: <FaShoppingCart />,
-    href: "/Services/Ecommerce_Website_Designing",
+    href: "/Services//ecommerce-website-designing",
   },
   {
     name: "Google Adwords",
     icon: <FaGoogle />,
-    href: "/Services/Google_Adwords",
+    href: "/Services/google-adwords",     
   },
   {
     name: "Search Engine Optimisation",
     icon: <FaSearch />,
-    href: "/Services/Search_Engin_Optimisation",
+    href: "/Services/search-engine-optimisation",
   },
   {
     name: "Local SEO",
     icon: <FaMapMarkerAlt />,
-    href: "/Services/Local_Seo",
+    href: "/Services/local-seo",
   },
   {
     name: "Social Media Marketing",
     icon: <FaShareAlt />,
-    href: "/Services/Social_Media_Marketing",
+    href: "/Services/social-media-marketing",
   },
   {
     name: "Mobile Application Development",
     icon: <FaMobileAlt />,
-    href: "/Services/Mobile_Application",
+    href: "/Services/mobile-application",
   },
 ];
 
@@ -98,6 +98,12 @@ export default function CabExpenseTracker() {
   return (
     <>
       <Head>
+      <title>Cab Expenses Tracker | Manage Your Taxi Costs Easily - WebUtsav</title>
+  <meta name="description" content="Track and manage your cab expenses effortlessly with WebUtsav's Cab Expenses Tracker. Simplify your travel budgeting and expense reporting today." />
+  <link rel="canonical" href="https://www.webutsav.com/Services/cab-expenses-tracker" />
+  <meta name="author" content="WebUtsav" />
+  <meta name="keywords" content="cab expenses tracker, taxi cost management, travel expense tracker, cab expense app, WebUtsav cab tools, expense reporting, budget your taxi fares" />
+  <meta name="robots" content="index, follow" />
         {/* Structured Data */}
         <script type="application/ld+json">
           {`
@@ -214,7 +220,7 @@ export default function CabExpenseTracker() {
               transition={{ delay: 0.7, duration: 0.5 }}
               className="text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-tight"
             >
-              Cab Expense Tracker Software
+              Cab Expense Tracker Software   
             </motion.h1>
           </div>
         </motion.div>
@@ -335,9 +341,9 @@ export default function CabExpenseTracker() {
                 >
                   <FaLightbulb className="text-4xl text-green-500" />
                 </motion.div>
-                <h2 className="text-3xl font-bold text-gray-800">
+                <h4 className="text-3xl font-bold text-gray-800">
                   Key Features of Cab Expense Tracker Software
-                </h2>
+                </h4>
               </div>
               {/* Feature 1 */}
               <motion.div 
@@ -345,10 +351,10 @@ export default function CabExpenseTracker() {
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
-                <h3 className="flex items-center space-x-2 text-2xl font-semibold text-gray-800">
+                <h4 className="flex items-center space-x-2 text-2xl font-semibold text-gray-800">
                   <span className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center">1</span>
                   <span>ERP-Based System (Master Admin & Sub-Admins)</span>
-                </h3>
+                </h4>
                 <p className="text-gray-600 text-xl ml-10 border-l-2 pl-4">
                   The Cab Expense Tracker Software offers an ERP-based structure, enabling businesses to assign roles such as Master Admin and Sub-Admins. This system helps streamline management within large travel agencies or fleet management companies by providing different access levels and permissions to various team members. The Master Admin can oversee all operations, while Sub-Admins can manage specific areas such as individual vehicle expenses, drivers, or specific departments.
                 </p>
@@ -359,10 +365,10 @@ export default function CabExpenseTracker() {
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
-                <h3 className="flex items-center space-x-2 text-2xl font-semibold text-gray-800">
+                <h4 className="flex items-center space-x-2 text-2xl font-semibold text-gray-800">
                   <span className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center">2</span>
                   <span>Expense Logging for Fuel, Tolls, and Maintenance</span>
-                </h3>
+                </h4>
                 <p className="text-gray-600 text-xl ml-10 border-l-2 pl-4">
                   Our software offers detailed expense logging capabilities. With Cab Expense Tracker Software, you can effortlessly log your daily expenses, such as:
                 </p>
@@ -384,10 +390,10 @@ export default function CabExpenseTracker() {
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
-                <h3 className="flex items-center space-x-2 text-2xl font-semibold text-gray-800">
+                <h4 className="flex items-center space-x-2 text-2xl font-semibold text-gray-800">
                   <span className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center">3</span>
                   <span>Live Image Uploads for Accurate Record-Keeping</span>
-                </h3>
+                </h4>
                 <p className="text-gray-600 text-xl ml-10 border-l-2 pl-4">
                   To ensure the accuracy of your records, the software allows users to upload live images. Ideal for documenting:
                 </p>
@@ -409,10 +415,10 @@ export default function CabExpenseTracker() {
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
-                <h3 className="flex items-center space-x-2 text-2xl font-semibold text-gray-800">
+                <h4 className="flex items-center space-x-2 text-2xl font-semibold text-gray-800">
                   <span className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center">4</span>
                   <span>Cloud-Based Storage & Real-Time Sync</span>
-                </h3>
+                </h4>
                 <p className="text-gray-600 text-xl ml-10 border-l-2 pl-4">
                   The software operates on cloud storage, ensuring data is securely synced in real time across all devices.
                 </p>
@@ -423,10 +429,10 @@ export default function CabExpenseTracker() {
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
-                <h3 className="flex items-center space-x-2 text-2xl font-semibold text-gray-800">
+                <h4 className="flex items-center space-x-2 text-2xl font-semibold text-gray-800">
                   <span className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center">5</span>
                   <span>User-Friendly Dashboard</span>
-                </h3>
+                </h4>
                 <p className="text-gray-600 text-xl ml-10 border-l-2 pl-4">
                   Monitor all your data at a glance with an easy-to-use dashboard, making financial operations simple and efficient.
                 </p>
@@ -455,9 +461,9 @@ export default function CabExpenseTracker() {
                     <AlertTriangle className="text-3xl text-purple-500" />
                   </motion.div>
                 </div>
-                <h2 className="text-3xl font-bold text-gray-800">
+                <h4 className="text-3xl font-bold text-gray-800">
                   How Cab Expense Tracker Software Helps in Expense Reduction
-                </h2>
+                </h4>
               </div>
 
               <div className="space-y-2">
@@ -468,10 +474,10 @@ export default function CabExpenseTracker() {
                 <div className="space-y-8">
                   {/* Area 1 */}
                   <div>
-                    <h3 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
+                    <h4 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
                       <span className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">1</span>
                       Fuel Management
-                    </h3>
+                    </h4>
                     <div className="ml-11">
                       <p className="text-gray-600 text-lg">
                         One of the largest costs for any cab or travel agency is fuel. The software allows you to track fuel consumption, identify trends, and optimize fuel efficiency. By keeping an eye on fuel costs and consumption patterns, you can make informed decisions to reduce wastage and save money.
@@ -481,10 +487,10 @@ export default function CabExpenseTracker() {
 
                   {/* Area 2 */}
                   <div>
-                    <h3 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
+                    <h4 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
                       <span className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">2</span>
                       Maintenance Cost Optimization
-                    </h3>
+                    </h4>
                     <div className="ml-11">
                       <p className="text-gray-600 text-lg">
                         Regular maintenance is essential for the longevity of your vehicles, but without proper tracking, maintenance can become an unpredictable and costly expense. The software lets you schedule regular maintenance and track repairs, ensuring your vehicles run efficiently and reducing the need for costly emergency fixes.
@@ -494,10 +500,10 @@ export default function CabExpenseTracker() {
 
                   {/* Area 3 */}
                   <div>
-                    <h3 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
+                    <h4 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
                       <span className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
                       Reduction of Overhead Costs
-                    </h3>
+                    </h4>
                     <div className="ml-11">
                       <p className="text-gray-600 text-lg">
                         By having an accurate and real-time overview of your expenses, you can identify areas where your money is being spent unnecessarily. Whether it's over-spending on fuel, tolls, or maintenance, the Cab Expense Tracker Software helps you cut down on costs, improving your bottom line.
@@ -507,10 +513,10 @@ export default function CabExpenseTracker() {
 
                   {/* Area 4 */}
                   <div>
-                    <h3 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
+                    <h4 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
                       <span className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">4</span>
                       Insurance Claims Management
-                    </h3>
+                    </h4>
                     <div className="ml-11">
                       <p className="text-gray-600 text-lg">
                         The software also helps track incidents and damage reports, which can be used for insurance claims. By keeping accurate records of every expense and incident, you streamline the process of making claims, ensuring faster reimbursements and minimizing losses.
@@ -543,9 +549,9 @@ export default function CabExpenseTracker() {
                     <UserCheck className="text-3xl text-red-500" />
                   </motion.div>
                 </div>
-                <h2 className="text-3xl font-bold text-gray-800">
+                <h4 className="text-3xl font-bold text-gray-800">
                   Why Choose Cab Expense Tracker Software in India?
-                </h2>
+                </h4>
               </div>
 
               <div className="space-y-4">
@@ -604,9 +610,9 @@ export default function CabExpenseTracker() {
                     <FaRocket className="text-3xl text-indigo-500" />
                   </motion.div>
                 </div>
-                <h2 className="text-3xl font-bold text-gray-800">
+                <h4 className="text-3xl font-bold text-gray-800">
                   Getting Started with Webutsav's Cab Expense Tracker Software
-                </h2>
+                </h4>
               </div>
 
               <div className="space-y-4">
@@ -617,10 +623,10 @@ export default function CabExpenseTracker() {
                 <div className="space-y-8">
                   {/* Step 1 */}
                   <div>
-                    <h3 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
+                    <h4 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
                       <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">1</span>
                       Sign Up for an Account
-                    </h3>
+                    </h4>
                     <div className="ml-11">
                       <p className="text-gray-600 text-lg">
                         Visit our website and sign up for the Cab Expense Tracker Software. Choose the plan that works best for your needs.
@@ -630,10 +636,10 @@ export default function CabExpenseTracker() {
 
                   {/* Step 2 */}
                   <div>
-                    <h3 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
+                    <h4 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
                       <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">2</span>
                       Set Up Your Fleet
-                    </h3>
+                    </h4>
                     <div className="ml-11">
                       <p className="text-gray-600 text-lg">
                         Enter your vehicle details and categorize your expenses. This step ensures that your data is organized from day one.
@@ -643,10 +649,10 @@ export default function CabExpenseTracker() {
 
                   {/* Step 3 */}
                   <div>
-                    <h3 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
+                    <h4 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
                       <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
                       Start Logging Expenses
-                    </h3>
+                    </h4>
                     <div className="ml-11">
                       <p className="text-gray-600 text-lg">
                         Begin recording your daily expenses right from the start. Whether it's fuel, maintenance, or tolls, everything can be logged quickly and efficiently.
@@ -656,10 +662,10 @@ export default function CabExpenseTracker() {
 
                   {/* Step 4 */}
                   <div>
-                    <h3 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
+                    <h4 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
                       <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">4</span>
                       Review Reports and Optimize
-                    </h3>
+                    </h4>
                     <div className="ml-11">
                       <p className="text-gray-600 text-lg">
                         Use the detailed reports to analyze your spending. This helps you identify areas for cost reduction and optimize your operations.
@@ -692,9 +698,9 @@ export default function CabExpenseTracker() {
                     <FaLightbulb className="text-3xl text-teal-500" />
                   </motion.div>
                 </div>
-                <h2 className="text-3xl font-bold text-gray-800">
+                <h4 className="text-3xl font-bold text-gray-800">
                   Advanced Features of Cab Expense Tracker Software
-                </h2>
+                </h4>
               </div>
 
               <div className="space-y-2">
@@ -705,10 +711,10 @@ export default function CabExpenseTracker() {
                 <div className="space-y-8">
                   {/* Feature 1 */}
                   <div>
-                    <h3 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
+                    <h4 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
                       <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">1</span>
                       Real-Time Notifications and Alerts
-                    </h3>
+                    </h4>
                     <div className="ml-11">
                       <p className="text-gray-600 text-lg">
                         Stay on top of all expenses with custom notifications. You can set up alerts for when fuel prices change, maintenance schedules are due, or if a certain expense threshold is reached. These notifications keep you informed and ensure that you never miss critical events in your fleet's operation.
@@ -718,10 +724,10 @@ export default function CabExpenseTracker() {
 
                   {/* Feature 2 */}
                   <div>
-                    <h3 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
+                    <h4 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
                       <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">2</span>
                       Data Backup and Security
-                    </h3>
+                    </h4>
                     <div className="ml-11">
                       <p className="text-gray-600 text-lg">
                         We understand that the security of your business data is of utmost importance. With Cab Expense Tracker Software, all data is securely backed up in the cloud, ensuring that even in the case of unexpected disruptions, your records are protected. Our encryption protocols keep your information secure, ensuring that your sensitive financial data is never at risk.
@@ -731,10 +737,10 @@ export default function CabExpenseTracker() {
 
                   {/* Feature 3 */}
                   <div>
-                    <h3 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
+                    <h4 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
                       <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
                       Cost Allocation and Budgeting Tools
-                    </h3>
+                    </h4>
                     <div className="ml-11">
                       <p className="text-gray-600 text-lg">
                         Budgeting is key to keeping expenses in check. Our software provides tools to allocate costs across multiple categories. Whether it's operational costs for different vehicles or specific departments within your travel agency, you can easily create and track budgets for different aspects of your fleet's operations. This allows businesses to operate within set financial limits while tracking all expenses.
@@ -744,10 +750,10 @@ export default function CabExpenseTracker() {
 
                   {/* Feature 4 */}
                   <div>
-                    <h3 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
+                    <h4 className="flex items-center text-2xl font-semibold text-gray-800 mb-4">
                       <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">4</span>
                       Mobile Access for On-the-Go Operations
-                    </h3>
+                    </h4>
                     <div className="ml-11">
                       <p className="text-gray-600 text-lg">
                         As a cab driver or fleet manager, you need to have your financial data at your fingertips wherever you go. Our Cab Expense Tracker Software in India is mobile-friendly, allowing users to track expenses, upload images, and review reports right from their smartphones. No matter where your business takes you, you'll have access to everything you need to stay on top of your finances.
@@ -780,9 +786,9 @@ export default function CabExpenseTracker() {
                     <UserCheck className="text-3xl text-orange-500" />
                   </motion.div>
                 </div>
-                <h2 className="text-3xl font-bold text-gray-800">
+                <h4 className="text-3xl font-bold text-gray-800">
                   The Benefits of Using Cab Expense Tracker Software in India
-                </h2>
+                </h4>
               </div>
 
               <div className="space-y-2">
@@ -796,7 +802,7 @@ export default function CabExpenseTracker() {
                       <FaChartPie className="text-sm" />
                     </span>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">Comprehensive Financial Overview</h3>
+                      <h4 className="text-xl font-semibold text-gray-800 mb-2">Comprehensive Financial Overview</h4>
                       <p className="text-gray-600 text-lg">
                         Gain a 360-degree view of your financial operations. The software generates detailed reports that break down all your expenses, helping you make informed decisions that will reduce costs and increase profitability.
                       </p>
@@ -808,7 +814,7 @@ export default function CabExpenseTracker() {
                       <FaMoneyBillWave className="text-sm" />
                     </span>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">Improve Cash Flow Management</h3>
+                      <h4 className="text-xl font-semibold text-gray-800 mb-2">Improve Cash Flow Management</h4>
                       <p className="text-gray-600 text-lg">
                         Managing cash flow effectively is crucial for business success. By using the Cab Expense Tracker Software to monitor income and expenses in real-time, you can ensure your business stays financially healthy and profitable.
                       </p>
@@ -820,7 +826,7 @@ export default function CabExpenseTracker() {
                       <FaClock className="text-sm" />
                     </span>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">Save Time and Reduce Manual Work</h3>
+                      <h4 className="text-xl font-semibold text-gray-800 mb-2">Save Time and Reduce Manual Work</h4>
                       <p className="text-gray-600 text-lg">
                         Say goodbye to manually updating spreadsheets and keeping physical receipts. Our software automates the expense tracking process, saving time and reducing errors. This allows you to focus more on what matters—growing your business.
                       </p>
@@ -832,7 +838,7 @@ export default function CabExpenseTracker() {
                       <FaTools className="text-sm" />
                     </span>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">Maximize Operational Efficiency</h3>
+                      <h4 className="text-xl font-semibold text-gray-800 mb-2">Maximize Operational Efficiency</h4>
                       <p className="text-gray-600 text-lg">
                         Track everything from fuel to repairs to minimize unexpected costs. Having a well-maintained fleet with transparent expense tracking leads to more efficient operations, reduced downtime, and higher profitability.
                       </p>
@@ -844,7 +850,7 @@ export default function CabExpenseTracker() {
                       <FaChartLine className="text-sm" />
                     </span>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">Scalability for Growing Businesses</h3>
+                      <h4 className="text-xl font-semibold text-gray-800 mb-2">Scalability for Growing Businesses</h4>
                       <p className="text-gray-600 text-lg">
                         As your fleet or agency grows, so do your operational needs. Our software is scalable, meaning it can grow with your business. Whether you're managing a handful of vehicles or a large fleet, the Cab Expense Tracker Software can handle it.
                       </p>
@@ -876,9 +882,9 @@ export default function CabExpenseTracker() {
                     <FaUsers className="text-3xl text-pink-500" />
                   </motion.div>
                 </div>
-                <h2 className="text-3xl font-bold text-gray-800">
+                <h4 className="text-3xl font-bold text-gray-800">
                   Client Testimonials: What Our Users Are Saying
-                </h2>
+                </h4>
               </div>
 
               <div className="grid md:grid-cols-3 gap-6">
@@ -891,7 +897,7 @@ export default function CabExpenseTracker() {
                       <span className="text-pink-600 font-bold text-lg">R</span>
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg">Ravi</h3>
+                      <h4 className="font-bold text-lg">Ravi</h4>
                       <p className="text-sm text-gray-500">Fleet Manager – Mumbai</p>
                     </div>
                   </div>
@@ -909,7 +915,7 @@ export default function CabExpenseTracker() {
                       <span className="text-pink-600 font-bold text-lg">A</span>
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg">Amit</h3>
+                      <h4 className="font-bold text-lg">Amit</h4>
                       <p className="text-sm text-gray-500">Independent Driver – Pune</p>
                     </div>
                   </div>
@@ -927,7 +933,7 @@ export default function CabExpenseTracker() {
                       <span className="text-pink-600 font-bold text-lg">P</span>
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg">Priya</h3>
+                      <h4 className="font-bold text-lg">Priya</h4>
                       <p className="text-sm text-gray-500">Travel Agency Owner – Pune</p>
                     </div>
                   </div>
@@ -960,9 +966,9 @@ export default function CabExpenseTracker() {
                     <CheckCircle className="text-3xl text-blue-600" />
                   </motion.div>
                 </div>
-                <h2 className="text-3xl font-bold text-gray-800">
+                <h4 className="text-3xl font-bold text-gray-800">
                   Conclusion: Why Choose Cab Expense Tracker Software by Webutsav?
-                </h2>
+                </h4>
               </div>
 
               <div className="space-y-6">
@@ -1005,9 +1011,9 @@ export default function CabExpenseTracker() {
                     <FaPlus className="text-3xl text-gray-700" />
                   </motion.div>
                 </div>
-                <h2 className="text-3xl font-bold text-gray-800">
+                <h4 className="text-3xl font-bold text-gray-800">
                   Frequently Asked Questions (FAQs)
-                </h2>
+                </h4>
               </div>
 
               <div className="space-y-6">
@@ -1119,9 +1125,9 @@ export default function CabExpenseTracker() {
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  <h4 className="text-3xl md:text-4xl font-bold text-white mb-6">
                     ✨ Webutsav – The Best Cab Expense Tracker Software in India ✨
-                  </h2>
+                  </h4>
                 </motion.div>
                 <p className="text-white text-lg md:text-xl mb-10 max-w-3xl mx-auto">
                   Webutsav is a trusted IT company in Pune offering innovative solutions in mobile and web development, digital marketing, and more. Transform your fleet management with our cutting-edge expense tracking software.

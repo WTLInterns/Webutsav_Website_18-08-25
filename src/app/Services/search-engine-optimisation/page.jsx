@@ -17,32 +17,33 @@ import {
 import { motion ,useInView,useAnimation} from "framer-motion";
 import { Globe, LineChart, Laptop, Lock, Rocket, Code, Wrench,CheckCircle } from "lucide-react"
 import Link from "next/link";
+import Head from "next/head";
 
 const faqs = [
   {
-    question: "What is Local SEO?",
-    answer:"Local SEO is the process of optimizing your website to rank higher in local search results. It involves optimizing your Google My Business profile, using local keywords, and gaining local backlinks",
+    question: "How long does SEO take to show results?",
+    answer:"SEO is a long-term strategy. Results typically start appearing within 3-6 months, depending on competition and industry.",
   },
   {
-    question: "Why is Local SEO Important for My Business?",
-    answer:"Local SEO helps businesses attract nearby customers who are searching for products or services in their area. It enhances your online visibility, drives relevant traffic, and increases sales opportunities.",
+    question: "Why is SEO important for businesses?",
+    answer:"SEO improves online visibility, attracts organic traffic, and increases brand credibility, leading to higher revenue.",
   },
   {
-    question: "How Does Local SEO Differ from Regular SEO?",
-    answer:"While regular SEO focuses on general rankings, local SEO targets location-specific searches. Local SEO strategies include optimizing for local keywords, improving your GMB profile, and building local citations.",
+    question: "What are the latest SEO trends?",
+    answer:"Some recent SEO trends include AI-driven content, voice search optimization, and Core Web Vitals improvement.",
   },
   {
-    question: "How Can Webutsav Help Improve My Local SEO?",
-    answer:"Webutsav offers expert local SEO optimization services to help you improve your online presence, rank higher in local searches, and attract more local customers through customized SEO strategies.",
+    question: "Can I do SEO myself?",
+    answer:"While basic SEO can be done independently, hiring experts ensures better results and long-term success",
   },
   {
-    question: "How Long Does It Take to See Results from Local SEO?",
-    answer:"Local SEO is a long-term strategy, and it can take 3 to 6 months to start seeing significant results. However, by consistently following best practices, you can expect gradual improvements in rankings and visibility.",
+    question: "Why choose Webutsav for SEO services?",
+    answer:"Webutsav provides customized SEO solutions, ensuring your business achieves top rankings with search engine optimization Pune strategies.",
   },
-  {
-    question: "Can Webutsav Help with Local SEO for Businesses Outside Pune?",
-    answer:"Yes! Webutsav offers local SEO services for businesses across India, focusing on specific cities and regions to help you achieve local search visibility.",
-  },
+  // {
+  //   question: "Finance & Banking ",
+  //   answer:"Get high-value leads for loans, insurance, and investment services.",
+  // },
 ];
 
 const features = [
@@ -80,33 +81,24 @@ const features = [
 
 const services = [
   {
-    title: "Google My Business (GMB) Profile:",
-    description: "A fully optimized GMB profile is crucial for local SEO. This includes accurate business information (name, address, phone number), adding images, responding to reviews, and using relevant keywords.",
+    title: "On-Page SEO",
+    description: "Keyword Optimization,Meta Tags & Descriptions,Header Tags (H1-H6) Optimization,Internal Linking,URL Structure Optimization",
   },
   {
-    title: "Local Keywords",
-    description: "Incorporating location-based keywords into your website’s content, meta descriptions, and titles helps you rank for searches relevant to your geographic area.",
+    title: "Off-Page SEO",
+    description: "Link Building,Social Media Engagement,Guest Blogging,Influencer Outreach",
   },
   {
-    title: "NAP Consistency",
-    description: "NAP stands for Name, Address, and Phone number. Ensuring that your NAP information is consistent across your website and local directories is essential for local SEO.",
-  },
-  {
-    title: "Backlinks from Local Sources",
-    description: " Gaining backlinks from local websites, such as local news outlets, directories, and businesses, can improve your website's authority in local searches.",
-  },
-  {
-    title: "Online Reviews and Ratings",
-    description: "Positive customer reviews on platforms like Google, Yelp, and Facebook can significantly boost your local rankings",
+    title: "Technical SEO",
+    description: "Website Speed Optimization,Mobile Friendliness,XML Sitemap Submission,Secure HTTPS Implementation",
   },
 ]
 
 const expertiseItems = [
-  { title: "1. Optimize Your Google My Business Profile: Ensure your GMB profile is fully optimized with accurate business details, regular posts, and customer engagement through reviews and Q&A."},
-  { title: "2. Create Local Content: Develop content that resonates with your local audience, such as blog posts about local events, news, or topics relevant to your industry in the local area."},
-  { title: "3 .Mobile Optimization: With the increasing use of mobile devices for local searches, make sure your website is mobile-friendly and loads quickly."},
-  { title: "4.Local Citations and Directory Listings: Get listed on local directories and citation sites such as Yelp, Yellow Pages, and industry-specific directories."},
-  { title: "5.Engage with Local Customers: Respond to customer reviews and interact with your local community on social media and forums to increase brand visibility and engagement."},
+  { title: "Expertise in SEO strategies"},
+  { title: "Proven track record of successful projects"},
+  { title: "Transparent reporting and ethical practices"},
+  { title: "Customized SEO solutions"},
 ]
 
 const technologies = [
@@ -186,7 +178,7 @@ const FadeInSection = ({ children }) => {
   )
 }
 
-export default function LocalSEO() {
+export default function SocialMediaMarketing() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -205,6 +197,19 @@ export default function LocalSEO() {
   };
 
   return (
+    <>
+      <Head>
+        <title>Search Engine Optimization (SEO) Services in India | WebUtsav</title>
+        <meta name="description" content="Professional SEO services by WebUtsav. We provide comprehensive search engine optimization including on-page, off-page, and technical SEO to improve your website's visibility and rankings." />
+        <link rel="canonical" href="https://www.webutsav.com/services/search-engine-optimization" />
+        <meta name="author" content="WebUtsav" />
+        <meta name="keywords" content="SEO services India, search engine optimization, on-page SEO, off-page SEO, technical SEO, SEO company Pune, digital marketing SEO, WebUtsav SEO, local SEO, eCommerce SEO" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Search Engine Optimization (SEO) Services in India | WebUtsav" />
+        <meta property="og:description" content="Professional SEO services by WebUtsav. We provide comprehensive search engine optimization to improve your website's visibility and rankings." />
+        <meta property="og:url" content="https://www.webutsav.com/services/search-engine-optimization" />
+        <meta property="og:type" content="website" />
+      </Head>
     
     <div className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
@@ -236,7 +241,7 @@ export default function LocalSEO() {
             transition={{ delay: 0.7, duration: 0.5 }}
             className="text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-tight"
           >
-            Local SEO
+            Search Engine Optimization (SEO) – The Key to Online Success
           </motion.h1>
         </div>
       </motion.div>
@@ -306,100 +311,97 @@ export default function LocalSEO() {
         {/* Content */}
         <div className="w-full md:w-3/5 max-w-8xl mx-auto py-12">
           <h1 className="text-4xl font-bold text-gray-800">
-          Local SEO Services by Webutsav
+          What is Search Engine Optimization (SEO)?
           </h1>
           <p className="text-gray-600 mt-6 text-2xl" >
-          As businesses continue to adapt to the digital landscape, local SEO has become an essential strategy for improving online visibility, driving targeted traffic, and boosting growth. At Webutsav, we offer Local SEO services designed to help your business rank higher in local search results, ensuring that you stand out in your specific geographic area. Our Local SEO optimization services are tailored to meet the needs of businesses in Pune and beyond, providing a competitive edge in a highly localized market.
+          Search Engine Optimization (SEO) is crucial for businesses looking to enhance their online presence and reach a wider audience. By optimizing both on-page elements, like content, meta tags, and images, and off-page factors, such as backlinks and social signals, SEO helps websites rank higher in search engine results pages (SERPs). The process also involves technical SEO, which ensures that a website is easy to navigate, loads quickly, and is mobile-friendly. All these factors work together to make a website more visible, user-friendly, and attractive to search engines, driving more relevant traffic and improving the chances of conversion.
           </p>
           <h2 className="text-4xl font-bold text-gray-800 pt-2">
-          What is Local SEO?
+          Importance of Search Engine Optimization
           </h2>
           <p className="text-gray-600 mt-6 text-2xl" >
-          Local SEO is the practice of optimizing a website to increase its visibility in local search results on search engines like Google, Bing, and Yahoo. While traditional SEO focuses on improving a website's ranking across all search results, local SEO specifically targets geographic-based searches. This makes it an ideal strategy for businesses that rely on local customers, such as restaurants, service providers, and retail stores.Local SEO helps you appear in searches that include location-specific terms, such as "restaurants near me," "plumbers in Pune," or "best digital marketing company in Kharadi." Optimizing for local search involves targeting local keywords, improving your Google My Business (GMB) profile, and gaining local backlinks, among other tactics.
+          In today's digital era, online presence is crucial for businesses. Implementing search engine optimization techniques ensures better visibility, higher credibility, and increased conversions. A well-optimized website attracts more visitors, leading to higher revenue.
           </p>
         </div>
       </div>
 
-      {/* <section className="w-full py-12 md:py-24 bg-gray-50">
-      <div className="container px-4 md:px-6 mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Search Engine Optimization Techniques</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
-              <feature.icon className="w-12 h-12 mb-4 text-blue-600" />
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section> */}
-
-    <section className="w-full py-10 bg-gradient-to-br from-blue-900 to-indigo-900 text-white">
-      <div className="container px-4 mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Local SEO Ranking Factors</h2>
-        <p className="text-center text-blue-200 mb-8 max-w-2xl mx-auto">
-        Achieving a high ranking in local search results requires focusing on specific ranking factors unique to local SEO. Some of the key local SEO ranking factors include:
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div key={index} className="group">
-              <div className="flex items-baseline mb-2">
-                <span className="text-2xl font-bold text-blue-400 mr-2 group-hover:text-blue-300 transition-colors">
-                  {(index + 1).toString().padStart(2, "0")}
-                </span>
-                <h3 className="text-lg font-semibold group-hover:text-blue-300 transition-colors">{service.title}</h3>
-              </div>
-              <p className="text-sm text-blue-100 ml-8 border-l border-blue-700 pl-3 py-1 group-hover:border-blue-500 transition-colors">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <FadeInSection>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-          Local SEO Strategy for Success
-          </h2>
-        </FadeInSection>
-
-        <FadeInSection>
-          <p className="text-lg mb-12 text-center max-w-4xl mx-auto">
-          To implement an effective local SEO strategy, businesses must focus on several key areas
+      <section className="w-full py-10 bg-gradient-to-br from-blue-900 to-indigo-900 text-white">
+        <div className="container px-4 mx-auto">
+          <h4 className="text-3xl md:text-4xl font-bold text-center mb-6">Search Engine Optimization Techniques</h4>
+          <p className="text-center text-blue-200 mb-8 max-w-2xl mx-auto">
+          To achieve top rankings, businesses must use effective search engine optimization techniques, including
           </p>
-        </FadeInSection>
-
-        {/* <FadeInSection>
-          <h4 className="text-2xl font-semibold mb-12 text-center">Finding the right search engine optimization company in Pune is crucial for business success. Key factors to consider:</h4>
-        </FadeInSection> */}
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {expertiseItems.map((item, index) => (
-            <FadeInSection key={index}>
-              <div className="border-l-4 border-blue-500 pl-6 py-4 h-full">
-                <h4 className="text-xl font-semibold mb-3">{item.title}</h4>
-                <p className="text-gray-600">{item.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <div key={index} className="group">
+                <div className="flex items-baseline mb-2">
+                  <span className="text-2xl font-bold text-blue-400 mr-2 group-hover:text-blue-300 transition-colors">
+                    {(index + 1).toString().padStart(2, "0")}
+                  </span>
+                  <h4 className="text-lg font-semibold group-hover:text-blue-300 transition-colors">{service.title}</h4>
+                </div>
+                <p className="text-sm text-blue-100 ml-8 border-l border-blue-700 pl-3 py-1 group-hover:border-blue-500 transition-colors">
+                  {service.description}
+                </p>
               </div>
-            </FadeInSection>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <FadeInSection>
+            <h4 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+            Search Engine Optimization Pune – Why It Matters?
+            </h4>
+          </FadeInSection>
+
+          <FadeInSection>
+            <p className="text-lg mb-12 text-center max-w-4xl mx-auto">
+            Pune is a growing hub for businesses, and competition is fierce. Implementing effective search engine optimization in Pune helps local businesses rank higher, attract customers, and grow revenue.
+            </p>
+          </FadeInSection>
+          <FadeInSection>
+            <h4 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+            Search Engine Optimization Kharadi – A Thriving Market
+            </h4>
+          </FadeInSection>
+
+          <FadeInSection>
+            <p className="text-lg mb-12 text-center max-w-4xl mx-auto">
+            Kharadi, Pune, is home to numerous IT companies and startups. A strategic search engine optimization Kharadi approach ensures businesses stand out in this competitive landscape, reaching potential customers effectively.
+            </p>
+          </FadeInSection>
+
+          <FadeInSection>
+            <h4 className="text-2xl font-semibold mb-12 text-center">Choosing the Best Search Engine Optimization Company in Pune</h4>
+          </FadeInSection>
+
+          <FadeInSection>
+            <h4 className="text-2xl font-semibold mb-12 text-center">Finding the right search engine optimization company in Pune is crucial for business success. Key factors to consider:</h4>
+          </FadeInSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {expertiseItems.map((item, index) => (
+              <FadeInSection key={index}>
+                <div className="border-l-4 border-blue-500 pl-6 py-4 h-full">
+                  <h4 className="text-xl font-semibold mb-3">{item.title}</h4>
+                  <p className="text-gray-600">{item.description}</p>
+                </div>
+              </FadeInSection>
+            ))}
+          </div>
+        </div>
+      </section>
 
 
       {/* FAQ Section */}
       <div className="container mx-auto py-2 px-4 md:px-6 lg:px-8">
         <div className="p-6 mt-12">
-          <h2 className="text-4xl font-bold text-gray-800 text-center mb-6">
-          FAQs on Local SEO Services
-          </h2>
-          {/* <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
-          Webutsav provides Google Ads solutions for businesses across various industries
-        </p> */}
+          <h4 className="text-4xl font-bold text-gray-800 text-center mb-6">
+          FAQs About Search Engine Optimization
+          </h4>
           <div className="max-w-4xl mx-auto">
             {faqs.map((faq, index) => (
               <div key={index} className="mb-4 border-b pb-4">
@@ -419,49 +421,6 @@ export default function LocalSEO() {
         </div>
       </div>
 
-      {/* <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Google Ads vs. SEO – Which One is Right for You?</h1>
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse">
-          <thead>
-            <tr className="bg-gray-100">
-              <th className="border p-3 text-left">Feature</th>
-              <th className="border p-3 text-center">Google AdWords</th>
-              <th className="border p-3 text-center">SEO</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border p-3 font-semibold">Time to See Results</td>
-              <td className="border p-3 text-center">Immediate</td>
-              <td className="border p-3 text-center">Takes time (3-6 months)</td>
-            </tr>
-            <tr className="bg-gray-50">
-              <td className="border p-3 font-semibold">Cost</td>
-              <td className="border p-3 text-center">Pay for Clicks</td>
-              <td className="border p-3 text-center">Free (Organic)</td>
-            </tr>
-            <tr>
-              <td className="border p-3 font-semibold">Traffic Control</td>
-              <td className="border p-3 text-center">Target specific audience & keywords</td>
-              <td className="border p-3 text-center">Depends on search engine ranking</td>
-            </tr>
-            <tr className="bg-gray-50">
-              <td className="border p-3 font-semibold">Best For</td>
-              <td className="border p-3 text-center">Instant traffic & lead generation</td>
-              <td className="border p-3 text-center">Long-term organic growth</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div className="mt-8 bg-blue-50 p-6 rounded-lg">
-        <h2 className="text-xl font-semibold mb-4">Best Strategy</h2>
-        <p className="text-lg">
-          A combination of Google Ads & SEO ensures short-term results (PPC) and long-term growth (SEO).
-        </p>
-      </div>
-    </div> */}
-      
       {/* Work Process Section */}
       <div className="flex flex-col items-center justify-center py-4 px-8 bg-gradient-to-b from-white to-yellow-50">
         <motion.h2
@@ -470,7 +429,7 @@ export default function LocalSEO() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-           Local SEO Checklist
+          Choosing the Best Search Engine Optimization Company in Pune
         </motion.h2>
         <motion.p
           className="text-gray-600 text-center mb-12 max-w-3xl text-lg"
@@ -478,7 +437,7 @@ export default function LocalSEO() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          A well-organized local SEO checklist is vital for ensuring that all aspects of your local SEO strategy are covered. Here’s a helpful checklist for local businesses looking to optimize their local SEO efforts:
+          Finding the right search engine optimization company in Pune is crucial for business success. Key factors to consider
         </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[" ", "", " ", " "].map(
@@ -508,12 +467,12 @@ export default function LocalSEO() {
                 >
                   {`0${index + 1}`}
                 </div>
-                <h3 className="text-2xl font-bold mb-2"></h3>
+                <h4 className="text-2xl font-bold mb-2"></h4>
                 <p className="text-gray-600">
-                  {index === 0 && "Claim and optimize your Google My Business listing."}
-                  {index === 1 && "Ensure that your NAP (name, address, phone number) is consistent across all online platforms."}
-                  {index === 2 && "Optimize your website with local keywords relevant to your services and location"}
-                  {index === 3 && "Obtain backlinks from local sources such as local blogs, news outlets, and business associations."}
+                  {index === 0 && "Expertise in SEO strategies"}
+                  {index === 1 && "Proven track record of successful projects"}
+                  {index === 2 && "Transparent reporting and ethical practices"}
+                  {index === 3 && "Customized SEO solutions"}
                 </p>
               </motion.div>
             )
@@ -527,19 +486,20 @@ export default function LocalSEO() {
           transition={{ duration: 1 }}
           className="text-4xl font-extrabold text-white tracking-wide mb-8"
         >
-          Webutsav – The Best Search Local SEO Company in Pune, Maharashtra
+          Webutsav – The Best Search Engine Optimization SEO Company in Pune, Maharashtra
         </motion.h2>
         <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto text">
-        Webutsav is a trusted Local search engine optimization SEO company Pune, Maharashtra, offering expert solutions to boost your website rankings. Our team ensures top-notch SEO strategies tailored to your business needs.
+        Webutsav is a trusted search engine optimization SEO company Pune, Maharashtra, offering expert solutions to boost your website rankings. Our team ensures top-notch SEO strategies tailored to your business needs.
         </p>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:bg-gray-100 transition-all duration-300 focus:outline-none"
         >
-          🚀 Want to Grow Your Business with Local SEO ? 🚀
+          🚀 Want to Grow Your Business with SEO ? 🚀
         </motion.button>
       </div>
     </div>
+    </>
   );
 }

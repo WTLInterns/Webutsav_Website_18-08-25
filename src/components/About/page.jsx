@@ -25,8 +25,8 @@ const About = () => {
               <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-orange-200 rounded-lg" />
               <div className="relative rounded-lg overflow-hidden bg-white shadow-xl">
                 <Image
-                  src="/team.png"
-                  alt="Team celebrating success"
+                  src="/Webutsav_ITTeam.JPG"
+                  alt="Webutsav IT Team"
                   width={600}
                   height={400}
                   className="w-full h-[400px] object-cover"
@@ -58,7 +58,7 @@ const About = () => {
 
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block mt-4">
               <Link
-                href="/AboutUs"
+                href="/aboutus"
                 className="inline-flex px-8 py-3 border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-md transition-all duration-300"
               >
                 More About Us

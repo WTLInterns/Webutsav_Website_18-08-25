@@ -12,7 +12,7 @@ const services = [
     description:
       "Expert web design and development services that deliver stunning, responsive, innovative, and user-focused solutions for your business.",
     color: "bg-blue-500",
-    link: "/Services/Web_Designing_Development",
+    link: "/Services/web-designing-development",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const services = [
     description:
       "Professional ecommerce website design and development services. Create a seamless shopping experience with custom, responsive, and user-friendly solutions.",
     color: "bg-green-500",
-    link: "/Services/Ecommerce_Website_Designing",
+    link: "/Services//ecommerce-website-designing",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const services = [
     description:
       "Maximize your online reach with targeted Google Ads campaigns. Drive traffic, increase conversions, and grow your business with expert PPC management.",
     color: "bg-red-500",
-    link: "/Services/Google_Adwords",
+    link: "/Services/google-adwords",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const services = [
     description:
       "Boost your website's visibility with expert SEO services. Improve rankings, drive organic traffic, and reach your online prospects effectively.",
     color: "bg-emerald-500",
-    link: "/Services/Search_Engin_Optimisation",
+    link: "/Services/search-engine-optimisation",
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const services = [
     description:
       "Amplify your online presence with strategic social media marketing. Engage your audience, boost awareness, and drive conversions through social channels.",
     color: "bg-indigo-500",
-    link: "/Services/Social_Media_Marketing",
+    link: "/Services/social-media-marketing",
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const services = [
     description:
       "Enhance your local visibility with targeted local SEO strategies. Reach nearby customers and grow your business with optimized local search results.",
     color: "bg-pink-500",
-    link: "/Services/Local_Seo",
+    link: "/Services/local-seo",
   },
   {
     id: 7,
@@ -66,7 +66,7 @@ const services = [
     description:
       "Create powerful, user-friendly mobile applications for iOS and Android. Enhance your business with custom mobile solutions tailored to your needs.",
     color: "bg-purple-500",
-    link: "/Services/Mobile_Application",
+    link: "/Services/mobile-application",
   },
 ]
 

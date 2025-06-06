@@ -10,7 +10,7 @@ export default function HomePage() {
     <div className="min-h-20 p-6 bg-white text-black">
       {/* Connect With Us Section */}
       <div className="text-center mb-8">
-        <h2 className="text-2xl font-bold">Connect with us</h2>
+        <h1 className="text-4xl font-bold">Connect with us</h1>
       </div>
       
       {/* Image Gallery (Responsive Column Layout) */}
@@ -21,7 +21,7 @@ export default function HomePage() {
         transition={{ duration: 0.5 }}
       >
         {[1, 2, 3, 4, 5].map((num) => (
-          <InstagramCard key={num} image={`/Blog/insta${num}.webp`} />
+          <InstagramCard key={num} image={`/blog/insta${num}.webp`} />
         ))}
       </motion.div>
       

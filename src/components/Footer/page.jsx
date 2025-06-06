@@ -11,10 +11,10 @@ const Footer = () => {
         <div className="transform transition-all hover:scale-105">
           <Link href="/">
             <Image
-              src="/cobaztech.png"
-              alt="Digimedia Solutions"
+              src="/Webutsav__3.png"
+              alt="WebUtsav Logo"
               width={150}
-              height={50}
+              height={100}
               className="transition-transform duration-300 transform hover:scale-110"
             />
           </Link>
@@ -50,14 +50,14 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2">
             {[
-              { name: "Web Designing & Development", href: "/Services/Web_Designing_Development" },
-              { name: "Ecommerce Website Designing", href: "/Services/Ecommerce_Website_Designing" },
-              { name: "Google Adwords", href: "/Services/Google_Adwords" },
-              { name: "Search Engine Optimisation", href: "/Services/Search_Engin_Optimisation" },
-              { name: "Local SEO", href: "/Services/Local_Seo" },
-              { name: "Social Media Marketing", href: "/Services/Social_Media_Marketing" },
-              { name: "Mobile Application Development", href: "/Services/Mobile_Application" },
-              { name: "Cab Expenses Tracker", href: "/Services/Cab_Expenses_Tracker" }
+              { name: "Web Designing & Development", href: "/Services/web-designing-development" },
+              { name: "Ecommerce Website Designing", href: "/Services//ecommerce-website-designing" },
+              { name: "Google Adwords", href: "/Services/google-adwords" },
+              { name: "Search Engine Optimisation", href: "/Services/search-engine-optimisation" },
+              { name: "Local SEO", href: "/Services/local-seo" },
+              { name: "Social Media Marketing", href: "/Services/social-media-marketing" },
+              { name: "Mobile Application Development", href: "/Services/mobile-application" },
+              { name: "Cab Expenses Tracker", href: "/Services/cab-expenses-tracker" }
             ].map((item) => (
               <li key={item.name}>
                 <Link
@@ -78,9 +78,9 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2">
             {[
-              { name: "About Us", href: "/AboutUs" },
-              { name: "Blogs", href: "/Blog" },
-              { name: "Contact Us", href: "/Contact" },
+              { name: "About Us", href: "/aboutus" },
+              { name: "Blogs", href: "/blog" },
+              { name: "Contact Us", href: "/contact" },
             ].map((nav) => (
               <li key={nav.name}>
                 <Link
@@ -122,7 +122,7 @@ const Footer = () => {
         <p>&copy; {new Date().getFullYear()} Webutsav | All rights reserved.</p>
         <div className="flex space-x-4 mt-2 md:mt-0">
           <Link
-            href="/Privacy"
+            href="/privacy"
             className="hover:underline hover:text-blue-600 transition-all duration-300 transform hover:scale-110"
           >
             Privacy Policy

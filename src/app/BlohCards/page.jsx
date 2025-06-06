@@ -10,19 +10,19 @@ const articles = [
     title: 'The Importance of IT Solutions for M...',
     date: '04 Sep 2024',
     views: '3.4K',
-    image: '/Blog/coming-soon-label.webp', 
+    image: '/blog/coming-soon-label.webp', 
   },
   {
     title: 'How Content Syndication Can Boost...',
     date: '10 Oct 2024',
     views: '3.4K',
-    image: '/Blog/coming-soon-label.webp',
+    image: '/blog/coming-soon-label.webp',
   },
   {
     title: 'Maximize Visibility with Effective Loc...',
     date: '10 Oct 2024',
     views: '3.4K',
-    image: '/Blog/coming-soon-label.webp',
+    image: '/blog/coming-soon-label.webp',
   },
 ];
 

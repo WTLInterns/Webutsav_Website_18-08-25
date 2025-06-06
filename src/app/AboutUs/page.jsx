@@ -5,6 +5,7 @@ import gsap from "gsap"
 import { motion, useScroll, useTransform, useAnimation } from "framer-motion"
 import { FaUserTie, FaCogs, FaCheckCircle, FaLightbulb } from "react-icons/fa"
 import { useInView } from "react-intersection-observer"
+import Head from "next/head"
 
 const FeatureItem = ({ icon, title, description }) => (
   <motion.div
@@ -110,8 +111,8 @@ export default function AboutUs() {
     }
   }, [])
 
-  const pText = "— About Us"
-  const h2Text = "Transforming Businesses With Innovative Technology!"
+  const h2Text = "— About Us"    
+  const pText = "Transforming Businesses With Innovative Technology!"
 
   useEffect(() => {
     let animationFrame
@@ -142,6 +143,15 @@ export default function AboutUs() {
 
   return (
     <>
+      <Head>
+        <title>About Us | WebUtsav - Digital Excellence with Purpose</title>
+        <meta name="description" content="Learn about WebUtsav's journey, values, and team. We are passionate about empowering businesses with innovative digital marketing and web development solutions." />
+        <link rel="canonical" href="https://www.webutsav.com/aboutus" />
+        <meta name="author" content="WebUtsav" />
+        <meta name="keywords" content="about WebUtsav, digital marketing agency India, web development company, our mission, our team, marketing experts, WebUtsav story" />
+        <meta name="robots" content="index, follow" />
+      </Head>
+    
       <div className="overflow-hidden">
         <motion.div
           className="relative w-full h-[70vh] flex items-center px-4 sm:px-8 lg:px-16"
@@ -161,13 +171,13 @@ export default function AboutUs() {
                 </span>
               ))}
             </p>
-            <h3 ref={h2Ref} className="text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
+            <h4 ref={h2Ref} className="text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
               {h2Text.split(" ").map((word, index) => (
                 <span key={index} className="inline-block mr-2">
                   {word}
                 </span>
               ))}
-            </h3>
+            </h4>
           </div>
         </motion.div>
 
@@ -179,7 +189,7 @@ export default function AboutUs() {
               transition={{ duration: 0.5 }}
               className="text-4xl font-bold text-center text-gray-800 mb-16"
             >
-              Our Achievements
+              <h1>Our Achievements</h1>
             </motion.h2>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -242,7 +252,7 @@ export default function AboutUs() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <h2 className="text-3xl font-bold mb-4">OUR VISION</h2>
+              <h4 className="text-3xl font-bold mb-4">OUR VISION</h4>
               <p className="text-lg">
                 📌 To be the leading provider of digital solutions, empowering businesses through innovation and
                 cutting-edge technology.
@@ -253,7 +263,7 @@ export default function AboutUs() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <h2 className="text-3xl font-bold mb-4">OUR MISSION</h2>
+              <h4 className="text-3xl font-bold mb-4">OUR MISSION</h4>
               <p className="text-lg">
                 🚀 Helping businesses reach their full potential through comprehensive digital strategies and
                 personalized solutions.
@@ -264,7 +274,7 @@ export default function AboutUs() {
 
         <section className="py-20 px-6 bg-gradient-to-br from-yellow-50 to-white">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">Why Choose Us?</h2>
+            <h4 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">Why Choose Us?</h4>
             <p className="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto">
               💡 We provide insights-based solutions to help businesses grow effectively in the digital landscape.
             </p>
@@ -303,14 +313,6 @@ export default function AboutUs() {
         >
           Work Process
         </motion.h4>
-        {/* <motion.h2
-          className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 text-center"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          Our Google AdWords Process
-        </motion.h2> */}
         <motion.p
           className="text-gray-600 text-center mb-12 max-w-3xl text-lg"
           initial={{ opacity: 0, y: -20 }}
@@ -345,7 +347,7 @@ export default function AboutUs() {
                 >
                   {`0${index + 1}`}
                 </div>
-                <h3 className="text-2xl font-bold mb-2">{step}</h3>
+                <h4 className="text-2xl font-bold mb-2">{step}</h4>
                 <p className="text-gray-600">
                   {index === 0 && "📍Analyze market trends and client needs."}
                   {index === 1 && "📍Brainstorm innovative solutions."}
@@ -571,7 +573,7 @@ function TeamTabs() {
                 />
               </div>
             </div>
-            <h3 className="text-lg font-semibold mb-1 transition-colors duration-300 hover:text-gray-700">{member.name}</h3>
+            <h4 className="text-lg font-semibold mb-1 transition-colors duration-300 hover:text-gray-700">{member.name}</h4>
             <p className="text-sm text-gray-600">{member.role}</p>
           </div>
         ))}
@@ -579,4 +581,3 @@ function TeamTabs() {
     </div>
   )
 }
-

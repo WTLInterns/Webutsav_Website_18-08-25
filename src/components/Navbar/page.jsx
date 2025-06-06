@@ -51,7 +51,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <Image src="/cobaztech.png" alt="Logo" width={400} height={150} className="h-20 w-auto" />
+            <Image src="/Webutsav__3.png" alt="WebUtsav Logo" width={300} height={200} className="h-20 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -59,7 +59,7 @@ const Navbar = () => {
             <NavLink href="/" isScrolled={isScrolled}>
               Home
             </NavLink>
-            <NavLink href="/AboutUs" isScrolled={isScrolled}>
+            <NavLink href="/aboutus" isScrolled={isScrolled}>
               About Us
             </NavLink>
             <div
@@ -78,10 +78,10 @@ const Navbar = () => {
               </button>
               <AnimatePresence>{isServicesOpen && <ServicesDropdown />}</AnimatePresence>
             </div>
-            <NavLink href="/Blog" isScrolled={isScrolled}>
+            <NavLink href="/blog" isScrolled={isScrolled}>
               Blog
             </NavLink>
-            <NavLink href="/Contact" isScrolled={isScrolled}>
+            <NavLink href="/contact" isScrolled={isScrolled}>
               Contact
             </NavLink>
           </div>
@@ -119,7 +119,7 @@ const Navbar = () => {
                 <MobileNavLink href="/" onClick={closeMobileMenu}>
                   Home
                 </MobileNavLink>
-                <MobileNavLink href="/AboutUs" onClick={closeMobileMenu}>
+                <MobileNavLink href="/aboutus" onClick={closeMobileMenu}>
                   About Us
                 </MobileNavLink>
                 <div>
@@ -136,10 +136,10 @@ const Navbar = () => {
                     {isServicesOpen && <MobileServicesDropdown closeMobileMenu={closeMobileMenu} />}
                   </AnimatePresence>
                 </div>
-                <MobileNavLink href="/Blog" onClick={closeMobileMenu}>
+                <MobileNavLink href="/blog" onClick={closeMobileMenu}>
                   Blog
                 </MobileNavLink>
-                <MobileNavLink href="/Contact" onClick={closeMobileMenu}>
+                <MobileNavLink href="/contact" onClick={closeMobileMenu}>
                   Contact
                 </MobileNavLink>
                 {/* <Link
@@ -189,15 +189,14 @@ const ServicesDropdown = () => (
     className="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
   >
     <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-      <DropdownLink href="/Services/Web_Designing_Development">Web Designing & Development</DropdownLink>
-      <DropdownLink href="/Services/Ecommerce_Website_Designing">Ecommerce Website Designing</DropdownLink>
-      <DropdownLink href="/Services/Google_Adwords">Google Adwords</DropdownLink>
-      <DropdownLink href="/Services/Search_Engin_Optimisation">Search Engine Optimisation</DropdownLink>
-      <DropdownLink href="/Services/Local_Seo">Local SEO</DropdownLink>
-      <DropdownLink href="/Services/Social_Media_Marketing">Social Media Marketing</DropdownLink>
-      <DropdownLink href="/Services/Mobile_Application">Mobile Application Development</DropdownLink>
-      <DropdownLink href="/Services/Cab_Expenses_Tracker">Cab Expenses Tracker
-      </DropdownLink>
+      <DropdownLink href="/Services/web-designing-development">Web Designing & Development</DropdownLink>
+      <DropdownLink href="/Services//ecommerce-website-designing">Ecommerce Website Designing</DropdownLink>
+      <DropdownLink href="/Services/google-adwords">Google Adwords</DropdownLink>
+      <DropdownLink href="/Services/search-engine-optimisation">Search Engine Optimization</DropdownLink>
+      <DropdownLink href="/Services/local-seo">Local SEO</DropdownLink>
+      <DropdownLink href="/Services/social-media-marketing">Social Media Marketing</DropdownLink>
+      <DropdownLink href="/Services/mobile-application">Mobile Application Development</DropdownLink>
+      <DropdownLink href="/Services/cab-expenses-tracker">Cab Expenses Tracker</DropdownLink>
     </div>
   </motion.div>
 )
@@ -210,29 +209,29 @@ const MobileServicesDropdown = ({ closeMobileMenu }) => (
     transition={{ duration: 0.2 }}
     className="pl-4 overflow-hidden"
   >
-    <MobileNavLink href="/Services/Web_Designing_Development" onClick={closeMobileMenu}>
+    <MobileNavLink href="/Services/web-designing-development" onClick={closeMobileMenu}>
       Web Designing & Development
     </MobileNavLink>
-    <MobileNavLink href="/Services/Ecommerce_Website_Designing" onClick={closeMobileMenu}>
+    <MobileNavLink href="/Services//ecommerce-website-designing" onClick={closeMobileMenu}>
       Ecommerce Website Designing
     </MobileNavLink>
-    <MobileNavLink href="/Services/Google_Adwords" onClick={closeMobileMenu}>
+    <MobileNavLink href="/Services/google-adwords" onClick={closeMobileMenu}>
       Google Adwords
     </MobileNavLink>
-    <MobileNavLink href="/Services/Search_Engin_Optimisation" onClick={closeMobileMenu}>
-      Search Engine Optimisation
+    <MobileNavLink href="/Services/search-engine-optimisation" onClick={closeMobileMenu}>
+      Search Engine Optimization
     </MobileNavLink>
-    <MobileNavLink href="/Services/Local_Seo" onClick={closeMobileMenu}>
+    <MobileNavLink href="/Services/local-seo" onClick={closeMobileMenu}>
       Local SEO
     </MobileNavLink>
-    <MobileNavLink href="/Services/Social_Media_Marketing" onClick={closeMobileMenu}>
+    <MobileNavLink href="/Services/social-media-marketing" onClick={closeMobileMenu}>
       Social Media Marketing
     </MobileNavLink>
-    <MobileNavLink href="/Services/Mobile_Application" onClick={closeMobileMenu}>
-    Mobile Application Development
+    <MobileNavLink href="/Services/mobile-application" onClick={closeMobileMenu}>
+      Mobile Application Development
     </MobileNavLink>
-    <MobileNavLink href="/Services/car-expenses" onClick={closeMobileMenu}>
-    Cab Expenses Tracker
+    <MobileNavLink href="/Services/cab-expenses-tracker" onClick={closeMobileMenu}>
+      Cab Expenses Tracker
     </MobileNavLink>
   </motion.div>
 )

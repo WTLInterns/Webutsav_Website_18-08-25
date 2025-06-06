@@ -9,7 +9,7 @@ import toast, { Toaster } from "react-hot-toast"
 // Initialize EmailJS
 emailjs.init("hlwUJ7O3Zyky0ZpCL") // Replace with your actual EmailJS user ID
 
-export default function ContactPage() {
+export default function ContactForm() {
   const formRef = useRef(null)
   const contactRef = useRef(null)
 
