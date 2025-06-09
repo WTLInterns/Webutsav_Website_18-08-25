@@ -124,7 +124,7 @@ export default function PrivacyPolicy() {
       <Head>
         <title>Privacy Policy | WebUtsav - Your Data, Our Responsibility</title>
         <meta name="description" content="Read WebUtsav's Privacy Policy to understand how we collect, use, and protect your personal information across our digital services." />
-        <link rel="canonical" href="https://www.webutsav.com/privacy" />
+        <link rel="canonical" href="https://webutsav.com/privacy" />
         <meta name="author" content="WebUtsav" />
         <meta name="keywords" content="WebUtsav privacy policy, data protection, user information, website privacy, personal data use, secure digital services, privacy commitment" />
         <meta name="robots" content="index, follow" />

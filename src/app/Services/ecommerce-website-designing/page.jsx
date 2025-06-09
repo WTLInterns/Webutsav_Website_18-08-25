@@ -216,13 +216,13 @@ export default function EcommerceWebsiteDesigning() {
       <Head>
         <title>Ecommerce Website Designing | Build Your Online Store with WebUtsav</title>
         <meta name="description" content="Professional eCommerce website design services by WebUtsav. We create high-converting online stores with seamless checkout, mobile responsiveness, and secure payment integration." />
-        <link rel="canonical" href="https://www.webutsav.com/services/ecommerce-website-designing" />
+        <link rel="canonical" href="https://webutsav.com/services/ecommerce-website-designing" />
         <meta name="author" content="WebUtsav" />
         <meta name="keywords" content="ecommerce website designing, online store design, ecommerce development, WebUtsav ecommerce services, online shop website, ecommerce solutions, shopify development, woocommerce, magento" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Ecommerce Website Designing | Build Your Online Store with WebUtsav" />
         <meta property="og:description" content="Professional eCommerce website design services by WebUtsav. We create high-converting online stores with seamless checkout and mobile responsiveness." />
-        <meta property="og:url" content="https://www.webutsav.com/services/ecommerce-website-designing" />
+        <meta property="og:url" content="https://webutsav.com/services/ecommerce-website-designing" />
         <meta property="og:type" content="website" />
       </Head>
 

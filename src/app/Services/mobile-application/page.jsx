@@ -202,7 +202,7 @@ export default function MobileApplication() {
       <Head>
         <title>Mobile App Development | Android & iOS Solutions by WebUtsav</title>
         <meta name="description" content="Get scalable and secure mobile applications developed for Android and iOS with WebUtsav. We turn your ideas into high-performing mobile apps." />
-        <link rel="canonical" href="https://www.webutsav.com/Services/mobile-application" />
+        <link rel="canonical" href="https://webutsav.com/Services/mobile-application" />
         <meta name="author" content="WebUtsav" />
         <meta name="keywords" content="mobile app development, android app, iOS app, app development company, mobile application services, custom app solutions, WebUtsav apps" />
         <meta name="robots" content="index, follow" />     

@@ -221,13 +221,13 @@ export default function WebDesigningDevelopment() {
       <Head>
         <title>Web Designing & Development | Custom Websites by WebUtsav</title>
         <meta name="description" content="Professional web design and development services by WebUtsav. We create responsive, SEO-friendly websites that drive results. Custom solutions for businesses of all sizes." />
-        <link rel="canonical" href="https://www.webutsav.com/services/web-designing-development" />
+        <link rel="canonical" href="https://webutsav.com/services/web-designing-development" />
         <meta name="author" content="WebUtsav" />
         <meta name="keywords" content="web design, website development, responsive websites, custom web solutions, WebUtsav web design, front-end and back-end development, UI UX design" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Web Designing & Development | Custom Websites by WebUtsav" />
         <meta property="og:description" content="Professional web design and development services by WebUtsav. We create responsive, SEO-friendly websites that drive results." />
-        <meta property="og:url" content="https://www.webutsav.com/services/web-designing-development" />
+        <meta property="og:url" content="https://webutsav.com/services/web-designing-development" />
         <meta property="og:type" content="website" />
       </Head>
     

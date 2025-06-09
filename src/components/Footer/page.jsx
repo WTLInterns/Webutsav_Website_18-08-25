@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image"
 import { MdEmail, MdPhone } from "react-icons/md"
+import { FaWhatsapp } from "react-icons/fa"
 import Link from "next/link"
 
 const Footer = () => {
@@ -11,10 +12,10 @@ const Footer = () => {
         <div className="transform transition-all hover:scale-105">
           <Link href="/">
             <Image
-              src="/Webutsav__3.png"
+              src="/Webutsav__3.png"   
               alt="WebUtsav Logo"
-              width={150}
-              height={100}
+              width={250}
+              height={150}
               className="transition-transform duration-300 transform hover:scale-110"
             />
           </Link>
@@ -135,7 +136,31 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-    </footer>
+    {/* Floating WhatsApp Button */}
+    <a
+      href="https://wa.me/918766922792"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        position: "fixed",
+        bottom: "24px",
+        left: "24px",
+        zIndex: 1000,
+        background: "#25D366",
+        borderRadius: "50%",
+        width: "56px",
+        height: "56px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+        textDecoration: "none"
+      }}
+      aria-label="Chat with us on WhatsApp"
+    >
+      <FaWhatsapp color="white" size={32} />
+    </a>
+  </footer>
   )
 }
 

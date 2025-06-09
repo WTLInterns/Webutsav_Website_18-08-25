@@ -755,7 +755,7 @@ export default function LocalSEO() {
       <Head>
         <title>Local SEO Services | Boost Local Visibility with WebUtsav</title>
         <meta name="description" content="Improve your local search rankings with WebUtsav's expert Local SEO services. Get found by nearby customers through Google Maps, listings, and citations." />
-        <link rel="canonical" href="https://www.webutsav.com/Services/local-seo" />
+        <link rel="canonical" href="https://webutsav.com/Services/local-seo" />
         <meta name="author" content="WebUtsav" />
         <meta name="keywords" content="local SEO services, local business SEO, Google My Business optimization, local listings, SEO for local businesses, WebUtsav SEO company" />
         <meta name="robots" content="index, follow" />

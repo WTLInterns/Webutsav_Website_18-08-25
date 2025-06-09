@@ -201,13 +201,13 @@ export default function SocialMediaMarketing() {
       <Head>
         <title>Search Engine Optimization (SEO) Services in India | WebUtsav</title>
         <meta name="description" content="Professional SEO services by WebUtsav. We provide comprehensive search engine optimization including on-page, off-page, and technical SEO to improve your website's visibility and rankings." />
-        <link rel="canonical" href="https://www.webutsav.com/services/search-engine-optimization" />
+        <link rel="canonical" href="https://webutsav.com/services/search-engine-optimization" />
         <meta name="author" content="WebUtsav" />
         <meta name="keywords" content="SEO services India, search engine optimization, on-page SEO, off-page SEO, technical SEO, SEO company Pune, digital marketing SEO, WebUtsav SEO, local SEO, eCommerce SEO" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Search Engine Optimization (SEO) Services in India | WebUtsav" />
         <meta property="og:description" content="Professional SEO services by WebUtsav. We provide comprehensive search engine optimization to improve your website's visibility and rankings." />
-        <meta property="og:url" content="https://www.webutsav.com/services/search-engine-optimization" />
+        <meta property="og:url" content="https://webutsav.com/services/search-engine-optimization" />
         <meta property="og:type" content="website" />
       </Head>
     

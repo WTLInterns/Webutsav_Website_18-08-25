@@ -46,7 +46,7 @@ const Hero = () => {
           name="description"
           content="WebUtsav is your trusted digital partner offering SEO, website design, social media marketing, and mobile app development services across India."
         />
-        <link rel="canonical" href="https://www.webutsav.com/" />
+        <link rel="canonical" href="https://webutsav.com/" />
         <meta name="author" content="WebUtsav" />
         <meta
           name="keywords"

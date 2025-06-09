@@ -146,7 +146,7 @@ export default function AboutUs() {
       <Head>
         <title>About Us | WebUtsav - Digital Excellence with Purpose</title>
         <meta name="description" content="Learn about WebUtsav's journey, values, and team. We are passionate about empowering businesses with innovative digital marketing and web development solutions." />
-        <link rel="canonical" href="https://www.webutsav.com/aboutus" />
+        <link rel="canonical" href="https://webutsav.com/aboutus" />
         <meta name="author" content="WebUtsav" />
         <meta name="keywords" content="about WebUtsav, digital marketing agency India, web development company, our mission, our team, marketing experts, WebUtsav story" />
         <meta name="robots" content="index, follow" />
@@ -183,14 +183,14 @@ export default function AboutUs() {
 
         <section className="py-20 bg-gradient-to-br from-amber-50 to-amber-100">
           <div className="max-w-6xl mx-auto px-6">
-            <motion.h2
+            <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="text-4xl font-bold text-center text-gray-800 mb-16"
             >
-              <h1>Our Achievements</h1>
-            </motion.h2>
+              Our Achievements
+            </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
@@ -432,16 +432,16 @@ function TeamTabs() {
       role: "Digital Marketing Executive",
       image: "/Team/PurvaBavale.jpg",
     },
-    {
-      name: "Tejas Kamath",
-      role: "Digital Marketing Executive",
-      image: "/Team/Tejas.JPG",
-    },
-    {
-      name: "Avinash Kumbharkar",
-      role: "Digital Marketing Executive",
-      image: "/Team/AvinashKumbharkar.JPG",
-    },
+    // {
+    //   name: "Tejas Kamath",
+    //   role: "Digital Marketing Executive",
+    //   image: "/Team/Tejas.JPG",
+    // },
+    // {
+    //   name: "Avinash Kumbharkar",
+    //   role: "Digital Marketing Executive",
+    //   image: "/Team/AvinashKumbharkar.JPG",
+    // },
     {
       name: "Ankita Wankhade",
       role: "Digital Marketing Executive",
@@ -470,15 +470,20 @@ function TeamTabs() {
       role: "Full Stack Developer(Java)",
       image: "/Team/Jaywant.JPG",
     },
+    // {
+    //   name: "Hrushikesh Kapse",
+    //   role: "Full Stack Developer(MERN)",
+    //   image: "/Team/Hrushikesh.JPG",
+    // },
+    // {
+    //   name: "Rohit More",
+    //   role: "Full Stack Developer(Java)",
+    //   image: "/Team/Rohit.JPG",
+    // },
     {
-      name: "Hrushikesh Kapse",
-      role: "Full Stack Developer(MERN)",
-      image: "/Team/Hrushikesh.JPG",
-    },
-    {
-      name: "Rohit More",
+      name: "Gautam Rana",
       role: "Full Stack Developer(Java)",
-      image: "/Team/Rohit.JPG",
+      image: "/Team/Gautam.JPG",
     },
     {
       name: "Arbaj Shaikh",
@@ -495,16 +500,12 @@ function TeamTabs() {
       role: "Full Stack Developer(MERN)",
       image: "/Team/Aakib.JPG",
     },
-    {
-      name: "Imran Shaikh",
-      role: "React Native Developer",
-      image: "/Team/Imran.JPG",
-    },
-    {
-      name: "Gautam Rana",
-      role: "Full Stack Developer(Java)",
-      image: "/Team/Gautam.JPG",
-    },
+    // {
+    //   name: "Imran Shaikh",
+    //   role: "React Native Developer",
+    //   image: "/Team/Imran.JPG",
+    // },
+    
     {
       name: "Abhishekh Pattekari",
       role: "React Native Developer",
@@ -515,11 +516,11 @@ function TeamTabs() {
       role: "Full Stack Developer(MERN)",
       image: "/Team/Manasi.JPG",
     },
-    {
-      name: "Pradnya Waghmare",
-      role: "Full Stack Developer(MERN)",
-      image: "/Team/Pradnya.jpg",
-    },
+    // {
+    //   name: "Pradnya Waghmare",
+    //   role: "Full Stack Developer(MERN)",
+    //   image: "/Team/Pradnya.jpg",
+    // },
     {
       name: "Hina Shaikh",
       role: "Full Stack Developer(MERN)",

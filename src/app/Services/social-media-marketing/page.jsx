@@ -206,7 +206,7 @@ export default function SocialMediaMarketing() {
       <Head>
         <title>Social Media Marketing Services | WebUtsav</title>
         <meta name="description" content="Boost your brand's visibility and engagement with WebUtsav's expert social media marketing services. We manage Facebook, Instagram, LinkedIn & more." />
-        <link rel="canonical" href="https://www.webutsav.com/Services/social-media-marketing" />
+        <link rel="canonical" href="https://webutsav.com/Services/social-media-marketing" />
         <meta name="author" content="WebUtsav" />
         <meta name="keywords" content="social media marketing, SMM services, Instagram marketing, Facebook ads, LinkedIn marketing, digital branding, WebUtsav social media agency" />
         <meta name="robots" content="index, follow" />

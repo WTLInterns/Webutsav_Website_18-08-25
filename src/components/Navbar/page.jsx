@@ -51,7 +51,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <Image src="/Webutsav__3.png" alt="WebUtsav Logo" width={300} height={200} className="h-20 w-auto" />
+            <Image 
+              src="/Webutsav__3.png" 
+              alt="WebUtsav Logo" 
+              width={350} 
+              height={250} 
+              className="h-24 w-auto transform transition-transform duration-300 hover:scale-105" 
+            />
           </Link>
 
           {/* Desktop Navigation */}

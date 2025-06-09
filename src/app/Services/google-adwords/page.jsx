@@ -218,7 +218,7 @@ export default function GoogleAdwords() {
       <Head>
         <title>Google Ads Management Services | Boost ROI with WebUtsav</title>
         <meta name="description" content="Maximize your business visibility with targeted Google Ads campaigns. WebUtsav helps you drive traffic, leads, and conversions through expert PPC strategies." />
-        <link rel="canonical" href="https://www.webutsav.com/Services/google-adwords" />
+        <link rel="canonical" href="https://webutsav.com/Services/google-adwords" />
         <meta name="author" content="WebUtsav" />
         <meta name="keywords" content="Google Ads services, PPC advertising, pay per click marketing, Adwords campaign management, SEM services, WebUtsav Google Ads" />
         <meta name="robots" content="index, follow" />

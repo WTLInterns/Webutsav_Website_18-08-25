@@ -120,7 +120,7 @@ export default function BlogPage() {
       <Head>
         <title>WebUtsav Blog | Insights on Digital Marketing & Web Development</title>
         <meta name="description" content="Stay updated with the latest trends, tips, and news in digital marketing, SEO, social media, and web development on the WebUtsav Blog." />
-        <link rel="canonical" href="https://www.webutsav.com/blog" />
+        <link rel="canonical" href="https://webutsav.com/blog" />
         <meta name="author" content="WebUtsav" />
         <meta name="keywords" content="digital marketing blog, SEO tips, social media strategies, web development insights, WebUtsav blog, marketing trends" />
         <meta name="robots" content="index, follow" />

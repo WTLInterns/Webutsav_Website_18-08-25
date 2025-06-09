@@ -38,7 +38,7 @@ export default function ContactPage() {
       <Head>
         <title>Contact WebUtsav | Let's Grow Your Digital Presence</title>
         <meta name="description" content="Get in touch with WebUtsav for digital marketing, web development, SEO, and app services. We're ready to help your business grow online." />
-        <link rel="canonical" href="https://www.webutsav.com/contact" />
+        <link rel="canonical" href="https://webutsav.com/contact" />
         <meta name="author" content="WebUtsav" />
         <meta name="keywords" content="contact WebUtsav, digital marketing support, web development consultation, SEO agency contact, WebUtsav office, WebUtsav location" />
         <meta name="robots" content="index, follow" />

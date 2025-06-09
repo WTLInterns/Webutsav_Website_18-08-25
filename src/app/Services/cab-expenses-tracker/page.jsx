@@ -100,7 +100,7 @@ export default function CabExpenseTracker() {
       <Head>
       <title>Cab Expenses Tracker | Manage Your Taxi Costs Easily - WebUtsav</title>
   <meta name="description" content="Track and manage your cab expenses effortlessly with WebUtsav's Cab Expenses Tracker. Simplify your travel budgeting and expense reporting today." />
-  <link rel="canonical" href="https://www.webutsav.com/Services/cab-expenses-tracker" />
+  <link rel="canonical" href="https://webutsav.com/Services/cab-expenses-tracker" />
   <meta name="author" content="WebUtsav" />
   <meta name="keywords" content="cab expenses tracker, taxi cost management, travel expense tracker, cab expense app, WebUtsav cab tools, expense reporting, budget your taxi fares" />
   <meta name="robots" content="index, follow" />
