@@ -36,7 +36,6 @@ export const metadata = {
   robots: "index, follow",
   alternates: {
     canonical: "https://webutsav.com/",
-    canonical: "https://webutsav.com/aboutus"
   },
 }
 
