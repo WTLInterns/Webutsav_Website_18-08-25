@@ -65,7 +65,7 @@ const Navbar = () => {
             <NavLink href="/" isScrolled={isScrolled}>
               Home
             </NavLink>
-            <NavLink href="/aboutus" isScrolled={isScrolled}>
+            <NavLink href="/AboutUs" isScrolled={isScrolled}>
               About Us
             </NavLink>
             <div
@@ -84,10 +84,10 @@ const Navbar = () => {
               </button>
               <AnimatePresence>{isServicesOpen && <ServicesDropdown />}</AnimatePresence>
             </div>
-            <NavLink href="/blog" isScrolled={isScrolled}>
+            <NavLink href="/Blog" isScrolled={isScrolled}>
               Blog
             </NavLink>
-            <NavLink href="/contact" isScrolled={isScrolled}>
+            <NavLink href="/Contact" isScrolled={isScrolled}>
               Contact
             </NavLink>
           </div>

@@ -214,7 +214,7 @@ export default function AboutUs() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
             <div className="w-full md:w-1/2 mb-8 md:mb-0">
               <Image
-                src="/digital_Team.jpeg"
+                src="/digital_Team.webp"
                 alt="Digimedia Solutions Team"
                 width={960}
                 height={540}
