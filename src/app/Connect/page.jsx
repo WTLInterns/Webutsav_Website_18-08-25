@@ -21,7 +21,7 @@ export default function HomePage() {
         transition={{ duration: 0.5 }}
       >
         {[1, 2, 3, 4, 5].map((num) => (
-          <InstagramCard key={num} image={`/blog/insta${num}.webp`} />
+          <InstagramCard key={num} image={`/Blog/insta${num}.webp`} />
         ))}
       </motion.div>
       
