@@ -79,9 +79,9 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2">
             {[
-              { name: "About Us", href: "/aboutus" },
-              { name: "Blogs", href: "/blog" },
-              { name: "Contact Us", href: "/contact" },
+              { name: "About Us", href: "/AboutUS" },
+              { name: "Blogs", href: "/Blog" },
+              { name: "Contact Us", href: "/Contact" },
             ].map((nav) => (
               <li key={nav.name}>
                 <Link
