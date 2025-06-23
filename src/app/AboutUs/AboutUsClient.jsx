@@ -420,117 +420,112 @@ function TeamTabs() {
     {
       name: "Ashutosh Pandey",
       role: "Digital Marketing Manager",
-      image: "/Team/Ashutosh.JPG",
+      image: "/Team/aashutosh.jpeg",
     },
     {
       name: "Ankita Shelke",
       role: "Digital Marketing Executive",
-      image: "/Team/AnkitaShelke.jpg",
+      image: "/Team/Ankita2.jpeg",
     },
     {
       name: "Purva Bavale",
       role: "Digital Marketing Executive",
-      image: "/Team/PurvaBavale.jpg",
+      image: "/Team/purva.jpeg",
     },
-    // {
-    //   name: "Tejas Kamath",
-    //   role: "Digital Marketing Executive",
-    //   image: "/Team/Tejas.JPG",
-    // },
-    // {
-    //   name: "Avinash Kumbharkar",
-    //   role: "Digital Marketing Executive",
-    //   image: "/Team/AvinashKumbharkar.JPG",
-    // },
+    
     {
       name: "Ankita Wankhade",
       role: "Digital Marketing Executive",
-      image: "/Team/AnkitaWankhade.JPG",
+      image: "/Team/ankita.jpeg",
     },
   ]
 
   const itTeam = [
-    {
-      name: "Rhugved Hegde",
-      role: "Team Lead",
-      image: "/Team/Rhugved.JPG",
-    },
+   
     {
       name: "Waseb Untwale",
       role: "Team Lead",
-      image: "/Team/Waseb.JPG",
+      image: "/Team/waseb.jpeg",
     },
     {
       name: "Shubham Jagtap",
       role: "Full Stack Developer(Java)",
-      image: "/Team/Shubham.JPG",
+      image: "/Team/shubham.jpeg",
     },
     {
       name: "Jaywant Mhala",
       role: "Full Stack Developer(Java)",
-      image: "/Team/Jaywant.JPG",
+      image: "/Team/jaywant.jpeg",
     },
-    // {
-    //   name: "Hrushikesh Kapse",
-    //   role: "Full Stack Developer(MERN)",
-    //   image: "/Team/Hrushikesh.JPG",
-    // },
-    // {
-    //   name: "Rohit More",
-    //   role: "Full Stack Developer(Java)",
-    //   image: "/Team/Rohit.JPG",
-    // },
+   
     {
       name: "Gautam Rana",
       role: "Full Stack Developer(Java)",
-      image: "/Team/Gautam.JPG",
+      image: "/Team/gautam.jpeg",
     },
     {
       name: "Arbaj Shaikh",
       role: "Full Stack Developer(Java)",
-      image: "/Team/Arbaj.JPG",
+      image: "/Team/arbaj.jpeg",
     },
     {
       name: "Pragati Kokare",
-      role: "Full Stack Developer(Java)",
-      image: "/Team/Pragati.JPG",
+      role: "Full Stack Developer(MERN)",
+      image: "/Team/pragati.jpeg",
     },
     {
-      name: "Aakib Ansari",
-      role: "Full Stack Developer(MERN)",
-      image: "/Team/Aakib.JPG",
+      name: "Shubham Handge",
+      role: "Java Developer",
+      image: "/Team/shubham2.jpeg",
     },
-    // {
-    //   name: "Imran Shaikh",
-    //   role: "React Native Developer",
-    //   image: "/Team/Imran.JPG",
-    // },
-    
+    {
+      name: "Kiran Wagh",
+      role: "Java Developer",
+      image: "/Team/kiran.jpeg",
+    },
     {
       name: "Abhishekh Pattekari",
       role: "React Native Developer",
-      image: "/Team/Abhishekh.JPG",
+      image: "/Team/abhishek.jpeg",
     },
     {
       name: "Manasi Tambe",
       role: "Full Stack Developer(MERN)",
-      image: "/Team/Manasi.JPG",
+      image: "/Team/manasi.jpeg",
     },
-    // {
-    //   name: "Pradnya Waghmare",
-    //   role: "Full Stack Developer(MERN)",
-    //   image: "/Team/Pradnya.jpg",
-    // },
+    {
+      name: "Gayatri Shende",
+      role: "Java Developer",
+      image: "/Team/gayatri.jpeg",
+    },
     {
       name: "Hina Shaikh",
       role: "Full Stack Developer(MERN)",
-      image: "/Team/Hina.jpg",
+      image: "/Team/hina.jpeg",
     },
-    {
-      name: "Nisha Takalkar",
-      role: "IT Lead Generation",
-      image: "/Team/Nisha1.jpg",
+
+     {
+      name: "Aachal Shukla ",
+      role: "Java Developer",
+      image: "/Team/aanchal.jpeg",
     },
+
+      {
+      name: "Saurabh Ganjale",
+      role: "Flutter Developer",
+      image: "/Team/saurabh.jpeg",
+    },
+     {
+      name: "Tejas Barot",
+      role: "Java Developer",
+      image: "/Team/intern2.jpeg",
+    },
+     {
+      name: "Sahil Deshmukh",
+      role: "Java Developer",
+      image: "/Team/sahil.jpeg",
+    },
+
   ]
 
   return (
