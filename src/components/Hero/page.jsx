@@ -89,7 +89,7 @@ const Hero = () => {
           >
             <Link
               className="px-6 py-3 bg-[#FFA500] hover:bg-[#FF9500] text-gray-900 font-medium rounded-md transition-colors duration-200"
-              href="/contact"
+              href="/Contact"
             >
               Contact Us
             </Link>

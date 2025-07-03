@@ -58,7 +58,7 @@ const About = () => {
 
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block mt-4">
               <Link
-                href="/aboutus"
+                href="/AboutUs"
                 className="inline-flex px-8 py-3 border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-md transition-all duration-300"
               >
                 More About Us
