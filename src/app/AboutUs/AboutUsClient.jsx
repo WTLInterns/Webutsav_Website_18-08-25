@@ -425,7 +425,7 @@ function TeamTabs() {
     {
       name: "Ankita Shelke",
       role: "Digital Marketing Executive",
-      image: "/Team/Ankita2.jpeg",
+      image: "/Team/ankita2.jpeg",
     },
     {
       name: "Purva Bavale",
