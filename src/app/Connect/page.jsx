@@ -10,7 +10,7 @@ export default function HomePage() {
     <div className="min-h-20 p-6 bg-white text-black">
       {/* Connect With Us Section */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold">Connect with us</h1>
+        <h1 className="text-4xl font-bold">Connect with us</h1>  
       </div>
       
       {/* Image Gallery (Responsive Column Layout) */}

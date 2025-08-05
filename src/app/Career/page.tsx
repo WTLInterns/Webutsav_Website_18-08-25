@@ -792,8 +792,7 @@ const JobApplicationModal = ({ job, onClose, onSuccess }) => {
         hasResume: !!formData.resume
       });
 
-      const apiUrl = "https://api.webutsav.com/employees/apply";
-      console.log('Submitting to API:', apiUrl);
+      const apiUrl = "https://api.webutsav.com/employees/apply";          console.log('Submitting to API:', apiUrl);
 
       const response = await fetch(apiUrl, {
         method: 'POST',

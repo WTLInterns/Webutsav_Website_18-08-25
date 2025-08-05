@@ -14,7 +14,8 @@ export async function GET() {
     '/services/mobile-application',
     '/services/search-engine-optimization',
     '/services/social-media-marketing',
-    '/services/web-designing-development'
+    '/services/web-designing-development',
+    '/products'
   ];
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>

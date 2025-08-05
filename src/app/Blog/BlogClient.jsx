@@ -138,20 +138,21 @@ export default function BlogPage() {
           }}>
           <div className="max-w-lg sm:max-w-xl lg:max-w-2xl text-left">
             {/* Animated P (— Blog Grid) */}
-            <p ref={pRef} className="text-yellow-400 font-bold text-lg sm:text-xl md:text-2xl mb-2">
+            {/* <p ref={pRef} className="text-yellow-400 font-bold text-lg sm:text-xl md:text-2xl mb-2">
               {pText.split("").map((letter, index) => (
                 <span key={index} className="inline-block">
                   {letter}
                 </span>
               ))}
-            </p>
+            </p> */}
+
+
+            
 
             {/* Animated H2 (Get to Know Our Latest Articles!) */}
             <h2 ref={h2Ref} className="text-white font-bold text-2xl sm:text-3xl md:text-4xl leading-tight">
               {h2Text.split(" ").map((word, index) => (
-                <span key={index} className="inline-block mr-2">
-                  {word}
-                </span>
+                <span key={index} className="inline-block mr-2">{word}</span>
               ))}
             </h2>
           </div>

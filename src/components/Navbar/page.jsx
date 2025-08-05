@@ -88,9 +88,13 @@ const Navbar = () => {
               Blog
             </NavLink>
             <NavLink href="/Contact" isScrolled={isScrolled}>
-              Contact
+              Contact Us
             </NavLink>
-             <NavLink href="/Career" isScrolled={isScrolled}>
+            {/* Products menu item - navigates to /products */}
+            <NavLink href="/products" isScrolled={isScrolled}>
+              Products
+            </NavLink>
+            <NavLink href="/Career" isScrolled={isScrolled}>
               Careers
             </NavLink>
           </div>
@@ -128,7 +132,7 @@ const Navbar = () => {
                 <MobileNavLink href="/" onClick={closeMobileMenu}>
                   Home
                 </MobileNavLink>
-                <MobileNavLink href="/aboutus" onClick={closeMobileMenu}>
+                <MobileNavLink href="/AboutUs" onClick={closeMobileMenu}>
                   About Us
                 </MobileNavLink>
                 <div>
@@ -145,11 +149,17 @@ const Navbar = () => {
                     {isServicesOpen && <MobileServicesDropdown closeMobileMenu={closeMobileMenu} />}
                   </AnimatePresence>
                 </div>
-                <MobileNavLink href="/blog" onClick={closeMobileMenu}>
+                <MobileNavLink href="/Blog" onClick={closeMobileMenu}>
                   Blog
                 </MobileNavLink>
-                <MobileNavLink href="/contact" onClick={closeMobileMenu}>
+                <MobileNavLink href="/Contact" onClick={closeMobileMenu}>
                   Contact
+                </MobileNavLink>
+                <MobileNavLink href="/products" onClick={closeMobileMenu}>
+                  Products
+                </MobileNavLink>
+                <MobileNavLink href="/Career" onClick={closeMobileMenu}>
+                  Careers
                 </MobileNavLink>
                 {/* <Link
                   href="/login"
@@ -199,7 +209,7 @@ const ServicesDropdown = () => (
   >
     <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
       <DropdownLink href="/Services/web-designing-development">Web Designing & Development</DropdownLink>
-      <DropdownLink href="/Services//ecommerce-website-designing">Ecommerce Website Designing</DropdownLink>
+      <DropdownLink href="/Services/ecommerce-website-designing">Ecommerce Website Designing</DropdownLink>
       <DropdownLink href="/Services/google-adwords">Google Adwords</DropdownLink>
       <DropdownLink href="/Services/search-engine-optimisation">Search Engine Optimization</DropdownLink>
       <DropdownLink href="/Services/local-seo">Local SEO</DropdownLink>

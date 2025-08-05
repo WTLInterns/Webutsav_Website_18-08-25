@@ -165,15 +165,15 @@ export default function AboutUs() {
         >
           <div className="max-w-lg sm:max-w-xl lg:max-w-2xl text-left z-10">
             <p ref={pRef} className="text-yellow-400 font-bold text-lg sm:text-xl md:text-2xl mb-4">
-              {pText.split("").map((letter, index) => (
-                <span key={index} className="inline-block">
-                  {letter}
+              {pText.split(" ").map((word, i) => (
+                <span key={i} className="inline-block">
+                  {word}
                 </span>
               ))}
             </p>
             <h4 ref={h2Ref} className="text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
-              {h2Text.split(" ").map((word, index) => (
-                <span key={index} className="inline-block mr-2">
+              {h2Text.split(" ").map((word, i) => (
+                <span key={i} className="inline-block mr-2">
                   {word}
                 </span>
               ))}

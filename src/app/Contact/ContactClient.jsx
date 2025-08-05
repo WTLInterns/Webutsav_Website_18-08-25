@@ -5,12 +5,12 @@ import gsap from 'gsap';
 import ContactForm from '../ContactForm/page';
 // import Head from 'next/head';
 
-export default function ContactPage() {
+export default function ContactPage() {  
   const pRef = useRef(null);
   const h2Ref = useRef(null);
 
   useEffect(() => {
-    if (pRef.current && h2Ref.current) {
+    if (pRef.current && h2Ref.current) {   
       const tl = gsap.timeline();
 
       // Animate `p` (— Blog Grid) first
@@ -59,8 +59,11 @@ export default function ContactPage() {
             
             {/* Animated P (— Blog Grid) */}
             <p ref={pRef} className="text-yellow-400 font-bold text-xl sm:text-2xl md:text-3xl">
-              {pText.split('').map((letter, index) => (
-                <span key={index} className="inline-block">{letter}</span>
+              {/* {pText.split('').map((letter, index) => (
+                <span key={index} className="inline-block">{letter}</span> */}
+
+{pText.split(' ').map((word, i) => (
+    <span key={i} className={i !== 0 ? 'ml-4 inline-block' : 'inline-block'}>{word}</span>
               ))}
             </p>
 

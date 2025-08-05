@@ -24,7 +24,7 @@ const redirects = [
   { source: '/Services/Web_Designing_Development', destination: '/Services/web-designing-development', permanent: true },
   { source: '/Services/Ecommerce_Website_Designing', destination: '/Services//ecommerce-website-designing', permanent: true },
   { source: '/Services/Google_Adwords', destination: '/Services/google-adwords', permanent: true },
-  { source: '/Services/Search_Engin_Optimisation', destination: '/Services/search-engine-optimisation', permanent: true },
+  { source: '//Search_Engin_Optimisation', destination: '/Services/search-engine-optimisation', permanent: true },
   { source: '/Services/Search-Engin-Optimisation', destination: '/Services/search-engine-optimisation', permanent: true },
   { source: '/Services/Search-Engine-Optimization', destination: '/Services/search-engine-optimisation', permanent: true },
   { source: '/Services/Local_Seo', destination: '/Services/local-seo', permanent: true },

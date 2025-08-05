@@ -27,7 +27,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/img/favicon.ico" />
+        <link rel="canonical" href="https://webutsav.com/" />
+        {/* <link rel="icon" href="/img/favicon.ico" /> */}
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
         <Script id="meta-pixel" strategy="afterInteractive">

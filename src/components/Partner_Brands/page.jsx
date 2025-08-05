@@ -50,7 +50,7 @@ export default function PartnerBrands() {
               key={i}
               src={logos[i % logos.length].src || "/vercel.svg"}
               alt="Background Logo"
-              className="w-full h-auto opacity-50"
+              className="w-full h-auto opacity-50"   
             />
           ))}
         </div>
