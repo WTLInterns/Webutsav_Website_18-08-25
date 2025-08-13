@@ -200,95 +200,107 @@ export default function SocialMediaMarketing() {
     <>
      
     
-    <div className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Hero Section */}
+    <div className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+      {/* Professional Hero Section with Brand Colors */}
       <motion.div
-        className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]"
+        className="relative w-full h-[80vh] flex items-center justify-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <Image
-          src="/images/aboutus.jpg"
-          alt="Google AdWords"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
+        {/* Brand Colors Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500"></div>
+
+        {/* Transparent Overlay for Brand Consistency */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+
+        {/* Floating Brand Color Elements */}
+        <motion.div
+          className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+          animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+          transition={{ duration: 8, repeat: Infinity }}
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center px-6 md:px-12">
+        <motion.div
+          className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl"
+          animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
+          transition={{ duration: 6, repeat: Infinity }}
+        />
+
+        {/* Content */}
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className="text-yellow-400 font-bold text-xl sm:text-2xl md:text-3xl mb-4"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-white/90 font-semibold text-xl md:text-2xl mb-4"
           >
             — Our Services
           </motion.p>
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.5 }}
-            className="text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-tight"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-white font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6"
           >
-            Search Engine Optimization (SEO) – The Key to Online Success
+            Search Engine <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Optimization</span>
           </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+          >
+            Boost your website's visibility with expert SEO services. Improve rankings, drive organic traffic, and reach your online prospects effectively.
+          </motion.p>
         </div>
       </motion.div>
 
       {/* Main Content Section */}
       <div className="flex flex-wrap p-6">
-        {/* Sidebar */}
-        <aside className="w-full md:w-1/5 bg-gradient-to-b from-white to-gray-100 p-6 shadow-lg rounded-lg mb-6 md:mb-0">
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">
-            All Services
+        {/* Sidebar with About Us Styling */}
+        <aside className="w-full md:w-1/5 professional-card p-6 shadow-lg rounded-2xl mb-6 md:mb-0 border border-blue-100/30">
+          <h3 className="text-3xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">All Services</span>
           </h3>
           <ul className="space-y-4">
             {[
               {
-                name: "Web Designing & Development",
-                icon: <FaGlobe />,
-                href: "/Services/Web_Designing_Development",
-              },
-              {
-                name: "Ecommerce Website Designing",
-                icon: <FaShoppingCart />,
-                href: "/Services/Ecommerce_Website_Designing",
-              },
-              {
                 name: "Google Adwords",
                 icon: <FaGoogle />,
-                href: "/Services/Google_Adwords",
+                href: "/Services/google-adwords",
               },
               {
                 name: "Search Engine Optimisation",
                 icon: <FaSearch />,
-                href: "/Services/Search_Engin_Optimisation",
+                href: "/Services/search-engine-optimisation",
               },
               {
                 name: "Local SEO",
                 icon: <FaMapMarkerAlt />,
-                href: "/Services/Local_Seo",
+                href: "/Services/local-seo",
               },
               {
                 name: "Social Media Marketing",
                 icon: <FaShareAlt />,
-                href: "/Services/Social_Media_Marketing",
+                href: "/Services/social-media-marketing",
               },
               {
                 name: "Mobile Application Development",
                 icon: <FaMobileAlt/>,
-                href: "/Services/Mobile_Application",
+                href: "/Services/mobile-application",
               },
             ].map((service, index) => (
               <motion.li key={index} whileHover={{ x: 5 }}>
                 <Link
                   href={service.href}
-                  className="group flex items-center space-x-3 p-3 rounded-md transition-all duration-200 hover:bg-white hover:shadow-md cursor-pointer"
+                  className="group flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 hover:bg-orange-50 cursor-pointer border border-transparent hover:border-orange-200/50"
                 >
-                  <span className="text-red-500 group-hover:text-red-600 transition-colors duration-200">
+                  <span className={`transition-colors duration-300 ${
+                    index % 2 === 0 ? "text-blue-500 group-hover:text-blue-600" : "text-orange-500 group-hover:text-orange-600"
+                  }`}>
                     {service.icon}
                   </span>
-                  <span className="text-gray-700 group-hover:text-gray-900 font-medium transition-colors duration-200">
+                  <span className="text-gray-700 group-hover:text-gray-900 font-medium transition-colors duration-300">
                     {service.name}
                   </span>
                 </Link>

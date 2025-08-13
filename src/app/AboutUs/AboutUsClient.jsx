@@ -7,19 +7,7 @@ import { FaUserTie, FaCogs, FaCheckCircle, FaLightbulb } from "react-icons/fa"
 import { useInView } from "react-intersection-observer"
 import Head from "next/head"
 
-const FeatureItem = ({ icon, title, description }) => (
-  <motion.div
-    className="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-lg"
-    whileHover={{ scale: 1.05 }}
-    transition={{ type: "spring", stiffness: 300 }}
-  >
-    <div className="text-orange-500 text-3xl">{icon}</div>
-    <div>
-      <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  </motion.div>
-)
+
 
 const features = [
   {
@@ -80,8 +68,8 @@ const CountUpAnimation = ({ target, duration = 2, label }) => {
 
   return (
     <motion.div ref={ref} initial={{ opacity: 0, y: 20 }} animate={controls} className="flex flex-col items-center">
-      <span className="text-4xl font-bold text-amber-500 mb-2">{count}+</span>
-      <span className="text-sm text-gray-600 text-center">{label}</span>
+      <span className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">{count}+</span>
+      <span className="text-sm text-gray-600 text-center font-medium group-hover:text-gray-700 transition-colors duration-300">{label}</span>
     </motion.div>
   )
 }
@@ -153,134 +141,429 @@ export default function AboutUs() {
       </Head>
     
       <div className="overflow-hidden">
+        {/* Professional Hero Section with Brand Colors */}
         <motion.div
-          className="relative w-full h-[70vh] flex items-center px-4 sm:px-8 lg:px-16"
-          style={{
-            backgroundImage: "url('/images/aboutus.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
-            y,
-          }}
+          className="relative w-full h-[80vh] flex items-center justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
         >
-          <div className="max-w-lg sm:max-w-xl lg:max-w-2xl text-left z-10">
-            <p ref={pRef} className="text-yellow-400 font-bold text-lg sm:text-xl md:text-2xl mb-4">
+          {/* Brand Colors Gradient Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500"></div>
+
+          {/* Transparent Overlay for Brand Consistency */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+
+          {/* Floating Brand Color Circles */}
+          <div className="absolute inset-0 overflow-hidden">
+            <motion.div
+              className="absolute top-20 left-10 w-32 h-32 bg-orange-400/20 rounded-full blur-xl"
+              animate={{ y: [0, -20, 0], rotate: [0, 180, 360] }}
+              transition={{ duration: 8, repeat: Infinity }}
+            />
+            <motion.div
+              className="absolute top-40 right-20 w-24 h-24 bg-blue-400/30 rounded-full blur-lg"
+              animate={{ y: [0, 20, 0], rotate: [360, 180, 0] }}
+              transition={{ duration: 6, repeat: Infinity }}
+            />
+            <motion.div
+              className="absolute bottom-32 left-1/4 w-40 h-40 bg-orange-300/15 rounded-full blur-2xl"
+              animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
+              transition={{ duration: 10, repeat: Infinity }}
+            />
+            <motion.div
+              className="absolute bottom-20 right-1/3 w-28 h-28 bg-blue-300/25 rounded-full blur-xl"
+              animate={{ y: [0, 15, 0], x: [0, -15, 0] }}
+              transition={{ duration: 7, repeat: Infinity }}
+            />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 text-center px-4 sm:px-8 lg:px-16 max-w-4xl">
+            <motion.p
+              ref={pRef}
+              className="text-blue-100 font-semibold text-lg sm:text-xl md:text-2xl mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               {pText.split(" ").map((word, i) => (
-                <span key={i} className="inline-block">
+                <motion.span
+                  key={i}
+                  className="inline-block mr-2"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                >
                   {word}
-                </span>
+                </motion.span>
               ))}
-            </p>
-            <h4 ref={h2Ref} className="text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
+            </motion.p>
+
+            <motion.h1
+              ref={h2Ref}
+              className="text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
               {h2Text.split(" ").map((word, i) => (
-                <span key={i} className="inline-block mr-2">
+                <motion.span
+                  key={i}
+                  className="inline-block mr-4"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.6 + i * 0.1 }}
+                >
                   {word}
-                </span>
+                </motion.span>
               ))}
-            </h4>
+            </motion.h1>
+
+            {/* Professional CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              <motion.button
+                className="px-8 py-4 bg-white/95 backdrop-blur-sm text-blue-600 font-bold text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group border border-orange-200/50"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="flex items-center space-x-2">
+                  <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Discover Our Journey</span>
+                  <motion.svg
+                    className="w-5 h-5 text-orange-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </motion.svg>
+                </span>
+              </motion.button>
+            </motion.div>
           </div>
         </motion.div>
 
-        <section className="py-20 bg-gradient-to-br from-amber-50 to-amber-100">
-          <div className="max-w-6xl mx-auto px-6">
+        {/* Professional Achievements Section */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+          {/* Background Brand Color Elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-10 right-10 w-64 h-64 bg-orange-100/30 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-10 left-10 w-48 h-48 bg-blue-100/25 rounded-full blur-2xl"></div>
+            <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-orange-200/20 rounded-full blur-xl transform -translate-x-1/2 -translate-y-1/2"></div>
+          </div>
+
+          <div className="max-w-6xl mx-auto px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-4xl font-bold text-center text-gray-800 mb-16"
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
             >
-              Our Achievements
+              <h2 className="text-5xl font-bold text-gray-900 mb-4">
+                Our <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Achievements</span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <p className="text-xl text-gray-600 mt-6 max-w-2xl mx-auto">
+                Celebrating milestones that reflect our commitment to excellence and client success
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.2 }}
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-white p-6 rounded-xl shadow-md transition-all duration-300 flex flex-col items-center justify-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className="professional-achievement-card group"
                 >
-                  <CountUpAnimation target={stat.value} label={stat.label} />
+                  {/* Brand Colors Gradient Border */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+
+                  {/* Card Content */}
+                  <div className="relative bg-white p-8 rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border border-blue-100/30 group-hover:border-orange-200/50">
+                    {/* Icon Background with Brand Colors */}
+                    <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 ${
+                      index % 2 === 0
+                        ? "bg-gradient-to-br from-blue-500 to-blue-600"
+                        : "bg-gradient-to-br from-orange-500 to-orange-600"
+                    }`}>
+                      <span className="text-white text-2xl font-bold">
+                        {index === 0 && "👥"}
+                        {index === 1 && "🚀"}
+                        {index === 2 && "📊"}
+                        {index === 3 && "🏆"}
+                      </span>
+                    </div>
+
+                    <CountUpAnimation target={stat.value} label={stat.label} />
+                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* About Webutsav section */}
-        <div className="w-full bg-gradient-to-b from-yellow-50 to-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
-            <div className="w-full md:w-1/2 mb-8 md:mb-0">
-              <Image
-                src="/digital_Team.webp"
-                alt="Digimedia Solutions Team"
-                width={960}
-                height={540}
-                className="w-full h-auto object-cover rounded-lg shadow-2xl"
-              />
-            </div>
-            <div className="w-full md:w-1/2 md:pl-12">
-              <h2 className="text-4xl font-bold text-amber-500 mb-6">About Webutsav</h2>
-              <h4 className="text-2xl font-semibold mb-4">Welcome to Webutsav – Where Innovation Meets Excellence!</h4>
-              <p className="text-gray-700 mb-4 text-lg">
-                Webutsav is a leading digital solutions provider based in Kharadi, Pune. We specialize in App
-                Development, Web Development, and Digital Marketing. With a proven track record of success, we have
-                successfully completed over 2,000 projects for more than 300 clients, delivering impactful results
-                through our insight-driven strategies.
-              </p>
+        {/* Professional About Webutsav Section */}
+        <section className="py-20 bg-white relative overflow-hidden">
+          {/* Background Elements with Brand Colors */}
+          <div className="absolute inset-0">
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50/30 via-orange-50/20 to-transparent"></div>
+            <div className="absolute top-20 right-0 w-96 h-96 bg-orange-100/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 left-0 w-80 h-80 bg-blue-100/15 rounded-full blur-2xl"></div>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="flex flex-col lg:flex-row items-center gap-16">
+              {/* Image Section */}
+              <motion.div
+                className="w-full lg:w-1/2"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="relative group">
+                  {/* Brand Colors Border Effect */}
+                  <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-orange-500 rounded-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-300 blur-lg"></div>
+
+                  <Image
+                    src="/digital_Team.webp"
+                    alt="Digimedia Solutions Team"
+                    width={960}
+                    height={540}
+                    className="relative w-full h-auto object-cover rounded-2xl shadow-2xl group-hover:shadow-3xl transition-shadow duration-300"
+                  />
+
+                  {/* Floating Badge with Brand Colors */}
+                  <motion.div
+                    className="absolute -bottom-6 -right-6 bg-gradient-to-r from-blue-500 to-orange-500 text-white px-6 py-3 rounded-full shadow-xl"
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                  >
+                    <span className="font-bold text-sm">5+ Years Excellence</span>
+                  </motion.div>
+                </div>
+              </motion.div>
+
+              {/* Content Section */}
+              <motion.div
+                className="w-full lg:w-1/2"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <div className="space-y-6">
+                  <div>
+                    <h2 className="text-5xl font-bold text-gray-900 mb-4">
+                      About <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Webutsav</span>
+                    </h2>
+                    <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full"></div>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold text-gray-800 leading-relaxed">
+                    Welcome to Webutsav – Where <span className="text-blue-600">Innovation</span> Meets <span className="text-orange-500">Excellence!</span>
+                  </h3>
+
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    Webutsav is a leading digital solutions provider based in Kharadi, Pune. We specialize in App
+                    Development, Web Development, and Digital Marketing. With a proven track record of success, we have
+                    successfully completed over 2,000 projects for more than 300 clients, delivering impactful results
+                    through our insight-driven strategies.
+                  </p>
+
+                  {/* Key Points */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                    {[
+                      { icon: "🎯", title: "2000+ Projects", desc: "Successfully Delivered" },
+                      { icon: "👥", title: "300+ Clients", desc: "Satisfied Worldwide" },
+                      { icon: "🏆", title: "Industry Leader", desc: "In Digital Solutions" },
+                      { icon: "📍", title: "Pune Based", desc: "Serving Globally" }
+                    ].map((item, index) => (
+                      <motion.div
+                        key={index}
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-orange-50 transition-colors duration-300"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                      >
+                        <span className="text-2xl">{item.icon}</span>
+                        <div>
+                          <h4 className="font-semibold text-gray-900">{item.title}</h4>
+                          <p className="text-sm text-gray-600">{item.desc}</p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="relative w-full py-20 flex justify-center items-center overflow-hidden bg-gradient-to-r from-blue-500 to-purple-600">
-          <div
-            className="absolute inset-0 bg-cover bg-no-repeat opacity-20"
-            style={{
-              backgroundImage: "url('/dm.jpg')",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              animation: "flowEffect 20s linear infinite",
-            }}
-          ></div>
-
-          <div className="relative flex flex-col md:flex-row gap-8 text-white p-4 max-w-6xl">
-            <motion.div
-              className="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg p-8 rounded-xl flex-1"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <h4 className="text-3xl font-bold mb-4">OUR VISION</h4>
-              <p className="text-lg">
-                📌 To be the leading provider of digital solutions, empowering businesses through innovation and
-                cutting-edge technology.
-              </p>
-            </motion.div>
-            <motion.div
-              className="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg p-8 rounded-xl flex-1"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <h4 className="text-3xl font-bold mb-4">OUR MISSION</h4>
-              <p className="text-lg">
-                🚀 Helping businesses reach their full potential through comprehensive digital strategies and
-                personalized solutions.
-              </p>
-            </motion.div>
+        {/* Professional Vision & Mission Section */}
+        <section className="relative py-20 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500">
+          {/* Background Pattern */}
+          <div className="absolute inset-0">
+            <div className="absolute top-0 left-0 w-full h-full opacity-10">
+              <div className="absolute top-20 left-20 w-32 h-32 border-2 border-white rounded-full"></div>
+              <div className="absolute top-40 right-32 w-24 h-24 border border-white rounded-full"></div>
+              <div className="absolute bottom-32 left-1/3 w-40 h-40 border border-white rounded-full"></div>
+              <div className="absolute bottom-20 right-20 w-28 h-28 border-2 border-white rounded-full"></div>
+            </div>
           </div>
-        </div>
 
-        <section className="py-20 px-6 bg-gradient-to-br from-yellow-50 to-white">
-          <div className="max-w-6xl mx-auto">
-            <h4 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">Why Choose Us?</h4>
-            <p className="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-              💡 We provide insights-based solutions to help businesses grow effectively in the digital landscape.
-            </p>
+          <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Section Header */}
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-5xl font-bold text-white mb-4">
+                Our Vision & Mission
+              </h2>
+              <div className="w-24 h-1 bg-white mx-auto rounded-full"></div>
+            </motion.div>
+
+            {/* Vision & Mission Cards */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Vision Card */}
+              <motion.div
+                className="group relative"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                whileHover={{ y: -10 }}
+              >
+                <div className="absolute inset-0 bg-white/10 backdrop-blur-lg rounded-2xl group-hover:bg-white/20 transition-all duration-300"></div>
+                <div className="relative p-8 rounded-2xl border border-white/20 group-hover:border-white/40 transition-all duration-300">
+                  {/* Icon */}
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-3xl">🎯</span>
+                  </div>
+
+                  <h3 className="text-3xl font-bold text-white mb-4">OUR VISION</h3>
+                  <p className="text-white/90 text-lg leading-relaxed">
+                    To be the leading provider of digital solutions, empowering businesses through innovation and
+                    cutting-edge technology that transforms ideas into digital success stories.
+                  </p>
+
+                  {/* Decorative Element */}
+                  <div className="absolute top-4 right-4 w-8 h-8 border-2 border-white/30 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+                </div>
+              </motion.div>
+
+              {/* Mission Card */}
+              <motion.div
+                className="group relative"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                whileHover={{ y: -10 }}
+              >
+                <div className="absolute inset-0 bg-white/10 backdrop-blur-lg rounded-2xl group-hover:bg-white/20 transition-all duration-300"></div>
+                <div className="relative p-8 rounded-2xl border border-white/20 group-hover:border-white/40 transition-all duration-300">
+                  {/* Icon */}
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-3xl">🚀</span>
+                  </div>
+
+                  <h3 className="text-3xl font-bold text-white mb-4">OUR MISSION</h3>
+                  <p className="text-white/90 text-lg leading-relaxed">
+                    Helping businesses reach their full potential through comprehensive digital strategies and
+                    personalized solutions that drive growth and create lasting impact.
+                  </p>
+
+                  {/* Decorative Element */}
+                  <div className="absolute top-4 right-4 w-8 h-8 border-2 border-white/30 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Professional Why Choose Us Section */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+          {/* Background Elements with Brand Colors */}
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-48 h-48 bg-orange-200/30 rounded-full blur-2xl"></div>
+            <div className="absolute top-1/2 right-1/4 w-32 h-32 bg-blue-200/15 rounded-full blur-xl"></div>
+          </div>
+
+          <div className="max-w-6xl mx-auto px-6 relative z-10">
+            {/* Section Header */}
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-5xl font-bold text-gray-900 mb-4">
+                Why Choose <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Us?</span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                💡 We provide insights-based solutions to help businesses grow effectively in the digital landscape.
+              </p>
+            </motion.div>
+
+            {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
-                <FeatureItem key={index} {...feature} />
+                <motion.div
+                  key={index}
+                  className="group relative"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                >
+                  {/* Brand Colors Gradient Border */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+
+                  {/* Card Content */}
+                  <div className="relative bg-white p-8 rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border border-blue-100/30 group-hover:border-orange-200/50">
+                    <div className="flex items-start space-x-4">
+                      {/* Icon with Alternating Brand Colors */}
+                      <div className="flex-shrink-0">
+                        <div className={`w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ${
+                          index % 2 === 0
+                            ? "bg-gradient-to-br from-blue-500 to-blue-600"
+                            : "bg-gradient-to-br from-orange-500 to-orange-600"
+                        }`}>
+                          <span className="text-white text-2xl">{feature.icon}</span>
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="flex-1">
+                        <h3 className={`text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 ${
+                          index % 2 === 0 ? "group-hover:text-blue-600" : "group-hover:text-orange-600"
+                        }`}>
+                          {feature.title}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                          {feature.description}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Decorative Corner with Brand Colors */}
+                    <div className={`absolute top-4 right-4 w-6 h-6 border-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                      index % 2 === 0 ? "border-blue-200" : "border-orange-200"
+                    }`}></div>
+                  </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -304,108 +587,191 @@ export default function AboutUs() {
           </div>
         </section>
 
-        <div className="flex flex-col items-center justify-center py-16 px-8 bg-gradient-to-b from-white to-yellow-50">
-        <motion.h4
-          className="text-amber-600 font-semibold text-lg mb-2"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Work Process
-        </motion.h4>
-        <motion.p
-          className="text-gray-600 text-center mb-12 max-w-3xl text-lg"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          We follow a systematic approach to ensure the success of your Google
-          AdWords campaigns, maximizing efficiency and delivering outstanding
-          results.
-        </motion.p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {["Research", "Ideate", "Develop", "Launch"].map(
-            (step, index) => (
-              <motion.div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-lg text-center"
-                whileHover={{ scale: 1.05 }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div
-                  className={`w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center text-3xl font-bold ${
-                    index === 0
-                      ? "bg-blue-200 text-blue-600"
-                      : index === 1
-                      ? "bg-green-200 text-green-600"
-                      : index === 2
-                      ? "bg-purple-200 text-purple-600"
-                      : "bg-red-200 text-red-600"
-                  }`}
+        {/* Professional Work Process Section */}
+        <section className="py-20 bg-white relative overflow-hidden">
+          {/* Background Elements with Brand Colors */}
+          <div className="absolute inset-0">
+            <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-blue-50/30 via-orange-50/20 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-100/20 rounded-full blur-3xl"></div>
+            <div className="absolute top-0 right-0 w-80 h-80 bg-blue-100/15 rounded-full blur-2xl"></div>
+          </div>
+
+          <div className="max-w-6xl mx-auto px-6 relative z-10">
+            {/* Section Header */}
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-5xl font-bold text-gray-900 mb-4">
+                Work <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Process</span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                We follow a systematic approach to ensure the success of your projects, maximizing efficiency and delivering outstanding results.
+              </p>
+            </motion.div>
+
+            {/* Process Steps */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                { step: "Research", icon: "🔍", desc: "Analyze market trends and client needs." },
+                { step: "Ideate", icon: "💡", desc: "Brainstorm innovative solutions." },
+                { step: "Develop", icon: "⚙️", desc: "Create and refine the product." },
+                { step: "Launch", icon: "🚀", desc: "Deploy and monitor performance." }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="group relative"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -10 }}
                 >
-                  {`0${index + 1}`}
-                </div>
-                <h4 className="text-2xl font-bold mb-2">{step}</h4>
-                <p className="text-gray-600">
-                  {index === 0 && "📍Analyze market trends and client needs."}
-                  {index === 1 && "📍Brainstorm innovative solutions."}
-                  {index === 2 && "📍Create and refine the product."}
-                  {index === 3 && "📍Deploy and monitor performance."}
-                </p>
-              </motion.div>
-            )
-          )}
-        </div>
-      </div>
+                  {/* Brand Colors Gradient Border */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
 
-        <section className="text-center py-20 bg-gradient-to-b from-purple-600 to-indigo-700 relative overflow-hidden">
+                  {/* Card Content */}
+                  <div className="relative bg-white p-8 rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border border-blue-100/30 group-hover:border-orange-200/50 text-center">
+                    {/* Step Number with Alternating Brand Colors */}
+                    <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 ${
+                      index % 2 === 0
+                        ? "bg-gradient-to-br from-blue-500 to-blue-600"
+                        : "bg-gradient-to-br from-orange-500 to-orange-600"
+                    }`}>
+                      <span className="text-white font-bold text-xl">{`0${index + 1}`}</span>
+                    </div>
+
+                    {/* Icon */}
+                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                      {item.icon}
+                    </div>
+
+                    {/* Content */}
+                    <h3 className={`text-2xl font-bold text-gray-900 mb-3 transition-colors duration-300 ${
+                      index % 2 === 0 ? "group-hover:text-blue-600" : "group-hover:text-orange-600"
+                    }`}>
+                      {item.step}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                      {item.desc}
+                    </p>
+
+                    {/* Connecting Line with Brand Colors (except last item) */}
+                    {index < 3 && (
+                      <div className={`hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 transform -translate-y-1/2 ${
+                        index % 2 === 0 ? "bg-blue-200" : "bg-orange-200"
+                      }`}></div>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Professional CTA Section */}
+        <section className="relative py-20 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500">
+          {/* Background Pattern */}
+          <div className="absolute inset-0">
+            <div className="absolute top-0 left-0 w-full h-full opacity-10">
+              <motion.div
+                className="absolute top-20 left-20 w-32 h-32 border-2 border-white rounded-full"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              />
+              <motion.div
+                className="absolute top-40 right-32 w-24 h-24 border border-white rounded-full"
+                animate={{ rotate: -360 }}
+                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+              />
+              <motion.div
+                className="absolute bottom-32 left-1/3 w-40 h-40 border border-white rounded-full"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+              />
+            </div>
+          </div>
+
+          {/* Floating Brand Color Elements */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 0.2, scale: 1.2 }}
-            transition={{
-              duration: 3,
-              repeat: Number.POSITIVE_INFINITY,
-              repeatType: "mirror",
-            }}
-            className="absolute w-96 h-96 bg-yellow-300 rounded-full top-0 left-0 blur-3xl opacity-20"
+            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+            animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity }}
           />
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 0.2, scale: 1.3 }}
-            transition={{
-              duration: 3,
-              repeat: Number.POSITIVE_INFINITY,
-              repeatType: "mirror",
-              delay: 1,
-            }}
-            className="absolute w-96 h-96 bg-blue-300 rounded-full bottom-0 right-0 blur-3xl opacity-20"
+            className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl"
+            animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
+            transition={{ duration: 6, repeat: Infinity }}
           />
 
-          <div className="relative z-10 max-w-4xl mx-auto px-6">
+          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
             <motion.h2
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
-              className="text-5xl font-extrabold text-white tracking-wide mb-8"
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-6xl font-bold text-white mb-6"
             >
-              Ready to Transform Your Business?
+              Ready to Transform Your <span className="text-blue-100">Business?</span>
             </motion.h2>
-            <p className="text-xl text-white mb-12">
-              🚀 Schedule a free expert session and discover how we can help you achieve your digital goals.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05, backgroundColor: "#F59E0B" }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-amber-500 text-white font-bold text-xl rounded-full shadow-lg transition-all duration-300 focus:outline-none"
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl text-white/90 mb-12 max-w-2xl mx-auto"
             >
-              <a
-              href="tel:+91 8766922792"
+              🚀 Schedule a free expert session and discover how we can help you achieve your digital goals with innovative solutions.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Book Your Free Session Now
-            </a> 
-            </motion.button>
+              <motion.a
+                href="tel:+918766922792"
+                className="inline-block px-10 py-5 bg-white/95 backdrop-blur-sm font-bold text-xl rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 group border border-blue-200/30"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="flex items-center space-x-3">
+                  <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Book Your Free Session Now</span>
+                  <motion.svg
+                    className="w-6 h-6 text-orange-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </motion.svg>
+                </span>
+              </motion.a>
+            </motion.div>
+
+            {/* Trust Indicators */}
+            <motion.div
+              className="mt-12 flex flex-wrap justify-center items-center gap-8 text-white/80"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <div className="flex items-center space-x-2">
+                <span className="text-2xl">⭐</span>
+                <span className="font-semibold">5-Star Rated</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-2xl">🏆</span>
+                <span className="font-semibold">Award Winning</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-2xl">🚀</span>
+                <span className="font-semibold">500+ Projects</span>
+              </div>
+            </motion.div>
           </div>
         </section>
       </div>
@@ -468,11 +834,17 @@ function TeamTabs() {
       role: "Full Stack Developer(Java)",
       image: "/Team/arbaj.jpeg",
     },
+{
+      name: "Abhishek Pattekari",
+      role: "Full Stack Developer",
+      image: "/Team/abhishek.jpeg",
+    },
     {
       name: "Pragati Kokare",
       role: "Full Stack Developer(MERN)",
       image: "/Team/pragati.jpeg",
     },
+
     {
       name: "Shubham Handge",
       role: "Java Developer",
@@ -483,11 +855,7 @@ function TeamTabs() {
       role: "Java Developer",
       image: "/Team/kiran.jpeg",
     },
-    {
-      name: "Abhishekh Pattekari",
-      role: "React Native Developer",
-      image: "/Team/abhishek.jpeg",
-    },
+
     {
       name: "Manasi Tambe",
       role: "Full Stack Developer(MERN)",

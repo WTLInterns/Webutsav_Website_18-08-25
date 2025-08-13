@@ -219,60 +219,70 @@ export default function WebDesigningDevelopment() {
     <>
 
     
-      <div className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-white">
-        {/* Hero Section */}
+      <div className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+        {/* Professional Hero Section with Brand Colors */}
         <motion.div
-          className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]"
+          className="relative w-full h-[80vh] flex items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <Image
-            src="/images/aboutus.jpg"
-            alt="Google AdWords"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
+          {/* Brand Colors Gradient Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500"></div>
+
+          {/* Transparent Overlay for Brand Consistency */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+
+          {/* Floating Brand Color Elements */}
+          <motion.div
+            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+            animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity }}
           />
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center px-6 md:px-12">
+          <motion.div
+            className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl"
+            animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
+            transition={{ duration: 6, repeat: Infinity }}
+          />
+
+          {/* Content */}
+          <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-yellow-400 font-bold text-xl sm:text-2xl md:text-3xl mb-4"
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-white/90 font-semibold text-xl md:text-2xl mb-4"
             >
               — Our Services
             </motion.p>
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.5 }}
-              className="text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-tight"
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-white font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6"
             >
-              Web Designing & Development
+              Web Designing & <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Development</span>
             </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+            >
+              Expert web design and development services that deliver stunning, responsive, innovative, and user-focused solutions for your business.
+            </motion.p>
           </div>
         </motion.div>
 
         {/* Main Content Section */}
         <div className="flex flex-wrap p-6">
-          {/* Sidebar */}
-          <aside className="w-full md:w-1/5 bg-gradient-to-b from-white to-gray-100 p-6 shadow-lg rounded-lg mb-6 md:mb-0">
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">
-              All Services
+          {/* Sidebar with About Us Styling */}
+          <aside className="w-full md:w-1/5 professional-card p-6 shadow-lg rounded-2xl mb-6 md:mb-0 border border-blue-100/30">
+            <h3 className="text-3xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">All Services</span>
             </h3>
             <ul className="space-y-4">
               {[
-                {
-                  name: "Web Designing & Development",
-                  icon: <FaGlobe />,
-                  href: "/Services/web-designing-development",
-                },
-                {
-                  name: "Ecommerce Website Designing",
-                  icon: <FaShoppingCart />,
-                  href: "/Services//ecommerce-website-designing",
-                },
                 {
                   name: "Google Adwords",
                   icon: <FaGoogle />,
@@ -302,12 +312,14 @@ export default function WebDesigningDevelopment() {
                 <motion.li key={index} whileHover={{ x: 5 }}>
                   <Link
                     href={service.href}
-                    className="group flex items-center space-x-3 p-3 rounded-md transition-all duration-200 hover:bg-white hover:shadow-md cursor-pointer"
+                    className="group flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 hover:bg-orange-50 cursor-pointer border border-transparent hover:border-orange-200/50"
                   >
-                    <span className="text-red-500 group-hover:text-red-600 transition-colors duration-200">
+                    <span className={`transition-colors duration-300 ${
+                      index % 2 === 0 ? "text-blue-500 group-hover:text-blue-600" : "text-orange-500 group-hover:text-orange-600"
+                    }`}>
                       {service.icon}
                     </span>
-                    <span className="text-gray-700 group-hover:text-gray-900 font-medium transition-colors duration-200">
+                    <span className="text-gray-700 group-hover:text-gray-900 font-medium transition-colors duration-300">
                       {service.name}
                     </span>
                   </Link>
@@ -316,221 +328,499 @@ export default function WebDesigningDevelopment() {
             </ul>
           </aside>
 
-          {/* Content */}
-          <div className="w-full md:w-3/5 max-w-8xl mx-auto py-12">
-            <h1 className="text-4xl font-bold text-gray-800">
-            Web Design and Development Company in Pune | Best Web Development Services in India
-            </h1>
-            <p className="text-gray-600 mt-6 text-2xl" >
-            In today's digital-first world, a well-designed, high-performing website is essential for business success. Webutsav, a leading web design and development company in Pune, specializes in creating stunning, SEO-friendly, and user-centric websites that help businesses thrive online.
-            </p>
-            <p className="text-gray-600 mt-4 text-2xl" >
-            From corporate websites and eCommerce platforms to complex web applications, we craft digital experiences that engage users, enhance brand visibility, and drive conversions. Our expertise in UI/UX design, custom development, and SEO optimization makes us the preferred choice for businesses in Pune, Mumbai, and across India.
-            </p>
+          {/* Content with About Us Styling */}
+          <div className="w-full md:w-3/5 max-w-8xl mx-auto py-12 px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="professional-card p-8 rounded-2xl border border-blue-100/30"
+            >
+              <h1 className="text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+                  Web Design and Development Company in Pune
+                </span>
+              </h1>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full mb-6"></div>
+
+              <p className="text-gray-600 mt-6 text-lg leading-relaxed mb-4">
+                In today's digital-first world, a well-designed, high-performing website is essential for business success. Webutsav, a leading web design and development company in Pune, specializes in creating stunning, SEO-friendly, and user-centric websites that help businesses thrive online.
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                From corporate websites and eCommerce platforms to complex web applications, we craft digital experiences that engage users, enhance brand visibility, and drive conversions. Our expertise in UI/UX design, custom development, and SEO optimization makes us the preferred choice for businesses in Pune, Mumbai, and across India.
+              </p>
+            </motion.div>
           </div>
         </div>
 
-        <section className="w-full py-12 md:py-24 bg-gray-50">
-          <div className="container px-4 md:px-6 mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Why Choose Webutsav for Web Design & Development?</h2>
+        {/* Features Section with About Us Styling */}
+        <section className="w-full py-16 md:py-24 bg-gradient-to-br from-gray-50 via-blue-50/30 to-orange-50/20 relative overflow-hidden">
+          {/* Floating Brand Color Elements */}
+          <motion.div
+            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/10 rounded-full blur-3xl"
+            animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity }}
+          />
+          <motion.div
+            className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/15 rounded-full blur-2xl"
+            animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
+            transition={{ duration: 6, repeat: Infinity }}
+          />
+
+          <div className="max-w-6xl mx-auto px-6 relative z-10">
+            {/* Section Header */}
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Why Choose <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Webutsav?</span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                💡 We provide cutting-edge web solutions to help businesses grow effectively in the digital landscape.
+              </p>
+            </motion.div>
+
+            {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex flex-col items-center text-center">
-                  <feature.icon className="w-12 h-12 mb-4 text-blue-600" />
-                  <h4 className="text-xl font-semibold mb-2">{feature.title}</h4>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+                <motion.div
+                  key={index}
+                  className="group relative"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                >
+                  {/* Brand Colors Gradient Border */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
 
-        <section className="w-full py-10 bg-gradient-to-br from-blue-900 to-indigo-900 text-white">
-          <div className="container px-4 mx-auto">
-            <h4 className="text-3xl md:text-4xl font-bold text-center mb-6">Comprehensive Web Services</h4>
-            <p className="text-center text-blue-200 mb-8 max-w-2xl mx-auto">
-              From design to development, we offer complete web solutions in Pune, Mumbai, and across India.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {services.map((service, index) => (
-                <div key={index} className="group">
-                  <div className="flex items-baseline mb-2">
-                    <span className="text-2xl font-bold text-blue-400 mr-2 group-hover:text-blue-300 transition-colors">
-                      {(index + 1).toString().padStart(2, "0")}
-                    </span>
-                    <h4 className="text-lg font-semibold group-hover:text-blue-300 transition-colors">{service.title}</h4>
+                  <div className="relative bg-white p-8 rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border border-blue-100/30 group-hover:border-orange-200/50 text-center h-full">
+                    {/* Icon with Alternating Brand Colors */}
+                    <motion.div
+                      className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 ${
+                        index % 2 === 0
+                          ? "bg-gradient-to-br from-blue-500 to-blue-600"
+                          : "bg-gradient-to-br from-orange-500 to-orange-600"
+                      }`}
+                      whileHover={{ rotate: 5 }}
+                    >
+                      <feature.icon className="w-8 h-8 text-white" />
+                    </motion.div>
+
+                    {/* Content */}
+                    <h3 className={`text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 ${
+                      index % 2 === 0 ? "group-hover:text-blue-600" : "group-hover:text-orange-600"
+                    }`}>
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                      {feature.description}
+                    </p>
                   </div>
-                  <p className="text-sm text-blue-100 ml-8 border-l border-blue-700 pl-3 py-1 group-hover:border-blue-500 transition-colors">
-                    {service.description}
-                  </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <FadeInSection>
-              <h4 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Why Webutsav is Among the Best Web Design & Development Companies in Pune & Mumbai?
-              </h4>
-            </FadeInSection>
+        {/* Comprehensive Web Services with About Us Styling */}
+        <section className="w-full py-16 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500 text-white relative overflow-hidden">
+          {/* Transparent Overlay for Brand Consistency */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
 
-            <FadeInSection>
-              <p className="text-lg mb-12 text-center max-w-4xl mx-auto">
+          {/* Floating Brand Color Elements */}
+          <motion.div
+            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+            animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity }}
+          />
+
+          <div className="container px-6 mx-auto relative z-10">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h4 className="text-4xl md:text-5xl font-bold mb-4">
+                Comprehensive <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Web Services</span>
+              </h4>
+              <div className="w-24 h-1 bg-gradient-to-r from-orange-300 to-orange-100 mx-auto rounded-full"></div>
+              <p className="text-white/80 text-xl mt-6 max-w-3xl mx-auto">
+                From design to development, we offer complete web solutions in Pune, Mumbai, and across India.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <motion.div
+                  key={index}
+                  className="group relative"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 group-hover:border-orange-300/50 transition-all duration-300 h-full">
+                    <div className="flex items-baseline mb-4">
+                      <span className={`text-2xl font-bold mr-3 transition-colors duration-300 ${
+                        index % 2 === 0 ? "text-orange-300 group-hover:text-orange-200" : "text-blue-300 group-hover:text-blue-200"
+                      }`}>
+                        {(index + 1).toString().padStart(2, "0")}
+                      </span>
+                      <h4 className="text-xl font-semibold text-white group-hover:text-orange-100 transition-colors duration-300">
+                        {service.title}
+                      </h4>
+                    </div>
+                    <p className="text-white/80 leading-relaxed group-hover:text-white/90 transition-colors duration-300">
+                      {service.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Expertise Section with About Us Styling */}
+        <section className="py-16 px-6 bg-gradient-to-br from-gray-50 via-blue-50/30 to-orange-50/20 relative overflow-hidden">
+          {/* Floating Brand Color Elements */}
+          <motion.div
+            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/10 rounded-full blur-3xl"
+            animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity }}
+          />
+
+          <div className="max-w-6xl mx-auto relative z-10">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h4 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Why Choose <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Webutsav?</span>
+              </h4>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <p className="text-xl text-gray-600 mt-6 max-w-4xl mx-auto leading-relaxed">
                 Webutsav stands out as one of the best web design & development companies in Pune, Mumbai, and India,
                 delivering high-quality, business-driven web solutions. Our approach focuses on innovation, user experience,
                 and search engine optimization to help businesses establish a strong digital footprint.
               </p>
-            </FadeInSection>
+            </motion.div>
 
-            <FadeInSection>
-              <h4 className="text-2xl font-semibold mb-12 text-center">Our Expertise in Web Development</h4>
-            </FadeInSection>
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <h4 className="text-3xl font-bold text-gray-900 mb-4">
+                Our <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Expertise</span>
+              </h4>
+              <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+            </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {expertiseItems.map((item, index) => (
-                <FadeInSection key={index}>
-                  <div className="border-l-4 border-blue-500 pl-6 py-4 h-full">
-                    <h4 className="text-xl font-semibold mb-3">{item.title}</h4>
-                    <p className="text-gray-600">{item.description}</p>
-                  </div>
-                </FadeInSection>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-2 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <h4 className="text-2xl md:text-3xl font-bold mb-4 text-center">Technologies We Use</h4>
-            <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
-              Our developers are skilled in the latest technologies to build modern, scalable, and future-ready websites.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {technologies.map((tech, index) => (
-                <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="text-lg font-semibold mb-3">{tech.category}</h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    {tech.items.map((item, itemIndex) => (
-                      <TechItem key={itemIndex} item={item} />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <div className="container mx-auto py-2 px-4 md:px-6 lg:px-8">
-          <div className="p-6 mt-12">
-            <h4 className="text-4xl font-bold text-gray-800 text-center mb-6">
-            Industries We Serve with Web Development Solutions in Pune, Mumbai & India
-            </h4>
-            <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto">
-            Webutsav caters to a diverse range of industries, providing tailored web development services to meet their unique business needs.
-            </p>
-            <div className="max-w-4xl mx-auto">
-              {faqs.map((faq, index) => (
-                <div key={index} className="mb-4 border-b pb-4">
-                  <button
-                    onClick={() => toggleFAQ(index)}
-                    className="flex justify-between items-center w-full text-left text-xl font-semibold text-gray-800 p-4 bg-white shadow rounded-lg"
-                  >
-                    {faq.question}
-                    {openIndex === index ? <FaMinus /> : <FaPlus />}
-                  </button>
-                  {openIndex === index && (
-                    <p className="p-4 text-gray-600">{faq.answer}</p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Work Process Section */}
-        <div className="flex flex-col items-center justify-center py-4 px-8 bg-gradient-to-b from-white to-yellow-50">
-          <motion.h2
-            className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 text-center"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            How We Develop High-Performance Websites
-          </motion.h2>
-          <motion.p
-            className="text-gray-600 text-center mb-12 max-w-3xl text-lg"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            Our web development process is designed to deliver outstanding results.
-          </motion.p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {["Consultation & Strategy", "UI/UX Design & Prototyping", "Development & Coding", "Testing & Quality Assurance","Deployment & Launch","Ongoing Support & Maintenance"].map(
-              (step, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-lg text-center"
-                  whileHover={{ scale: 1.05 }}
+                  className="group relative"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className={`professional-card p-6 rounded-2xl border-l-4 h-full transition-all duration-300 ${
+                    index % 2 === 0 ? "border-l-blue-500 hover:border-l-blue-600" : "border-l-orange-500 hover:border-l-orange-600"
+                  }`}>
+                    <h4 className={`text-xl font-bold mb-3 transition-colors duration-300 ${
+                      index % 2 === 0 ? "text-gray-900 group-hover:text-blue-600" : "text-gray-900 group-hover:text-orange-600"
+                    }`}>
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                      {item.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Technologies Section with About Us Styling */}
+        <section className="py-16 px-6 bg-white relative overflow-hidden">
+          {/* Floating Brand Color Elements */}
+          <motion.div
+            className="absolute bottom-10 right-10 w-48 h-48 bg-blue-300/15 rounded-full blur-2xl"
+            animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
+            transition={{ duration: 6, repeat: Infinity }}
+          />
+
+          <div className="max-w-6xl mx-auto relative z-10">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h4 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Technologies <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">We Use</span>
+              </h4>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                Our developers are skilled in the latest technologies to build modern, scalable, and future-ready websites.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {technologies.map((tech, index) => (
+                <motion.div
+                  key={index}
+                  className="group relative"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                >
+                  {/* Brand Colors Gradient Border */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+
+                  <div className="relative professional-card p-6 rounded-2xl border border-blue-100/30 group-hover:border-orange-200/50 h-full">
+                    <h4 className={`text-lg font-bold mb-4 transition-colors duration-300 ${
+                      index % 2 === 0 ? "text-gray-900 group-hover:text-blue-600" : "text-gray-900 group-hover:text-orange-600"
+                    }`}>
+                      {tech.category}
+                    </h4>
+                    <div className="grid grid-cols-2 gap-4">
+                      {tech.items.map((item, itemIndex) => (
+                        <TechItem key={itemIndex} item={item} />
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Industries Section with About Us Styling */}
+        <section className="py-16 px-6 bg-gradient-to-br from-gray-50 via-blue-50/30 to-orange-50/20 relative overflow-hidden">
+          {/* Floating Brand Color Elements */}
+          <motion.div
+            className="absolute top-10 left-10 w-64 h-64 bg-orange-400/10 rounded-full blur-3xl"
+            animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity }}
+          />
+
+          <div className="max-w-6xl mx-auto relative z-10">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h4 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Industries <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">We Serve</span>
+              </h4>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                Webutsav caters to a diverse range of industries, providing tailored web development services to meet their unique business needs.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              {faqs.map((faq, index) => (
+                <motion.div
+                  key={index}
+                  className="mb-6 group"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <div
-                    className={`w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center text-3xl font-bold ${
-                      index === 0
-                        ? "bg-blue-200 text-blue-600"
-                        : index === 1
-                          ? "bg-green-200 text-green-600"
-                          : index === 2
-                            ? "bg-purple-200 text-purple-600"
-                            : index === 3
-                              ? "bg-red-200 text-red-600"
-                              : index === 4
-                                ? "bg-yellow-200 text-yellow-600"
-                                : "bg-pink-200 text-pink-600"
+                  <motion.button
+                    onClick={() => toggleFAQ(index)}
+                    className={`flex justify-between items-center w-full text-left p-6 professional-card rounded-2xl border transition-all duration-300 ${
+                      openIndex === index
+                        ? "border-orange-200/50 bg-orange-50/50"
+                        : "border-blue-100/30 hover:border-orange-200/50"
                     }`}
+                    whileHover={{ y: -2 }}
                   >
-                    {`0${index + 1}`}
-                  </div>
-                  <h4 className="text-2xl font-bold mb-2">{step}</h4>
-                  <p className="text-gray-600">
-                    {index === 0 && "Understanding your business goals and planning a customized solution."}
-                    {index === 1 && "Creating visually appealing, user-friendly designs."}
-                    {index === 2 && "Bringing the design to life with advanced technologies."}
-                    {index === 3 && "Conducting rigorous tests for performance, security, and compatibility."}
-                    {index === 4 && "Ensuring a seamless transition from development to live website."}
-                    {index === 5 && "Keeping your website updated, secure, and optimized for growth."}
-                  </p>
+                    <span className={`text-xl font-bold transition-colors duration-300 ${
+                      index % 2 === 0 ? "text-gray-900 group-hover:text-blue-600" : "text-gray-900 group-hover:text-orange-600"
+                    }`}>
+                      {faq.question}
+                    </span>
+                    <motion.span
+                      className={`transition-colors duration-300 ${
+                        index % 2 === 0 ? "text-blue-500" : "text-orange-500"
+                      }`}
+                      animate={{ rotate: openIndex === index ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {openIndex === index ? <FaMinus /> : <FaPlus />}
+                    </motion.span>
+                  </motion.button>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="mt-4 p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-blue-100/30"
+                    >
+                      <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                    </motion.div>
+                  )}
                 </motion.div>
-              )
-            )}
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="bg-gradient-to-r from-amber-500 to-amber-600 py-16 px-4 text-center">
-          <motion.h2
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            className="text-4xl font-extrabold text-white tracking-wide mb-8"
-          >
-            Get the Best Web Design & Development Services in Pune, Mumbai & Across India
-          </motion.h2>
-          <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto text">
-          If you're looking for a top web design and development company in Pune, Webutsav is your go-to solution. Our expert team specializes in building high-performance, visually stunning, and SEO-optimized websites tailored to your business needs.
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:bg-gray-100 transition-all duration-300 focus:outline-none"
-          >
-            Let's Build Your Website Today!
-          </motion.button>
-        </div>
+        </section>
+
+        {/* Work Process Section with About Us Styling */}
+        <section className="py-16 px-6 bg-white relative overflow-hidden">
+          {/* Floating Brand Color Elements */}
+          <motion.div
+            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/10 rounded-full blur-3xl"
+            animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity }}
+          />
+          <motion.div
+            className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/15 rounded-full blur-2xl"
+            animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
+            transition={{ duration: 6, repeat: Infinity }}
+          />
+
+          <div className="max-w-6xl mx-auto relative z-10">
+            {/* Section Header */}
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Our Development <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Process</span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+              <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+                Our web development process is designed to deliver outstanding results through systematic approach.
+              </p>
+            </motion.div>
+
+            {/* Process Steps */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {["Consultation & Strategy", "UI/UX Design & Prototyping", "Development & Coding", "Testing & Quality Assurance","Deployment & Launch","Ongoing Support & Maintenance"].map(
+                (step, index) => (
+                  <motion.div
+                    key={index}
+                    className="group relative"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    whileHover={{ y: -10 }}
+                  >
+                    {/* Brand Colors Gradient Border */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+
+                    {/* Card Content */}
+                    <div className="relative bg-white p-8 rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border border-blue-100/30 group-hover:border-orange-200/50 text-center">
+                      {/* Step Number with Alternating Brand Colors */}
+                      <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 ${
+                        index % 2 === 0
+                          ? "bg-gradient-to-br from-blue-500 to-blue-600"
+                          : "bg-gradient-to-br from-orange-500 to-orange-600"
+                      }`}>
+                        <span className="text-white font-bold text-xl">{`0${index + 1}`}</span>
+                      </div>
+
+                      {/* Content */}
+                      <h4 className={`text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 ${
+                        index % 2 === 0 ? "group-hover:text-blue-600" : "group-hover:text-orange-600"
+                      }`}>
+                        {step}
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                        {index === 0 && "Understanding your business goals and planning a customized solution."}
+                        {index === 1 && "Creating visually appealing, user-friendly designs."}
+                        {index === 2 && "Bringing the design to life with advanced technologies."}
+                        {index === 3 && "Conducting rigorous tests for performance, security, and compatibility."}
+                        {index === 4 && "Ensuring a seamless transition from development to live website."}
+                        {index === 5 && "Keeping your website updated, secure, and optimized for growth."}
+                      </p>
+                    </div>
+                  </motion.div>
+                )
+              )}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section with About Us Styling */}
+        <section className="py-16 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500 text-white relative overflow-hidden">
+          {/* Transparent Overlay for Brand Consistency */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+
+          {/* Floating Brand Color Elements */}
+          <motion.div
+            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+            animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity }}
+          />
+
+          <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-5xl font-bold mb-6"
+            >
+              Ready to Build Your <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Dream Website?</span>
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-white/80 text-xl mb-8 max-w-3xl mx-auto leading-relaxed"
+            >
+              If you're looking for a top web design and development company in Pune, Webutsav is your go-to solution. Our expert team specializes in building high-performance, visually stunning, and SEO-optimized websites tailored to your business needs.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <motion.a
+                href="tel:+918766922792"
+                className="inline-block px-10 py-5 bg-white/95 backdrop-blur-sm font-bold text-xl rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 group border border-blue-200/30"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="flex items-center space-x-3">
+                  <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Let's Build Your Website Today!</span>
+                  <motion.svg
+                    className="w-6 h-6 text-orange-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </motion.svg>
+                </span>
+              </motion.a>
+            </motion.div>
+          </div>
+        </section>
       </div>
     </>
   );

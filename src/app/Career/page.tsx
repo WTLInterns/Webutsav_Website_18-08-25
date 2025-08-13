@@ -139,38 +139,45 @@ const CareerPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section ref={heroRef} className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Build Your Career at
-              <span className="block text-blue-300">Webutsav</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Join our dynamic team of innovators, creators, and digital solution experts. 
-              Shape the future of technology while growing your career in Pune's thriving tech ecosystem.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                className="bg-blue-500 hover:bg-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105"
-                onClick={() => jobsRef.current?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                View Open Positions
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
-                Learn About Culture
-              </button>
-            </div>
+      {/* Professional Hero Section with Brand Colors */}
+      <section ref={heroRef} className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
+        {/* Brand Colors Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500"></div>
+
+        {/* Transparent Overlay for Brand Consistency */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+
+        {/* Floating Brand Color Elements */}
+        <div className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl animate-bounce"></div>
+        <div className="absolute top-1/3 left-1/4 w-32 h-32 bg-orange-300/15 rounded-full blur-2xl animate-ping"></div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+          <p className="text-white/90 font-semibold text-xl md:text-2xl mb-4">
+            — Careers
+          </p>
+          <h1 className="text-white font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
+            Accelerate Your Career at <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">WebUtsav</span>
+          </h1>
+          <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
+            Join our dynamic team of innovators, creators, and digital solution experts. Shape the future of technology while growing your career in Pune's thriving tech ecosystem.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              className="inline-block px-10 py-5 bg-white/95 backdrop-blur-sm font-bold text-xl rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 group border border-blue-200/30 hover:scale-105"
+              onClick={() => jobsRef.current?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              <span className="flex items-center space-x-3">
+                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">View Open Positions</span>
+                <span className="w-6 h-6 text-orange-500">→</span>
+              </span>
+            </button>
+            <button className="border-2 border-white/80 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105">
+              Learn About Culture
+            </button>
           </div>
-        </div>
-        
-        {/* Animated Background Elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-400/20 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-24 h-24 bg-indigo-400/20 rounded-full animate-bounce"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-purple-400/20 rounded-full animate-ping"></div>
         </div>
       </section>
 
@@ -209,7 +216,7 @@ const CareerPage = () => {
               Discover opportunities across our diverse teams and find where your skills can make the biggest impact.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {departments.map((dept, index) => {
               const IconComponent = dept.icon;
@@ -615,7 +622,7 @@ const CareerPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Join Webutsav?
+              Why Join WebUtsav?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We're not just building digital solutions; we're building careers, relationships, and the future of technology in Pune.
@@ -663,7 +670,7 @@ const CareerPage = () => {
             Ready to Start Your Journey?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join Webutsav and be part of a team that's shaping the digital future. 
+            Join WebUtsav and be part of a team that's shaping the digital future.
             Your next career opportunity is just one click away.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

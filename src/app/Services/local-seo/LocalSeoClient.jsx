@@ -754,38 +754,58 @@ export default function LocalSEO() {
     <>
    
     
-      <div className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-white">
-        {/* Hero Section */}
+      <div className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+        {/* Professional Hero Section with Brand Colors */}
         <motion.div
-          className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]"
+          className="relative w-full h-[80vh] flex items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <Image
-            src="/images/aboutus.jpg"
-            alt="Google AdWords"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
+          {/* Brand Colors Gradient Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500"></div>
+
+          {/* Transparent Overlay for Brand Consistency */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
+
+          {/* Floating Brand Color Elements */}
+          <motion.div
+            className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+            animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity }}
           />
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center px-6 md:px-12">
+          <motion.div
+            className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl"
+            animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
+            transition={{ duration: 6, repeat: Infinity }}
+          />
+
+          {/* Content */}
+          <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-yellow-400 font-bold text-xl sm:text-2xl md:text-3xl mb-4"
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-white/90 font-semibold text-xl md:text-2xl mb-4"
             >
               — Our Services
             </motion.p>
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.5 }}
-              className="text-white font-bold text-3xl sm:text-4xl md:text-5xl leading-tight"
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-white font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6"
             >
-              Local SEO
+              Local <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">SEO</span>
             </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+            >
+              Enhance your local visibility with targeted local SEO strategies. Reach nearby customers and grow your business with optimized local search results.
+            </motion.p>
           </div>
         </motion.div>
 

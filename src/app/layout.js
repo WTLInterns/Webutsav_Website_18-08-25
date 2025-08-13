@@ -3,7 +3,7 @@ import "./globals.css"
 import Navbar from "../components/Navbar/page.jsx"
 import PreLoader from "../components/PreLoader/page.jsx"
 import Footer from "../components/Footer/page.jsx"
-import PartnerBrands from "../components/Partner_Brands/page.jsx"
+import FloatingButtons from "../components/FloatingButtons/page.jsx"
 import Script from 'next/script'
 
 const geistSans = Geist({
@@ -58,8 +58,8 @@ export default function RootLayout({ children }) {
         <Navbar />
         <PreLoader />
         {children}
-        <PartnerBrands/>
         <Footer />
+        <FloatingButtons />
       </body>
     </html>
   )

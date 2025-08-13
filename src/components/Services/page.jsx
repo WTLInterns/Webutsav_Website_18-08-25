@@ -1,208 +1,342 @@
 "use client"
 
-import { Monitor, ShoppingCart, Search, Share2, MapPin, BarChart3, Smartphone } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import Link from "next/link"
-import { motion } from "framer-motion"
-
-const services = [
-  {
-    id: 1,
-    icon: Monitor,
-    title: "Web Designing & Development",
-    description:
-      "Expert web design and development services that deliver stunning, responsive, innovative, and user-focused solutions for your business.",
-    color: "bg-blue-500",
-    link: "/Services/web-designing-development",
-  },
-  {
-    id: 2,
-    icon: ShoppingCart,
-    title: "Ecommerce Website Designing",
-    description:
-      "Professional ecommerce website design and development services. Create a seamless shopping experience with custom, responsive, and user-friendly solutions.",
-    color: "bg-green-500",
-    link: "/Services//ecommerce-website-designing",
-  },
-  {
-    id: 3,
-    icon: BarChart3,
-    title: "Google Adwords",
-    description:
-      "Maximize your online reach with targeted Google Ads campaigns. Drive traffic, increase conversions, and grow your business with expert PPC management.",
-    color: "bg-red-500",
-    link: "/Services/google-adwords",
-  },
-  {
-    id: 4,
-    icon: Search,
-    title: "Search Engine Optimization",
-    description:
-      "Boost your website's visibility with expert SEO services. Improve rankings, drive organic traffic, and reach your online prospects effectively.",
-    color: "bg-emerald-500",
-    link: "/Services/search-engine-optimisation",
-  },
-  {
-    id: 5,
-    icon: Share2,
-    title: "Social Media Marketing",
-    description:
-      "Amplify your online presence with strategic social media marketing. Engage your audience, boost awareness, and drive conversions through social channels.",
-    color: "bg-indigo-500",
-    link: "/Services/social-media-marketing",
-  },
-  {
-    id: 6,
-    icon: MapPin,
-    title: "Local SEO",
-    description:
-      "Enhance your local visibility with targeted local SEO strategies. Reach nearby customers and grow your business with optimized local search results.",
-    color: "bg-pink-500",
-    link: "/Services/local-seo",
-  },
-  {
-    id: 7,
-    icon: Smartphone,
-    title: "Mobile Application Development",
-    description:
-      "Create powerful, user-friendly mobile applications for iOS and Android. Enhance your business with custom mobile solutions tailored to your needs.",
-    color: "bg-purple-500",
-    link: "/Services/mobile-application",
-  },
-]
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react"
 
 const ServicesTimeline = () => {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, threshold: 0.1 })
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  }
+
+  const serviceVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }
+    }
+  }
+
   return (
-    <div className="py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 bg-gradient-to-b from-gray-50 to-gray-100">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <motion.div
-          className="text-center mb-12 sm:mb-16 md:mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-800 px-4">
-            Our Creative Services
-          </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
-            Elevate your business with our comprehensive suite of services designed to create exceptional UI/UX
-            experiences and drive growth.
-          </p>
-        </motion.div>
-
-        {/* Timeline */}
-        <div className="relative">
-          {/* Timeline Line - Hidden on mobile */}
-          <motion.div
-            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-200 hidden md:block"
-            initial={{ height: 0 }}
-            animate={{ height: "100%" }}
-            transition={{ duration: 1, delay: 0.3 }}
-          />
-
-          {/* Services */}
-          <div className="relative">
-            {services.map((service, index) => (
-              <div key={service.id} className="mb-8 sm:mb-12 md:mb-24">
-                <div
-                  className={`flex flex-col md:flex-row items-center gap-4 sm:gap-6 md:gap-8 
-                    ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
-                >
-                  {/* Content */}
-                  <div className={`flex-1 w-full md:w-auto ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
-                    <motion.div
-                      className="bg-white p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-                      initial={{
-                        opacity: 0,
-                        x: 0,
-                        y: 50,
-                      }}
-                      whileInView={{
-                        opacity: 1,
-                        x: 0,
-                        y: 0,
-                      }}
-                      viewport={{ once: true }}
-                      transition={{
-                        duration: 0.5,
-                        delay: index * 0.1,
-                      }}
-                      whileHover={{ y: -5 }}
-                    >
-                      <motion.div
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ delay: index * 0.2 + 0.3 }}
-                        className={`w-12 h-12 sm:w-16 sm:h-16 ${
-                          service.color
-                        } rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto md:mx-0 ${
-                          index % 2 === 0 ? "md:ml-auto" : ""
-                        }`}
-                      >
-                        <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-                      </motion.div>
-                      <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800 text-center md:text-left">
-                        {service.title}
-                      </h3>
-                      <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 text-center md:text-left">
-                        {service.description}
-                      </p>
-                      <div className={`text-center md:text-left ${index % 2 === 0 ? "md:text-right" : ""}`}>
-                        <Link
-                          href={service.link}
-                          className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold text-base sm:text-lg group"
-                        >
-                          View Details
-                          <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
-                        </Link>
-                      </div>
-                    </motion.div>
-                  </div>
-
-                  {/* Timeline Dot */}
-                  <motion.div
-                    className="absolute left-1/2 transform -translate-x-1/2 hidden md:block"
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 260,
-                      damping: 20,
-                      delay: index * 0.1,
-                    }}
-                  >
-                    <div
-                      className={`w-8 h-8 sm:w-12 sm:h-12 rounded-full ${service.color} flex items-center justify-center text-white font-bold text-base sm:text-lg border-4 border-white shadow-md`}
-                    >
-                      {String(service.id).padStart(2, "0")}
-                    </div>
-                  </motion.div>
-
-                  {/* Spacer for opposite side - Hidden on mobile */}
-                  <div className="flex-1 hidden md:block" />
-                </div>
-              </div>
-            ))}
+    <div>
+      {/* Professional Hero Section with Brand Colors */}
+      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500">
+        {/* Background Pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full opacity-10">
+            <motion.div
+              className="absolute top-20 left-20 w-32 h-32 border-2 border-white rounded-full"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            />
+            <motion.div
+              className="absolute top-40 right-32 w-24 h-24 border border-white rounded-full"
+              animate={{ rotate: -360 }}
+              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            />
+            <motion.div
+              className="absolute bottom-32 left-1/3 w-40 h-40 border border-white rounded-full"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+            />
           </div>
         </div>
 
-        {/* CTA Button */}
+        {/* Floating Brand Color Elements */}
         <motion.div
-          className="text-center mt-8 sm:mt-12 md:mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          {/* <Link
-            href="/get-started"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-base sm:text-lg font-semibold px-6 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+          className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+          animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+          transition={{ duration: 8, repeat: Infinity }}
+        />
+        <motion.div
+          className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl"
+          animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
+          transition={{ duration: 6, repeat: Infinity }}
+        />
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-6xl font-bold text-white mb-6"
           >
-            Get Started Now
-          </Link> */}
+            Our Professional <span className="text-blue-100">Services</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl text-white/90 mb-12 max-w-2xl mx-auto"
+          >
+            Comprehensive digital solutions designed to transform your business and drive exceptional growth through innovative technology.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <motion.button
+              className="px-10 py-4 bg-white/95 backdrop-blur-sm font-bold text-lg rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 group border border-blue-200/30"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Explore Our Services</span>
+            </motion.button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Enhanced Services Section */}
+      <section
+        ref={ref}
+        className="py-20 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
+      >
+      {/* Brand Color Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="absolute top-20 right-10 w-40 h-40 bg-orange-200/20 rounded-full blur-xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            rotate: [0, 180, 360]
+          }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div
+          className="absolute bottom-32 left-10 w-32 h-32 bg-blue-300/15 rounded-full blur-lg"
+          animate={{
+            y: [0, -30, 0],
+            scale: [1, 0.7, 1]
+          }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/4 w-24 h-24 bg-orange-400/10 rounded-full blur-lg"
+          animate={{
+            x: [0, 20, 0],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-20 right-1/4 w-28 h-28 bg-blue-500/10 rounded-full blur-xl"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div
+          className="absolute top-1/3 right-1/3 w-36 h-36 bg-orange-300/8 rounded-full blur-2xl"
+          animate={{
+            y: [0, 25, 0],
+            x: [0, -15, 0]
+          }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          {/* Enhanced Header with Brand Colors */}
+          <motion.div
+            className="text-center mb-16"
+            variants={headerVariants}
+          >
+            <motion.h2
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+              variants={headerVariants}
+            >
+              Our Creative{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent relative">
+                Services
+                <motion.div
+                  className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full"
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 1, delay: 0.8 }}
+                />
+              </span>
+            </motion.h2>
+            <motion.p
+              className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+              variants={headerVariants}
+            >
+              Elevate your business with our comprehensive suite of services designed to create exceptional{" "}
+              <span className="text-blue-600 font-semibold">digital experiences</span> and drive{" "}
+              <span className="text-orange-500 font-semibold">sustainable growth</span>.
+            </motion.p>
+          </motion.div>
+
+          {/* Enhanced CTA Section with Brand Colors */}
+          <motion.div
+            className="text-center mt-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <Link href="/Contact">
+              <motion.div
+                className="inline-flex items-center space-x-4 bg-gradient-to-r from-blue-500 to-orange-500 text-white px-10 py-5 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer group"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="font-bold text-lg">Ready to Get Started?</span>
+                <motion.div
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </motion.div>
+              </motion.div>
+            </Link>
+
+            <motion.p
+              className="text-gray-600 mt-6 text-lg max-w-2xl mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+            >
+              Let's discuss your project and bring your <span className="text-blue-600 font-semibold">vision</span> to <span className="text-orange-500 font-semibold">life</span>
+            </motion.p>
+
+            {/* Trust Indicators */}
+            <motion.div
+              className="mt-8 flex flex-wrap justify-center items-center gap-8 text-gray-500"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+            >
+              <div className="flex items-center space-x-2">
+                <span className="text-2xl">⭐</span>
+                <span className="font-semibold">5-Star Rated</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-2xl">🚀</span>
+                <span className="font-semibold">500+ Projects</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-2xl">👥</span>
+                <span className="font-semibold">250+ Happy Clients</span>
+              </div>
+            </motion.div>
+          </motion.div>
         </motion.div>
       </div>
+      </section>
+
+      {/* Why Choose Our Services Section */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        {/* Background Elements with Brand Colors */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-blue-50/30 via-orange-50/20 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-100/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-80 h-80 bg-blue-100/15 rounded-full blur-2xl"></div>
+        </div>
+
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          {/* Section Header */}
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-5xl font-bold text-gray-900 mb-4">
+              Why Choose Our <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Services?</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+            <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+              We deliver exceptional results through innovative solutions, expert team, and proven methodologies.
+            </p>
+          </motion.div>
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { icon: "🎯", title: "Expert Team", desc: "Skilled professionals with years of industry experience" },
+              { icon: "⚡", title: "Fast Delivery", desc: "Quick turnaround times without compromising quality" },
+              { icon: "🔧", title: "Custom Solutions", desc: "Tailored services to meet your specific business needs" },
+              { icon: "📈", title: "Proven Results", desc: "Track record of successful projects and satisfied clients" },
+              { icon: "🛡️", title: "Quality Assurance", desc: "Rigorous testing and quality control processes" },
+              { icon: "💬", title: "24/7 Support", desc: "Round-the-clock assistance and maintenance services" }
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                className="group relative"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+              >
+                {/* Brand Colors Gradient Border */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+
+                {/* Card Content */}
+                <div className="relative bg-white p-6 rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border border-blue-100/30 group-hover:border-orange-200/50">
+                  <div className="text-center">
+                    {/* Icon */}
+                    <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 ${
+                      index % 2 === 0
+                        ? "bg-gradient-to-br from-blue-500 to-blue-600"
+                        : "bg-gradient-to-br from-orange-500 to-orange-600"
+                    }`}>
+                      <span className="text-white text-2xl">{feature.icon}</span>
+                    </div>
+
+                    {/* Content */}
+                    <h3 className={`text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 ${
+                      index % 2 === 0 ? "group-hover:text-blue-600" : "group-hover:text-orange-600"
+                    }`}>
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                      {feature.desc}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

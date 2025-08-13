@@ -5,31 +5,44 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import gsap from 'gsap';
+import ProductImage from '../../components/ProductImage/ProductImage';
 
 // Product data array
 const products = [
   {
-    title: 'HRM',
-    // Product link for HRM:
-    link: 'https://managifyhr.com/', 
-    // Product image (update path as needed):
+    title: 'ManagifyHR',
+    category: 'HR Management',
+    link: 'https://managifyhr.com/',
     image: '/images/HRM Logo.png',
-    // Product description:
-    description: 'A comprehensive HR management solution for modern businesses.',
+    description: 'A comprehensive HR management solution for modern businesses. Streamline your workforce management with advanced features.',
   },
   {
-    title: 'Whatsapp CRM',
-    // Product link for Whatsapp CRM:
-    link: 'https://testuinnovation.com/register',
-    image: '/images/Webutsav (3) (1).jpeg',
-    description: 'CRM tool to manage your WhatsApp leads and conversations efficiently.',
+    title: 'Testuinnovation CRM',
+    category: 'Customer Relationship',
+    link: 'https://testuinnovation.com',
+    image: '/images/whtsappcrmtestunivation.png',
+    description: 'Advanced WhatsApp CRM tool to manage your WhatsApp leads and conversations efficiently. Boost your customer engagement.',
   },
   {
     title: 'Route Budget',
-    // Product link for Rout Budget:
+    category: 'Fleet Management',
     link: 'https://routebudget.com',
-    image: '/images/Route budget.jpg',
-    description: 'Route planning and budgeting made easy for Fleet Management.',
+    image: '/images/Route Budget.jpg',
+    description: 'Route planning and budgeting made easy for logistics teams. Optimize your fleet operations and reduce costs.',
+  },
+  {
+    title: 'SilkSew',
+    category: 'E-commerce Platform',
+    link: 'https://silksew.com/',
+    image: '/images/silksew.jpg',
+    description: 'Premium silk and textile e-commerce platform. Discover luxury fabrics and custom tailoring services online.',
+  },
+  {
+    title: 'Parshuram Dairy Farm',
+    category: 'Agriculture & Dairy',
+    link: 'https://parshuramdairyfarm.com/',
+    image: '/images/parshuram.jpeg',
+    description: 'Fresh dairy products and farm management system. Quality milk and dairy products delivered fresh from farm to table.',
   },
 ];
 
@@ -72,117 +85,162 @@ export default function ProductsPage() {
   const h2Text = 'Discover Our Powerful Solutions!';
 
   return (
-    <main className="min-h-screen bg-gray-50">
-      {/* Animated Hero Section */}
-      <div
-        className="relative w-full h-[60vh] sm:h-[60vh] flex items-center px-4 sm:px-8 lg:px-16"
-        style={{
-          backgroundImage: "url('/images/aboutus.jpg')",        
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-        }}
+    <main className="min-h-screen overflow-hidden" suppressHydrationWarning={true}>
+      {/* Professional Hero Section with Brand Colors */}
+      <motion.div
+        className="relative w-full h-[80vh] flex items-center justify-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
       >
-        <div className="max-w-lg sm:max-w-xl lg:max-w-2xl text-left">
-          {/* Animated P (— Our Products) */}
-          <p ref={pRef} className="text-yellow-400 font-bold text-lg sm:text-xl md:text-2xl mb-2">
+        {/* Brand Colors Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500"></div>
 
+        {/* Transparent Overlay for Brand Consistency */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-600/20"></div>
 
-          {/* {pText.split('').map((letter, index) => (
-              <span key={index} className="inline-block">{letter}</span> */}
+        {/* Floating Brand Color Elements */}
+        <motion.div
+          className="absolute top-10 right-10 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl"
+          animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+          transition={{ duration: 8, repeat: Infinity }}
+        />
+        <motion.div
+          className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/25 rounded-full blur-2xl"
+          animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
+          transition={{ duration: 6, repeat: Infinity }}
+        />
+        <motion.div
+          className="absolute top-1/3 left-1/4 w-32 h-32 bg-orange-300/15 rounded-full blur-2xl"
+          animate={{ y: [0, -15, 0], x: [0, 15, 0] }}
+          transition={{ duration: 9, repeat: Infinity }}
+        />
 
-
-
-            {pText.split(' ').map((word, i) => (
-              <span key={i} className={i !== 0 ? 'ml-4 inline-block' : 'inline-block'}>{word}</span>
-            ))}
-          </p>
-
-
-
-
-          {/* Animated H2 (Discover Our Powerful Solutions!) */}
-          <h2 ref={h2Ref} className="text-white font-bold text-2xl sm:text-3xl md:text-4xl leading-tight">
-            {h2Text.split(' ').map((word, index) => (
-              <span key={index} className="inline-block mr-2">{word}</span>
-            ))}
-          </h2>
-        </div>
-      </div>
-
-      {/* Product Cards Section */}
-      <div className="py-12 px-4">
-        <div className="container mx-auto flex flex-col items-center">
-          <motion.div
-            className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center"
-            variants={containerVariants}
-            initial="hidden"
-            animate="show"
+        {/* Content */}
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-white/90 font-semibold text-xl md:text-2xl mb-4"
           >
-            {products.map((product, idx) => (
-              <motion.a
-                key={product.title}
-                href={product.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                variants={cardVariants}
-                whileHover={{
-                  scale: 1.06,
-                  rotate: -2,
-                  boxShadow: "0 12px 48px 0 rgba(245, 158, 66, 0.22)", // deeper amber glow
-                  borderColor: "#f59e42", // amber border
-                  color: "#b45309", // subtle text color change
-                }}
-                transition={{ type: 'spring', stiffness: 260, damping: 16, duration: 0.24 }}
-                className="bg-gradient-to-br from-white via-amber-50 to-amber-100 shadow-2xl rounded-3xl border border-amber-100 p-8 m-4 flex flex-col items-center justify-center cursor-pointer w-80 h-[400px] sm:w-80 sm:h-[400px] mx-auto font-sans text-center hover:shadow-amber-300 hover:border-amber-400 transition-all duration-300 ease-in-out group relative overflow-hidden"
-                style={{ textDecoration: 'none' }}
-              >
-                {/* Interactive BADGE for HRM */}
-                {/* {product.title === 'HRM' && (
-                  <span className="absolute top-4 left-4 bg-amber-400 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md animate-pulse z-10">
-                    NEW
-                  </span>
-                )} */}
-                {/* Product Image */}
-                <div className="w-20 h-20 mb-4 relative flex items-center justify-center">
-                  <Image
-                    src={product.image}
-                    alt={product.title + ' logo'}
-                    fill
-                    style={{ objectFit: 'contain' }}
-                    className="rounded"
-                    sizes="80px"
-                    priority
-                  />
-                </div>
-                {/* Product Title */}
-                <h2 className="text-xl font-semibold text-gray-800 text-center mb-2 group-hover:text-amber-700 transition-colors duration-300">
-                  {product.title}
-                </h2>
-                {/* Product Description */}
-                <p className="text-gray-600 text-center text-base mb-4 group-hover:text-gray-900 transition-colors duration-300">
-                  {product.description}
-                </p>
-                {/* Overlay gradient and CTA on hover */}
-                <span
-                  className="mt-auto px-6 py-2 rounded-full bg-amber-400 text-white font-bold shadow hover:bg-amber-500 transition-all duration-300 z-10"
-                  style={{ fontSize: 16 }}
-                >
-                  Learn More
-                </span>
-                {/* Overlay: subtle gradient appears on hover */}
-                <span className="absolute inset-0 bg-gradient-to-t from-amber-200/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0" />
-              </motion.a>
-            ))}
-          </motion.div>
+            — Our Products
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-white font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6"
+          >
+            Discover Our <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Powerful Solutions!</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+          >
+            Explore our innovative products designed to streamline your business operations and drive growth.
+          </motion.p>
         </div>
-        {/* --- PRODUCT LINKS, IMAGES, & DESCRIPTIONS ---
-          HRM: https://managifyhr.com/ | /images/HRM Logo.png | A comprehensive HR management solution for modern businesses.
-          Whatsapp CRM: https://testuinnovation.com/register | /images/Webutsav (3) (1).jpeg | CRM tool to manage your WhatsApp leads and conversations efficiently.
-          Rout Budget: https://routebudget.com | /images/Route budget.jpg | Route planning and budgeting made easy for logistics teams.
-          To update, edit the 'products' array above.
-        */}
-      </div>
+      </motion.div>
+
+      {/* Product Cards Section with About Us Styling */}
+      <section className="py-16 px-6 bg-gradient-to-br from-gray-50 via-blue-50/30 to-orange-50/20 relative overflow-hidden">
+        {/* Floating Brand Color Elements */}
+        <motion.div
+          className="absolute top-10 right-10 w-64 h-64 bg-orange-400/10 rounded-full blur-3xl"
+          animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+          transition={{ duration: 8, repeat: Infinity }}
+        />
+        <motion.div
+          className="absolute bottom-10 left-10 w-48 h-48 bg-blue-300/15 rounded-full blur-2xl"
+          animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
+          transition={{ duration: 6, repeat: Infinity }}
+        />
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          {/* Section Header */}
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Our <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Products</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
+            <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+              💡 Innovative solutions designed to transform your business operations and drive success.
+            </p>
+          </motion.div>
+
+          {/* Product Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" suppressHydrationWarning={true}>
+            {products.map((product, idx) => (
+              <div
+                key={product.title}
+                className="group relative"
+                suppressHydrationWarning={true}
+              >
+                {/* Brand Colors Gradient Border */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+
+                <a
+                  href={product.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative block professional-card p-8 rounded-2xl border border-blue-100/30 group-hover:border-orange-200/50 transition-all duration-300 h-full text-center group-hover:scale-105 group-hover:-translate-y-2"
+                  style={{ textDecoration: 'none' }}
+                >
+                  {/* Product Category Badge */}
+                  <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 ${
+                    idx % 2 === 0
+                      ? "bg-blue-100 text-blue-600"
+                      : "bg-orange-100 text-orange-600"
+                  }`}>
+                    {product.category}
+                  </div>
+
+                  {/* Product Image with Fallback */}
+                  <ProductImage
+                    src={product.image}
+                    alt={`${product.title} - ${product.category}`}
+                    title={product.title}
+                    category={product.category}
+                    index={idx}
+                  />
+
+                  {/* Product Title */}
+                  <h3 className={`text-2xl font-bold text-gray-900 mb-3 transition-colors duration-300 ${
+                    idx % 2 === 0 ? "group-hover:text-blue-600" : "group-hover:text-orange-600"
+                  }`}>
+                    {product.title}
+                  </h3>
+
+                  {/* Product Description */}
+                  <p className="text-gray-600 text-base leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300 min-h-[4rem]">
+                    {product.description}
+                  </p>
+
+                  {/* CTA Button with Brand Colors */}
+                  <div
+                    className={`inline-flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                      idx % 2 === 0
+                        ? "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white"
+                        : "bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white"
+                    }`}
+                  >
+                    <span>Visit Website</span>
+                    <span className="ml-2">→</span>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

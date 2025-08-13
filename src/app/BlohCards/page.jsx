@@ -45,33 +45,68 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="container mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div className="container mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
       {articles.map((article, index) => (
         <motion.div
           key={index}
           id={`card-${index}`}
-          className="bg-white shadow-lg rounded-lg overflow-hidden p-4 w-full max-w-xs sm:max-w-sm cursor-pointer"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
+          className="group relative"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+          whileHover={{ y: -10 }}
         >
-          <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden">
-            <Image 
-              id={`image-${index}`}
-              src={article.image} 
-              alt={article.title} 
-              layout="fill" 
-              objectFit="cover" 
-              className="rounded-t-lg transform transition-transform duration-300"
-              priority
-            />
-          </div>
-          <div className="p-4">
-            <h3 className="text-lg font-semibold text-gray-800">{article.title}</h3>
-            <p className="text-gray-600 flex justify-between text-sm mt-2">
-              <span>{article.date}</span>
-              <span>{article.views} views</span>
-            </p>
-            <a href="#" className="text-blue-600 hover:underline mt-2 block">View Details →</a>
+          {/* Brand Colors Gradient Border */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+
+          <div className="relative professional-card rounded-2xl overflow-hidden border border-blue-100/30 group-hover:border-orange-200/50 transition-all duration-300">
+            <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden">
+              <Image
+                id={`image-${index}`}
+                src={article.image}
+                alt={article.title}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-t-2xl transform transition-transform duration-300 group-hover:scale-110"
+                priority
+              />
+              {/* Overlay with Brand Colors */}
+              <div className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300 ${
+                index % 2 === 0
+                  ? "bg-gradient-to-br from-blue-500 to-blue-600"
+                  : "bg-gradient-to-br from-orange-500 to-orange-600"
+              }`}></div>
+            </div>
+
+            <div className="p-6">
+              <h3 className={`text-xl font-bold text-gray-800 mb-3 transition-colors duration-300 ${
+                index % 2 === 0 ? "group-hover:text-blue-600" : "group-hover:text-orange-600"
+              }`}>
+                {article.title}
+              </h3>
+              <p className="text-gray-600 flex justify-between text-sm mb-4">
+                <span>{article.date}</span>
+                <span>{article.views} views</span>
+              </p>
+              <motion.a
+                href="#"
+                className={`inline-flex items-center font-semibold transition-colors duration-300 ${
+                  index % 2 === 0
+                    ? "text-blue-600 hover:text-blue-700"
+                    : "text-orange-600 hover:text-orange-700"
+                }`}
+                whileHover={{ x: 5 }}
+              >
+                <span>View Details</span>
+                <motion.span
+                  className="ml-2"
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  →
+                </motion.span>
+              </motion.a>
+            </div>
           </div>
         </motion.div>
       ))}

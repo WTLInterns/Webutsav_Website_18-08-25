@@ -68,19 +68,15 @@ const Navbar = () => {
             <NavLink href="/AboutUs" isScrolled={isScrolled}>
               About Us
             </NavLink>
-            <div
-              className="relative group"
-              onMouseEnter={() => setIsServicesOpen(true)}
-              onMouseLeave={() => setIsServicesOpen(false)}
-              ref={servicesRef}
-            >
+            <div className="relative" ref={servicesRef}>
               <button
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
                 className={`${
                   isScrolled ? "text-gray-800" : "text-white"
                 } hover:text-amber-500 transition-colors flex items-center group`}
               >
                 Services
-                <ChevronDown className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" />
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`} />
               </button>
               <AnimatePresence>{isServicesOpen && <ServicesDropdown />}</AnimatePresence>
             </div>
@@ -208,6 +204,10 @@ const ServicesDropdown = () => (
     className="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
   >
     <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+{/*       <DropdownLink href="/Services"> */}
+{/*         <span className="font-semibold text-orange-600">All Services Overview</span> */}
+{/*       </DropdownLink> */}
+      <div className="border-t border-gray-100 my-1"></div>
       <DropdownLink href="/Services/web-designing-development">Web Designing & Development</DropdownLink>
       <DropdownLink href="/Services/ecommerce-website-designing">Ecommerce Website Designing</DropdownLink>
       <DropdownLink href="/Services/google-adwords">Google Adwords</DropdownLink>
@@ -228,6 +228,10 @@ const MobileServicesDropdown = ({ closeMobileMenu }) => (
     transition={{ duration: 0.2 }}
     className="pl-4 overflow-hidden"
   >
+    <MobileNavLink href="/Services" onClick={closeMobileMenu}>
+      <span className="font-semibold text-orange-600">All Services Overview</span>
+    </MobileNavLink>
+    <div className="border-t border-gray-200 my-2 mx-4"></div>
     <MobileNavLink href="/Services/web-designing-development" onClick={closeMobileMenu}>
       Web Designing & Development
     </MobileNavLink>

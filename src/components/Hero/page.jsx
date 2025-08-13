@@ -3,7 +3,6 @@
 import { useState, useCallback, useEffect } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Phone } from "lucide-react"
 import Head from "next/head"
 
 const Hero = () => {
@@ -26,14 +25,64 @@ const Hero = () => {
   }, [videoElement])
 
   const headingVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 1.2,
+        ease: [0.25, 0.46, 0.45, 0.94],
+        delay: 0.3,
+      },
+    },
+  }
+
+  const subheadingVariants = {
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
+        duration: 1,
+        ease: "easeOut",
+        delay: 0.6,
+      },
+    },
+  }
+
+  const buttonVariants = {
+    hidden: { opacity: 0, y: 30, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
         duration: 0.8,
         ease: "easeOut",
-        delay: 0.2,
+        delay: 0.9,
+      },
+    },
+    hover: {
+      scale: 1.05,
+      boxShadow: "0 10px 30px rgba(255, 165, 0, 0.3)",
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+    tap: {
+      scale: 0.95,
+    },
+  }
+
+  const overlayVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        ease: "easeInOut",
       },
     },
   }
@@ -55,91 +104,150 @@ const Hero = () => {
         <meta name="robots" content="index, follow" />
       </Head>
 
-      <div className="relative h-screen">
-        <video
+      <div className="relative h-screen overflow-hidden">
+        {/* Enhanced Video Background */}
+        <motion.video
           ref={videoRef}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover scale-105"
           loop
           muted
           playsInline
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1.05, opacity: 1 }}
+          transition={{ duration: 2, ease: "easeOut" }}
         >
           <source
             src="https://res.cloudinary.com/dvpk4sbzi/video/upload/v1740208926/3254066-uhd_3840_2160_25fps_oy3k7g.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
-        </video>
+        </motion.video>
 
-        <div className="absolute inset-0 bg-black/30" />
+        {/* Enhanced Overlay with Gradient */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent"
+          initial="hidden"
+          animate="visible"
+          variants={overlayVariants}
+        />
+
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <motion.div
+            className="absolute top-20 left-10 w-20 h-20 bg-orange-500/10 rounded-full blur-xl"
+            animate={{
+              y: [0, -20, 0],
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.6, 0.3]
+            }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute bottom-32 right-20 w-32 h-32 bg-blue-500/10 rounded-full blur-xl"
+            animate={{
+              y: [0, 20, 0],
+              scale: [1, 0.8, 1],
+              opacity: [0.2, 0.5, 0.2]
+            }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          />
+        </div>
+
+        {/* Enhanced Content Container */}
         <div className="relative z-10 flex flex-col items-start justify-center h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h1
-            className="text-3xl md:text-4xl font-bold text-white max-w-3xl"
+          {/* Main Heading with Enhanced Animation */}
+          <motion.div
+            className="max-w-4xl"
             initial="hidden"
             animate="visible"
             variants={headingVariants}
           >
-            Accelerate your growth with our digital solutions
-          </motion.h1>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+              <span className="block">Accelerate your</span>
+              <span className="block gradient-text animate-pulse-slow">growth</span>
+              <span className="block">with our digital</span>
+              <span className="block text-orange-400">solutions</span>
+            </h1>
+          </motion.div>
 
-          <motion.div
-            className="mt-8 flex space-x-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+          {/* Subheading */}
+          <motion.p
+            className="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl leading-relaxed"
+            initial="hidden"
+            animate="visible"
+            variants={subheadingVariants}
           >
-            <Link
-              className="px-6 py-3 bg-[#FFA500] hover:bg-[#FF9500] text-gray-900 font-medium rounded-md transition-colors duration-200"
-              href="/Contact"
+            Transform your business with cutting-edge digital marketing, web development,
+            and innovative technology solutions that drive real results.
+          </motion.p>
+
+          {/* Enhanced CTA Buttons */}
+          <motion.div
+            className="mt-10 flex flex-col sm:flex-row gap-4"
+            initial="hidden"
+            animate="visible"
+            variants={buttonVariants}
+          >
+            <motion.div
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
             >
-              Contact Us
-            </Link>
+              <Link
+                className="group px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-full shadow-lg transition-all duration-300 flex items-center space-x-2 hover-glow"
+                href="/Contact"
+              >
+                <span>Get Started Today</span>
+                <motion.svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </motion.svg>
+              </Link>
+            </motion.div>
+
+            <motion.div
+              variants={buttonVariants}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link
+                className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full backdrop-blur-sm hover:bg-white/10 transition-all duration-300 flex items-center space-x-2"
+                href="/AboutUs"
+              >
+                <span>Learn More</span>
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          {/* Stats or Features */}
+          <motion.div
+            className="mt-16 grid grid-cols-3 gap-8 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.2 }}
+          >
+            <div className="text-white">
+              <div className="text-2xl md:text-3xl font-bold text-orange-400">300+</div>
+              <div className="text-sm md:text-base text-gray-300">Happy Clients</div>
+            </div>
+            <div className="text-white">
+              <div className="text-2xl md:text-3xl font-bold text-orange-400">2000+</div>
+              <div className="text-sm md:text-base text-gray-300">Projects Completed</div>
+            </div>
+            <div className="text-white">
+              <div className="text-2xl md:text-3xl font-bold text-orange-400">12+</div>
+              <div className="text-sm md:text-base text-gray-300">Awards Won</div>
+            </div>
           </motion.div>
         </div>
 
-        {/* WhatsApp Floating Button */}
-        <motion.a
-          href="https://wa.me/8766922792"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed left-6 bottom-6 z-50 flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300"
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1, type: "spring", stiffness: 260, damping: 20 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-white"
-          >
-            {/* WhatsApp Icon Path */}
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M20.5027 3.49786..."
-              fill="white"
-            />
-          </svg>
-          <span className="sr-only">Contact us on WhatsApp</span>
-        </motion.a>
 
-        {/* Call Button */}
-        <motion.a
-          href="tel:+918766922792"
-          className="fixed right-6 bottom-6 z-50 flex items-center justify-center w-14 h-14 bg-blue-500 rounded-full shadow-lg hover:bg-blue-600 transition-colors duration-300"
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1.2, type: "spring", stiffness: 260, damping: 20 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <Phone className="text-white" size={24} />
-          <span className="sr-only">Call us</span>
-        </motion.a>
       </div>
     </>
   )
