@@ -154,10 +154,10 @@ const CareerPage = () => {
 
         {/* Content */}
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="text-white/90 font-semibold text-xl md:text-2xl mb-4">
+          <p className="text-white/90 font-semibold text-xl md:text-2xl mt-12 mb-4">
             — Careers
           </p>
-          <h1 className="text-white font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
+          <h1 className="text-white font-bold text-5xl md:text-5xl lg:text-6xl leading-tight mb-6">
             Accelerate Your Career at <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">WebUtsav</span>
           </h1>
           <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">

@@ -8,27 +8,34 @@ export default function WhyChooseUs() {
   const features = [
     {
       icon: Users2,
-      title: "Expertise and Experience",
+      title: "Cultural Understanding",
       description:
-        "Our team has years of expertise in digital marketing, web development, and branding to deliver optimal solutions for your business.",
+        "We adapt designs and marketing to suit your market’s culture and behavior.",
     },
     {
       icon: Settings,
-      title: "Customized Solutions",
-      description: "We tailor strategies to address specific business challenges, ensuring maximum effectiveness.",
+      title: "Multi-Time-Zone Support",
+      description: "Whether it’s morning in Dubai or evening in New York, ourteam is available.",
     },
     {
       icon: Shield,
-      title: "Commitment to Quality",
+      title: "Proven Results",
       description:
-        "We are dedicated to delivering quality from start to finish, exceeding client expectations on every project.",
+        "Case studies from India replicated for international success.",
     },
     {
       icon: Laptop,
-      title: "Innovative Technology",
-      description: "We use the latest tools and technology to keep your brand ahead of the competition.",
+      title: "Advanced Tools",
+      description: "We use global-standard technologies for top performance.",
+    },
+    {
+      icon: Users2,
+      title: "Transparent Communication",
+      description:
+        "Weekly progress reports & clear milestones.",
     },
   ]
+  
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -39,6 +46,10 @@ export default function WhyChooseUs() {
       },
     },
   }
+
+  
+
+  
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -90,7 +101,7 @@ export default function WhyChooseUs() {
             >
               Why Choose{" "}
               <span className="gradient-text relative">
-                Us?
+              WebUtsav Globally?
                 <motion.div
                   className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full"
                   initial={{ width: 0 }}
@@ -100,8 +111,8 @@ export default function WhyChooseUs() {
               </span>
             </motion.h2>
             <motion.p className="text-lg text-gray-600 leading-relaxed" variants={itemVariants}>
-              As a trusted partner, we provide{" "}
-              <span className="text-orange-600 font-semibold">insights-based solutions</span> to help businesses grow and achieve their goals effectively.
+            When you work with{" "}
+              <span className="text-orange-600 font-semibold">WebUtsav Pvt Ltd,</span> you don’t just get a service—you get a partnership. Here’s why international businesses trust us
             </motion.p>
           </div>
 

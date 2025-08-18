@@ -260,14 +260,14 @@ export default function GoogleAdwords() {
             >
               Google <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">AdWords</span>
             </motion.h1>
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
             >
               Maximize your online reach with targeted Google Ads campaigns. Drive traffic, increase conversions, and grow your business with expert PPC management.
-            </motion.p>
+            </motion.p> */}
           </div>
         </motion.div>
 
@@ -325,15 +325,29 @@ export default function GoogleAdwords() {
 
           {/* Content */}
           <div className="w-full md:w-3/5 max-w-8xl mx-auto py-12">
-            <h1 className="text-4xl font-bold text-gray-800">
-            Google AdWords Company in Pune | Best Google AdWords Agency in India
-            </h1>
-            <p className="text-gray-600 mt-6 text-2xl" >
+            <h1 className="text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+                 Google Ads / PPC Campaigns – Get Instant, Qualified Leads
+                </span>
+              </h1>
+            {/* <p className="text-gray-600 mt-6 text-2xl" >
             Are you looking for instant visibility, quality leads, and high ROI for your business? Webutsav, a leading Google AdWords company in Pune, provides expert PPC (Pay-Per-Click) advertising solutions to help businesses maximize their online presence.
             </p>
             <p className="text-gray-600 mt-4 text-2xl" >
             With years of experience in Google Ads campaign management, we create highly targeted ads that drive conversions, website traffic, and brand awareness. Whether you're a startup, SME, or large enterprise, our Google AdWords agency in Pune ensures every rupee spent delivers measurable results.
-            </p>
+            </p> */}
+            <br />
+            <p className="text-gray-800 mt-4 text-xl"><b>Our PPC Approach:</b>
+              <br /><br />
+● Market research & competitive analysis
+<br /><br />                                 
+● High-converting ad copywriting
+<br /><br />
+● Geo-targeted campaigns for local/global reach
+<br /><br />
+● Ongoing optimization for maximum ROI</p>
+<br /><br />
+<p className="text-gray-700 mt-4 text-xl"><b>Google Ads Management in UAE, Best PPC Agency in UK</b></p>
           </div>
         </div>
 
@@ -551,6 +565,44 @@ export default function GoogleAdwords() {
             🚀 Want to Grow Your Business with Google Ads? 🚀
           </motion.button>
         </div>
+
+        {/* Google Ads / PPC Campaign Management in UAE */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="bg-gray-50 py-12 px-4 mt-12"
+      >
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-amber-600 mb-8">Google Ads / PPC Campaign Management in UAE</h2>
+          <p className="text-gray-700 leading-relaxed mb-6 text-center">
+            Want instant leads? Our Google Ads & Pay-Per-Click (PPC) campaigns are designed to put your business in front of the right audience at the right time.
+          </p>
+          <h4 className="text-lg font-semibold text-gray-800 mb-3">Our PPC Process:</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Keyword research tailored for UAE markets</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Compelling ad copy that drives clicks</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Geo-targeted campaigns for maximum relevance</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Continuous optimization for better ROI</span>
+            </div>
+          </div>
+          <p className="text-gray-700 leading-relaxed text-center font-medium">
+            Result: You pay only for clicks that matter and get measurable conversions.
+          </p>
+        </div>
+      </motion.section>
       </div>
     </>
   );

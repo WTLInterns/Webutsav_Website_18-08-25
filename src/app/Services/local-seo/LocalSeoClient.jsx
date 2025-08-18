@@ -798,14 +798,14 @@ export default function LocalSEO() {
             >
               Local <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">SEO</span>
             </motion.h1>
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
             >
               Enhance your local visibility with targeted local SEO strategies. Reach nearby customers and grow your business with optimized local search results.
-            </motion.p>
+            </motion.p> */}
           </div>
         </motion.div>
 
@@ -873,18 +873,26 @@ export default function LocalSEO() {
 
           {/* Content */}
           <div className="w-full md:w-3/5 max-w-8xl mx-auto py-12">
-            <h1 className="text-4xl font-bold text-gray-800">
-            Local SEO Services by Webutsav
-            </h1>
-            <p className="text-gray-600 mt-6 text-2xl" >
-            As businesses continue to adapt to the digital landscape, local SEO has become an essential strategy for improving online visibility, driving targeted traffic, and boosting growth. At Webutsav, we offer Local SEO services designed to help your business rank higher in local search results, ensuring that you stand out in your specific geographic area. Our Local SEO optimization services are tailored to meet the needs of businesses in Pune and beyond, providing a competitive edge in a highly localized market.
+            <h1 className="text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+                 Geo-Specific SEO – Rank Locally, Sell Globally
+                </span>
+              </h1>
+            <p className="text-gray-600 mt-6 text-xl" >
+            Want to dominate local search in Dubai, New York, or London ? Our geo-targeted SEO strategies ensure you appear on top for city-specific and country-specific searches.
+
             </p>
-            <h2 className="text-4xl font-bold text-gray-800 pt-2">
-            What is Local SEO?
+            <h2 className="text-3xl font-bold text-gray-800 pt-2"><br />
+            We Focus On:
             </h2>
-            <p className="text-gray-600 mt-6 text-2xl" >
-            Local SEO is the practice of optimizing a website to increase its visibility in local search results on search engines like Google, Bing, and Yahoo. While traditional SEO focuses on improving a website's ranking across all search results, local SEO specifically targets geographic-based searches. This makes it an ideal strategy for businesses that rely on local customers, such as restaurants, service providers, and retail stores.Local SEO helps you appear in searches that include location-specific terms, such as "restaurants near me," "plumbers in Pune," or "best digital marketing company in Kharadi." Optimizing for local search involves targeting local keywords, improving your Google My Business (GMB) profile, and gaining local backlinks, among other tactics.
-            </p>
+            <p className="text-gray-600 mt-6 text-xl" >
+● Google Business Profile optimization
+<br /><br />
+● Local directory submissions
+<br /><br />
+● Review & reputation management
+<br /><br />
+● Region-specific keyword targeting</p>
           </div>
         </div>
 
@@ -1021,6 +1029,8 @@ export default function LocalSEO() {
               )
             )}
           </div>
+
+          
         </div>
         <div className="bg-gradient-to-r from-amber-500 to-amber-600 py-16 px-4 text-center">
           <motion.h2
@@ -1042,6 +1052,42 @@ export default function LocalSEO() {
             🚀 Want to Grow Your Business with Local SEO ? 🚀
           </motion.button>
         </div>
+
+        {/* Local SEO / Geo-Specific SEO – Dominate Your Market */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="bg-gray-50 py-12 px-4 "
+      >
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-amber-600 mb-8">Local SEO / Geo-Specific SEO – Dominate Your Market</h2>
+          <p className="text-gray-800 leading-relaxed mb-6 text-center">
+            If you want your business to show up for local searches in Dubai, Abu Dhabi, or Sharjah, our Geo-specific SEO strategies ensure you stand out.
+          </p>
+          <h4 className="text-lg font-semibold text-gray-800 mb-3">What We Do:</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Google Business Profile optimization</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Local directory listings</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Review & reputation management</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Region-specific content marketing</span>
+            </div>
+          </div>
+        </div>
+      </motion.section>   
+
       </div>
     </>
   );

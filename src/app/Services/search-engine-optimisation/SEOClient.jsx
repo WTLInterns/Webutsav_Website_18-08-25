@@ -232,7 +232,7 @@ export default function SocialMediaMarketing() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-white/90 font-semibold text-xl md:text-2xl mb-4"
+            className="text-white/90 font-semibold text-lg md:text-2xl mb-4"
           >
             — Our Services
           </motion.p>
@@ -240,18 +240,18 @@ export default function SocialMediaMarketing() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-white font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6"
+            className="text-white font-bold text-4xl md:text-6xl lg:text-6xl leading-tight mb-6"
           >
-            Search Engine <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Optimization</span>
+            Search Engine Optimization (SEO) <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">– The Key to Online Success</span>
           </motion.h1>
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
           >
             Boost your website's visibility with expert SEO services. Improve rankings, drive organic traffic, and reach your online prospects effectively.
-          </motion.p>
+          </motion.p> */}
         </div>
       </motion.div>
 
@@ -311,18 +311,28 @@ export default function SocialMediaMarketing() {
 
         {/* Content */}
         <div className="w-full md:w-3/5 max-w-8xl mx-auto py-12">
-          <h1 className="text-4xl font-bold text-gray-800">
-          What is Search Engine Optimization (SEO)?
-          </h1>
+          <h1 className="text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+                 Search Engine Optimization (SEO) – Long-Term Growth on Autopilot
+                </span>
+              </h1>
           <p className="text-gray-600 mt-6 text-2xl" >
-          Search Engine Optimization (SEO) is crucial for businesses looking to enhance their online presence and reach a wider audience. By optimizing both on-page elements, like content, meta tags, and images, and off-page factors, such as backlinks and social signals, SEO helps websites rank higher in search engine results pages (SERPs). The process also involves technical SEO, which ensures that a website is easy to navigate, loads quickly, and is mobile-friendly. All these factors work together to make a website more visible, user-friendly, and attractive to search engines, driving more relevant traffic and improving the chances of conversion.
+          We help your business rank on Google, Bing, and Yahoo with ethical, data-driven SEO strategies. From on-page optimization to high-quality backlinks, we ensure your website gets found by the right people.
           </p>
-          <h2 className="text-4xl font-bold text-gray-800 pt-2">
-          Importance of Search Engine Optimization
+          <br/>
+          <h2 className="text-xl font-bold text-gray-800 pt-2">
+          SEO Services Include:
           </h2>
-          <p className="text-gray-600 mt-6 text-2xl" >
-          In today's digital era, online presence is crucial for businesses. Implementing search engine optimization techniques ensures better visibility, higher credibility, and increased conversions. A well-optimized website attracts more visitors, leading to higher revenue.
-          </p>
+          <p className="text-gray-700 mt-6 text-xl" >
+● Keyword research tailored for each market
+<br /><br />
+● Content optimization for local search trends
+<br /><br />
+● Technical SEO for better site performancebr
+<br /><br />
+● Link-building from reputable global sources
+</p>
+<p className="text-gray-700 mt-6 text-2xl"><b>● Best SEO Company in UAE, International SEO Services in USA</b></p>
         </div>
       </div>
 
@@ -500,6 +510,44 @@ export default function SocialMediaMarketing() {
           🚀 Want to Grow Your Business with SEO ? 🚀
         </motion.button>
       </div>
+
+      {/* Search Engine Optimization (SEO) – Rank Higher, Get Found */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="bg-gray-50 py-12 px-4"
+      >
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-amber-600 mb-8">Search Engine Optimization (SEO) – Rank Higher, Get Found</h2>
+          <p className="text-gray-800 leading-relaxed mb-6 text-center">
+            Ranking on Google isn’t magic—it’s strategy. Our SEO experts create customized plans that help your website rank higher and attract targeted traffic.
+          </p>
+          <h4 className="text-lg font-semibold text-gray-800 mb-3">Our SEO Strategies Include:</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Competitor & keyword research</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">On-page SEO (meta tags, headings, content optimization)</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Off-page SEO (link building, citations)</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Technical SEO for site performance</span>
+            </div>
+          </div>
+          <p className="text-gray-700 leading-relaxed text-center font-medium">
+            We follow white-hat SEO practices to ensure sustainable rankings and long-term success.
+          </p>
+        </div>
+      </motion.section>
     </div>
     </>
   );

@@ -247,16 +247,16 @@ export default function SocialMediaMarketing() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-white font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6"
             >
-              Social Media <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Marketing</span>
+              Social Media <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Marketing Services</span>
             </motion.h1>
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
             >
               Amplify your online presence with strategic social media marketing. Engage your audience, boost awareness, and drive conversions through social channels.
-            </motion.p>
+            </motion.p> */}
           </div>
         </motion.div>
 
@@ -314,16 +314,28 @@ export default function SocialMediaMarketing() {
 
           {/* Content */}
           <div className="w-full md:w-3/5 max-w-8xl mx-auto py-12">
-            <h1 className="text-4xl font-bold text-gray-800">
-            Social Media Marketing Services by Webutsav
-            </h1>
+            <h1 className="text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+                 Social Media Marketing – Engage, Influence, Convert
+                </span>
+              </h1>
             <p className="text-gray-600 mt-6 text-2xl" >
-            In today's digital age, businesses can't afford to ignore the power of social media. With billions of active users on platforms like Facebook, Instagram, Twitter, and LinkedIn, Social Media Marketing (SMM) has become one of the most effective ways to connect with potential customers, build brand awareness, and drive traffic to your website. At Webutsav, we specialize in providing Social Media Marketing services that help businesses grow their presence online, engage with their audience, and increase their ROI.
+            We create platform-specific strategies for Instagram, Facebook, LinkedIn, and TikTok to engage audiences and drive business growth.
             </p>
-            <p className="text-gray-600 mt-6 text-2xl" >
-            As the best social media marketing company in Pune, we provide comprehensive and tailored social media digital marketing strategies that align with your business goals. Whether you're a small business or an established enterprise, we can help you unlock the full potential of social media to drive measurable results
-            </p>
-          </div>
+            <br/>
+            <p className="text-gray-700 mt-6 text-xl" >
+<b>Our Social Media Services:</b>
+<br /><br />
+● Content creation & scheduling
+<br /><br />
+● Paid ad campaign management
+<br /><br />
+● Influencer collaboration strategies
+<br /><br />
+● Analytics & reporting </p> 
+        <br />
+          <p className="text-gray-700 mt-6 text-2xl" ><b>Social Media Marketing Agency in UAE, International SMM Experts in UK</b></p>
+        </div>
         </div>
 
         <section className="w-full py-10 bg-gradient-to-br from-blue-900 to-indigo-900 text-white">
@@ -421,6 +433,45 @@ export default function SocialMediaMarketing() {
           >
             🚀 Want to Grow Your Business with Social Media Digital Marketing? 🚀
           </motion.button>
+        </div>
+        <div>
+          {/* Social Media Marketing – Build Your Online Community */}
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="bg-gray-50 py-12 px-4"
+        >
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-amber-600 mb-8">Social Media Marketing – Build Your Online Community</h2>
+            <p className="text-gray-700 leading-relaxed mb-6 text-center">
+              Social media is the voice of your brand. We help businesses engage, influence, and convert audiences through data-driven social media marketing strategies.
+            </p>
+            <h4 className="text-lg font-semibold text-gray-800 mb-3">Our Social Media Services:</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+              <div className="flex items-start gap-3">
+                <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                <span className="text-gray-700">Content creation & storytelling</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                <span className="text-gray-700">Targeted ad campaigns</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                <span className="text-gray-700">Influencer collaborations</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                <span className="text-gray-700">Social media analytics & reporting</span>
+              </div>
+            </div>
+            <p className="text-gray-700 leading-relaxed text-center font-medium">
+              We create culturally relevant content for platforms like Instagram, Facebook, LinkedIn, and TikTok to ensure maximum impact.
+            </p>
+          </div>
+        </motion.section>
         </div>
       </div>
     </>

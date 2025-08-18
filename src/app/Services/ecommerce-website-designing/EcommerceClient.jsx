@@ -255,18 +255,18 @@ export default function EcommerceWebsiteDesigning() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-white font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6"
+              className="text-white font-bold text-4xl md:text-4xl lg:text-6xl leading-tight mb-6"
             >
               Ecommerce Website <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Designing</span>
             </motion.h1>
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
             >
               Professional ecommerce website design and development services. Create a seamless shopping experience with custom, responsive, and user-friendly solutions.
-            </motion.p>
+            </motion.p> */}
           </div>
         </motion.div>
 
@@ -340,18 +340,37 @@ export default function EcommerceWebsiteDesigning() {
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full mb-6"></div>
 
               <p className="text-gray-600 mt-6 text-lg leading-relaxed mb-4">
-                In the fast-evolving digital marketplace, having a professionally designed eCommerce website is essential for business growth. At Webutsav, a trusted eCommerce website designing company in Pune, we specialize in creating stunning, high-performing, and conversion-driven online stores tailored to your business needs.
+              For global e-commerce brands, we create feature-rich online stores that attract customers, simplify checkout, and maximize sales.
               </p>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <br />
+              <br />
+              <p className="text-gray-800 mt-4 text-lg" >
+Features Include:
+<br /><br />
+● Multi-currency & multi-language integration
+<br /><br />
+● Secure payment gateways
+<br /><br />
+● Mobile-first designs for high mobile conversion rates
+<br /><br />
+● Inventory and order management systems
+            </p>
+            <br />
+            <p className="text-gray-800 mt-4 text-xl">Ecommerce Website Development in UAE, Shopify & WooCommerce
+Experts in USA
+</p>
+              {/* <p className="text-gray-600 text-lg leading-relaxed">
                 Whether you're launching a new eCommerce business or upgrading an existing one, our team provides cutting-edge eCommerce website development solutions that are mobile-friendly, SEO-optimized, and feature-rich.
-              </p>
+              </p> */}
             </motion.div>
           </div>
         </div>
 
         <section className="w-full py-12 md:py-24 bg-gray-50">
         <div className="container px-4 md:px-6 mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Webutsav for Ecommerce Website Development in Pune, Mumbai & India?</h2>
+        <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-3xl font-bold text-transparent">
+        Why Choose Webutsav for Ecommerce Website Development in Pune, Mumbai & India?
+                </span>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="flex flex-col items-center text-center">
@@ -549,6 +568,45 @@ export default function EcommerceWebsiteDesigning() {
             Start Your eCommerce Journey Today!
           </motion.button>
         </div>
+
+
+        {/* E-commerce Website Development – Sell Without Borders */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="bg-gray-50 py-12 px-4 mt-12"
+      >
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-amber-600 mb-8">E-commerce Website Development – Sell Without Borders</h2>
+          <p className="text-gray-900 leading-relaxed mb-6 text-center">
+            The world shops online—and your e-commerce platform should be ready to handle global customers. Our custom e-commerce development services enable you to sell products 24/7, anywhere in the world.
+          </p>
+          <h4 className="text-lg font-semibold text-gray-800 mb-3">E-commerce Features We Offer</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Multi-currency & multi-language support</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Secure payment gateway integration</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Easy inventory & order management</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+              <span className="text-gray-700">Conversion-focused product pages</span>
+            </div>
+          </div>
+          <p className="text-gray-700 leading-relaxed text-center font-medium">
+            We work with Shopify, WooCommerce, Magento, and custom frameworks to build platforms that deliver sales.
+          </p>
+        </div>
+      </motion.section>
       </div>
     </>
   );

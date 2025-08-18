@@ -107,7 +107,7 @@ const services = [
   },
   {
     title: "Website Maintenance & Support",
-    description: "Regular updates, security patches, and performance optimizations are essential to keep your website running smoothly. Our maintenance services ensure that your website remains secure, fast, and up to date",
+    description: "Regular updates, security patches, and performance optimizations are essential to keep your website running smoothly. Our maintenance services ensure that your website remains secure, fast, and up to date.",
   },
 ]
 
@@ -217,8 +217,6 @@ export default function WebDesigningDevelopment() {
 
   return (
     <>
-
-    
       <div className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-white overflow-hidden">
         {/* Professional Hero Section with Brand Colors */}
         <motion.div
@@ -253,7 +251,7 @@ export default function WebDesigningDevelopment() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-white/90 font-semibold text-xl md:text-2xl mb-4"
             >
-              — Our Services
+              — Our Services - Tailored for Global Impact
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -267,9 +265,9 @@ export default function WebDesigningDevelopment() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+              className="text-white/90 text-4xl md:text-xl max-w-4xl mx-auto leading-relaxed"
             >
-              Expert web design and development services that deliver stunning, responsive, innovative, and user-focused solutions for your business.
+              <b>Your Brand, Your Digital Storefront</b>
             </motion.p>
           </div>
         </motion.div>
@@ -338,10 +336,12 @@ export default function WebDesigningDevelopment() {
             >
               <h1 className="text-4xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
-                  Web Design and Development Company in Pune
+                  WebUtsav Pvt Ltd – From Pune to the World: Your Global Technology Partner
                 </span>
               </h1>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full mb-6"></div>
+
+              <p className="text-gray-800 mt-6 text-lg leading-relaxed mb-4">Your website is your first impression—and in the digital space, first impressions last. We design modern, responsive, and conversion-focused websites that work flawlessly across devices and browsers.</p>
 
               <p className="text-gray-600 mt-6 text-lg leading-relaxed mb-4">
                 In today's digital-first world, a well-designed, high-performing website is essential for business success. Webutsav, a leading web design and development company in Pune, specializes in creating stunning, SEO-friendly, and user-centric websites that help businesses thrive online.
@@ -349,6 +349,21 @@ export default function WebDesigningDevelopment() {
               <p className="text-gray-600 text-lg leading-relaxed">
                 From corporate websites and eCommerce platforms to complex web applications, we craft digital experiences that engage users, enhance brand visibility, and drive conversions. Our expertise in UI/UX design, custom development, and SEO optimization makes us the preferred choice for businesses in Pune, Mumbai, and across India.
               </p>
+              <br />
+
+              <p className="text-gray-800 mt-4 text-lg ml-10" >What We Deliver:
+              <br /><br />
+● Custom UI/UX design tailored for your target market
+<br /><br />
+● SEO-optimized structure for higher search rankings
+<br /><br />
+● Lightning-fast load speeds for better user experience
+<br />  <br />
+● Secure and scalable development for long-term growth</p>
+<br />
+<br />
+<p className="text-gray-700 mt-4 text-xl"><b>Top Web Design Agency in USA, Professional Website Designers in UAE,
+International Website Development Company</b></p>
             </motion.div>
           </div>
         </div>
@@ -375,13 +390,13 @@ export default function WebDesigningDevelopment() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Why Choose <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Webutsav?</span>
+              <h2 className="text-3xl md:text-3xl font-bold text-gray-900 mb-4">
+                Why Choose <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Webutsav for Web Design & Development?</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
-              <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+              {/* <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
                 💡 We provide cutting-edge web solutions to help businesses grow effectively in the digital landscape.
-              </p>
+              </p> */}
             </motion.div>
 
             {/* Features Grid */}
@@ -502,8 +517,8 @@ export default function WebDesigningDevelopment() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h4 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Why Choose <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Webutsav?</span>
+              <h4 className="text-4xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Webutsav is Among the <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Best Web Design & Development Companies in Pune & Mumbai?</span>
               </h4>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
               <p className="text-xl text-gray-600 mt-6 max-w-4xl mx-auto leading-relaxed">
@@ -520,7 +535,7 @@ export default function WebDesigningDevelopment() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h4 className="text-3xl font-bold text-gray-900 mb-4">
-                Our <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Expertise</span>
+                Our Expertise <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">in Web Development</span>
               </h4>
               <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
             </motion.div>
@@ -626,7 +641,7 @@ export default function WebDesigningDevelopment() {
               transition={{ duration: 0.8 }}
             >
               <h4 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Industries <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">We Serve</span>
+              Industries We Serve with <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Web Development Solutions in Pune, Mumbai & India</span>
               </h4>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
               <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
@@ -707,7 +722,7 @@ export default function WebDesigningDevelopment() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Our Development <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Process</span>
+              How We Develop <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">High-Performance Websites</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
               <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
@@ -762,6 +777,7 @@ export default function WebDesigningDevelopment() {
             </div>
           </div>
         </section>
+
         {/* CTA Section with About Us Styling */}
         <section className="py-16 bg-gradient-to-br from-blue-600 via-blue-500 to-orange-500 text-white relative overflow-hidden">
           {/* Transparent Overlay for Brand Consistency */}
@@ -779,9 +795,9 @@ export default function WebDesigningDevelopment() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-5xl font-bold mb-6"
+              className="text-4xl md:text-4xl font-bold mb-6"
             >
-              Ready to Build Your <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Dream Website?</span>
+              Get the Best Web Design & Development Services in <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Pune, Mumbai & Across India</span>
             </motion.h2>
 
             <motion.p
@@ -821,6 +837,74 @@ export default function WebDesigningDevelopment() {
             </motion.div>
           </div>
         </section>
+
+        {/* International Services – Designed for Global Success */}
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="bg-gradient-to-br from-gray-50 via-blue-50/30 to-orange-50/20 py-16 px-4 relative overflow-hidden"
+        >
+          {/* Floating Brand Color Elements */}
+          <motion.div
+            className="absolute top-10 left-10 w-64 h-64 bg-orange-400/10 rounded-full blur-3xl"
+            animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity }}
+          />
+          <motion.div
+            className="absolute bottom-10 right-10 w-48 h-48 bg-blue-300/15 rounded-full blur-2xl"
+            animate={{ y: [0, 20, 0], scale: [1, 0.9, 1] }}
+            transition={{ duration: 6, repeat: Infinity }}
+          />
+
+          <div className="max-w-6xl mx-auto relative z-10">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Our International Services – Designed for Global Success</span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full mb-8"></div>
+            </motion.div>
+
+            {/* UAE Web Design Subsection */}
+            <div className="mb-10">
+              <h3 className="text-xl md:text-2xl font-bold mb-3">
+                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Web Designing & Development in UAE</span>
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Your website is your digital storefront, and it must impress, engage, and convert visitors. We design modern, mobile-friendly, and SEO-optimized websites that reflect your brand's personality while delivering exceptional performance.
+              </p>
+              <h4 className="text-lg font-semibold text-gray-800 mb-3">Our Web Development Expertise</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                <div className="flex items-start gap-3">
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-orange-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="text-gray-700">Custom website design with engaging UI/UX</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-orange-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="text-gray-700">Responsive layouts for seamless mobile experience</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-orange-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="text-gray-700">SEO-friendly coding for higher search rankings</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-orange-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="text-gray-700">Scalable architecture for future growth</span>
+                </div>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-800 mb-2">Why UAE Businesses Choose Us:</h4>
+              <p className="text-gray-700 leading-relaxed">
+                We adapt design elements to local culture, market preferences, and user behavior, ensuring your site resonates with your audience.
+              </p>
+            </div>
+          </div>
+        </motion.section>
       </div>
     </>
   );

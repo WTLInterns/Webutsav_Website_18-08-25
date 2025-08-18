@@ -193,16 +193,24 @@ const ServicesTimeline = () => {
               </span>
             </motion.h2>
             <motion.p
+              className="text-xl md:text-2xl text-gray-600 max-w-6xl mx-auto leading-relaxed mb-8 mt-6"
+              variants={headerVariants}
+            >
+              Best software, web design, app development & digital marketing company from India serving{" "}
+              <span className="text-blue-600 font-bold">UAE, USA, UK & beyond.</span>Boost your business{" "}
+              <span className="text-orange-500 font-bold">growth today!</span>
+            </motion.p>
+            <motion.p
               className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
               variants={headerVariants}
             >
               Elevate your business with our comprehensive suite of services designed to create exceptional{" "}
-              <span className="text-blue-600 font-semibold">digital experiences</span> and drive{" "}
-              <span className="text-orange-500 font-semibold">sustainable growth</span>.
+              <span className="text-blue-600 font-semibold">UI/UX experiences</span> and{" "}
+              <span className="text-orange-500 font-semibold">drive growth.</span>
             </motion.p>
-          </motion.div>
+          </motion.div> 
 
-          {/* Enhanced CTA Section with Brand Colors */}
+          {/* Enhanced CTA Section with Brand Colors */}       
           <motion.div
             className="text-center mt-16"
             initial={{ opacity: 0, y: 30 }}
@@ -243,16 +251,16 @@ const ServicesTimeline = () => {
               transition={{ duration: 0.8, delay: 1.2 }}
             >
               <div className="flex items-center space-x-2">
-                <span className="text-2xl">⭐</span>
-                <span className="font-semibold">5-Star Rated</span>
+                {/* <span className="text-2xl">⭐⭐⭐⭐⭐</span> */}
+                <span className="font-semibold text-gray-700">5-Star Rated</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-2xl">🚀</span>
-                <span className="font-semibold">500+ Projects</span>
+                {/* <span className="text-2xl">🚀</span> */}
+                <span className="font-semibold text-gray-700">500+ Projects</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-2xl">👥</span>
-                <span className="font-semibold">250+ Happy Clients</span>
+                {/* <span className="text-2xl">👥</span> */}
+                <span className="font-semibold text-gray-700">250+ Happy Clients</span>
               </div>
             </motion.div>
           </motion.div>

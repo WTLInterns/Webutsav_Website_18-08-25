@@ -134,14 +134,14 @@ export default function ProductsPage() {
           >
             Discover Our <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Powerful Solutions!</span>
           </motion.h1>
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
           >
             Explore our innovative products designed to streamline your business operations and drive growth.
-          </motion.p>
+          </motion.p> */}
         </div>
       </motion.div>
 

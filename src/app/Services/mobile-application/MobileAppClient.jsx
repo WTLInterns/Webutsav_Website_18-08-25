@@ -245,14 +245,14 @@ export default function MobileApplication() {
             >
               Mobile Application <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Development</span>
             </motion.h1>
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
             >
               Create powerful, user-friendly mobile applications for iOS and Android. Enhance your business with custom mobile solutions tailored to your needs.
-            </motion.p>
+            </motion.p> */}
           </div>
         </motion.div>
 
@@ -320,15 +320,27 @@ export default function MobileApplication() {
 
           {/* Content */}
           <div className="w-full md:w-3/5 max-w-8xl mx-auto py-12">
-            <h1 className="text-4xl font-bold text-gray-800">
-            Mobile Application Development Services by Webutsav
-            </h1>
-            <p className="text-gray-600 mt-6 text-2xl" >
-            In today's mobile-first world, having a mobile application for your business is more essential than ever. Whether you're looking to enhance customer engagement, streamline operations, or boost sales, a custom mobile app can offer unparalleled benefits. At Webutsav, we specialize in Mobile Application Development services tailored to your unique business needs. As a leading mobile application development company in Pune, we are committed to helping businesses of all sizes create high-quality mobile apps that drive growth and improve user experiences.
+            <h1 className="text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+                  Mobile App Development – iOS & Android Apps that Deliver
+                </span>
+              </h1>
+            <p className="text-gray-600 mt-6 text-xl" >
+            Our team builds custom mobile applications for businesses that want to offer seamless, engaging user experiences.
             </p>
-            <p className="text-gray-600 mt-6 text-2xl" >
-            From conceptualization to launch, our team of skilled developers ensures your mobile app is designed and developed to meet the highest standards. Whether you're looking for enterprise mobile application development or need a custom app for your local business, Webutsav is here to bring your vision to life.
-            </p>
+            <br />
+            <p className="text-gray-800 mt-6 text-xl" >
+<b>App Development Capabilities:</b>   
+<br /><br />
+● Native iOS & Android app development
+<br /><br />
+● Cross-platform solutions (Flutter, React Native)
+<br /><br />
+● UI/UX design for mobile apps
+<br /><br />
+● API integrations & backend development 
+<br /><br />
+   <b className="text-2xl text-gray-700">Custom App Development Services in UK, Mobile App Developers in UAE</b>     </p>
           </div>
         </div>
 
@@ -361,7 +373,7 @@ export default function MobileApplication() {
             <FadeInSection>
               <h4 className="text-2xl font-semibold mb-12 text-center">Our Expertise in Mobile Application Development</h4>
             </FadeInSection>
-            <p className="text-sm md:text-base mb-6 text-center max-w-3xl mx-auto text">
+            <p className="text-xl md:text-base mb-10 text-center max-w-4xl mx-auto text-gray-800">
             At Webutsav, we have extensive expertise in creating custom mobile applications for a variety of industries. Our team has experience working with businesses across various sectors, including retail, healthcare, finance, education, and entertainment.
             We specialize in building both native mobile applications (iOS and Android) and cross-platform apps that work seamlessly across multiple devices. Additionally, we offer solutions like enterprise mobile application development to help large organizations streamline their operations, improve productivity, and enhance customer service
             </p>
@@ -422,6 +434,45 @@ export default function MobileApplication() {
           >
             🚀 Want to Grow Your Business with Mobile Application Development ? 🚀
           </motion.button>
+        </div>
+        <div>
+          {/* Mobile App Development – iOS & Android Excellence */}
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="bg-gray-50 py-12 px-4 mt-12"
+        >
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-amber-600 mb-8">Mobile App Development – iOS & Android Excellence</h2>
+            <p className="text-gray-700 leading-relaxed mb-6 text-center">
+              From concept to code, we build user-friendly, secure, and high-performing mobile applications for iOS and Android.
+            </p>
+            <h4 className="text-lg font-semibold text-gray-800 mb-3">Our Mobile App Expertise:</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+              <div className="flex items-start gap-3">
+                <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                <span className="text-gray-700">Native & cross-platform development</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                <span className="text-gray-700">Feature-rich, scalable solutions</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                <span className="text-gray-700">Intuitive UI/UX design</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                <span className="text-gray-700">Secure API integrations</span>
+              </div>
+            </div>
+            <p className="text-gray-700 leading-relaxed text-center font-medium">
+              Whether you need an on-demand service app or a corporate productivity tool, we make it happen.
+            </p>
+          </div>
+        </motion.section>
         </div>
       </div>
     </>

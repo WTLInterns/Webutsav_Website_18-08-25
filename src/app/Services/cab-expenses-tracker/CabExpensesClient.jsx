@@ -135,16 +135,16 @@ export default function CabExpenseTracker() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-white font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6"
             >
-              Cab Expense <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Tracker</span>
+              Cab Expense <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Tracker Software</span>
             </motion.h1>
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
             >
               Professional expense tracking software designed for cab drivers and travel agencies. Manage your business expenses efficiently with our comprehensive solution.
-            </motion.p>
+            </motion.p> */}
           </div>
         </motion.div>
 
@@ -194,17 +194,28 @@ export default function CabExpenseTracker() {
               <div className="p-8 bg-white rounded-lg shadow-xl border-l-8 border-amber-500 mb-12">
                 <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-3 mb-6">
                   <FaCar className="text-4xl text-amber-600" />
-                  <h1 className="text-3xl lg:text-4xl font-bold text-gray-800">
-                    Welcome to Webutsav - Cab Expense Tracker Software for Efficient Fleet Management
-                  </h1>
+                  <h1 className="text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+                  Cab Expense Tracker Software – Automate Fleet Expense Management
+                </span>
+              </h1>
                 </div>
                 <div className="space-y-6">
                   <p className="text-gray-600 text-lg">
-                    Webutsav, an IT company based in Pune, is at the forefront of developing innovative solutions for businesses. We specialize in mobile app development, web development (both backend and frontend), and digital marketing. With our latest project, we aim to revolutionize the way cab drivers, fleet managers, and travel agencies manage their daily expenses. Our Cab Expense Tracker Software is specifically designed to streamline expense management, reduce costs, and enhance the financial efficiency of businesses in the transportation industry.
+                  Our Cab Expense Tracker is a powerful solution for fleet owners, cab companies, and travel agencies to manage fuel, toll, and maintenance expenses effortlessly.
                   </p>
-                  <p className="text-gray-600 text-lg">
-                    In this comprehensive guide, we'll explore everything you need to know about Cab Expense Tracker Software, how it works, and why it's the ideal solution for the modern Indian cab and travel business. Whether you're an independent driver or manage a fleet of vehicles, our software offers unmatched benefits.
-                  </p>
+                  <br />
+                  <p className="text-gray-700 text-xl">
+                    <b>Key Features:</b>    
+                    <br /><br />
+                    ● Real-time expense tracking
+                    <br /><br />
+                    ● Multi-vehicle management
+                    <br /><br />
+                    ● Detailed reporting & analytics
+                    <br /><br />
+                    ● Mobile-friendly interface</p>
+
                 </div>
               </div>
             </motion.div>
@@ -1043,9 +1054,9 @@ export default function CabExpenseTracker() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mb-20"
+            className=""
           >
-            <div className="bg-gradient-to-r from-amber-500 to-amber-600 rounded-3xl shadow-2xl overflow-hidden">
+            <div className="bg-gradient-to-r from-amber-500 to-amber-600 shadow-2xl overflow-hidden">
               <div className="p-8 md:p-16 text-center">
                 <motion.div
                   initial={{ scale: 0.9, opacity: 0 }}
@@ -1070,6 +1081,45 @@ export default function CabExpenseTracker() {
             </div>
           </motion.div>
 
+        </div>
+        <div>
+          {/* Cab Expense Tracker Software – Simplify Fleet Management */}
+          <motion.section
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="bg-gray-50 py-12 px-4"
+          >
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-center text-amber-600 mb-8">Cab Expense Tracker Software – Simplify Fleet Management</h2>
+              <p className="text-gray-700 leading-relaxed mb-6 text-center">
+                Managing vehicle expenses can be a headache—our Cab Expense Tracker Software automates it.
+              </p>
+              <h4 className="text-lg font-semibold text-gray-800 mb-3">Key Features:</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                <div className="flex items-start gap-3">
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.4 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="text-gray-700">Real-time expense tracking</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="text-gray-700">Multi-vehicle support</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="text-gray-700">Detailed expense analytics</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="pt-1"><motion.span initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><svg xmlns='http://www.w3.org/2000/svg' className='text-amber-500' width='22' height='22' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'><polyline points='20 6 9 17 4 12'/></svg></motion.span></span>
+                  <span className="text-gray-700">User-friendly dashboard</span>
+                </div>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-center font-medium">
+                Ideal for cab operators, fleet managers, and travel companies in global markets.
+              </p>
+            </div>
+          </motion.section>
         </div>
       </div>
     </>

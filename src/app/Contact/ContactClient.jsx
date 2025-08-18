@@ -92,16 +92,16 @@ export default function ContactPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-white font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6"
             >
-              Be Free To <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Contact Us</span>
+              Be Free To <span className="bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">Contact Us or Visit</span>
             </motion.h1>
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
             >
               Get in touch with WebUtsav for digital marketing, web development, SEO, and app services. We're ready to help your business grow online.
-            </motion.p>
+            </motion.p> */}
           </div>
         </motion.div>
 
