@@ -485,11 +485,11 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1.2 }}
           >
             <div className="text-white">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400">300+</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400">180+</div>
               <div className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight">Happy Clients</div>
             </div>
             <div className="text-white">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400">2000+</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-orange-400">250+</div>
               <div className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight">Projects Completed</div>
             </div>
             <div className="text-white">

@@ -256,11 +256,11 @@ const ServicesTimeline = () => {
               </div>
               <div className="flex items-center space-x-2">
                 {/* <span className="text-2xl">🚀</span> */}
-                <span className="font-semibold text-gray-700">500+ Projects</span>
+                <span className="font-semibold text-gray-700">250 Projects</span>
               </div>
               <div className="flex items-center space-x-2">
                 {/* <span className="text-2xl">👥</span> */}
-                <span className="font-semibold text-gray-700">250+ Happy Clients</span>
+                <span className="font-semibold text-gray-700">180+ Happy Clients</span>
               </div>
             </motion.div>
           </motion.div>

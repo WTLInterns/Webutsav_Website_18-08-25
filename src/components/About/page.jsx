@@ -171,8 +171,8 @@ const About = () => {
                 variants={itemVariants}
               >
                 With a proven track record of success, we have successfully completed over{" "}
-                <span className="text-orange-600 font-bold text-xl">2,000 projects</span> for more than{" "}
-                <span className="text-orange-600 font-bold text-xl">300 clients</span>, delivering impactful results
+                <span className="text-orange-600 font-bold text-xl">250 projects</span> for more than{" "}
+                <span className="text-orange-600 font-bold text-xl">180 clients</span>, delivering impactful results
                 through our insight-driven strategies.
               </motion.p>
             </motion.div>
@@ -189,7 +189,7 @@ const About = () => {
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.8 }}
                 >
-                  300+
+                  180+
                 </motion.div>
                 <div className="text-sm text-gray-600">Happy Clients</div>
               </div>
@@ -200,7 +200,7 @@ const About = () => {
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.6, delay: 1 }}
                 >
-                  2000+
+                  250+
                 </motion.div>
                 <div className="text-sm text-gray-600">Projects</div>
               </div>
