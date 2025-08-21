@@ -4,22 +4,46 @@ import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import emailjs from "@emailjs/browser"
 import toast, { Toaster } from "react-hot-toast"
-
-// Initialize EmailJS
-emailjs.init("hlwUJ7O3Zyky0ZpCL") // Replace with your actual EmailJS user ID
 
 export default function ContactForm() {
   const formRef = useRef(null)
   const contactRef = useRef(null)
 
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [phone, setPhone] = useState("")
-  const [subject, setSubject] = useState("")
-  const [message, setMessage] = useState("")
-  const [isLoading, setIsLoading] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phoneNumber: '',
+    country: '',
+    message: ''
+  })
+
+  const countries = [
+    'Afghanistan', 'Albania', 'Algeria', 'Argentina', 'Armenia', 'Australia',
+    'Austria', 'Azerbaijan', 'Bahrain', 'Bangladesh', 'Belarus', 'Belgium',
+    'Bolivia', 'Bosnia and Herzegovina', 'Brazil', 'Bulgaria', 'Cambodia',
+    'Canada', 'Chile', 'China', 'Colombia', 'Croatia', 'Czech Republic',
+    'Denmark', 'Ecuador', 'Egypt', 'Estonia', 'Finland', 'France', 'Georgia',
+    'Germany', 'Ghana', 'Greece', 'Hungary', 'Iceland', 'India', 'Indonesia',
+    'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy', 'Japan', 'Jordan',
+    'Kazakhstan', 'Kenya', 'Kuwait', 'Latvia', 'Lebanon', 'Lithuania',
+    'Luxembourg', 'Malaysia', 'Mexico', 'Morocco', 'Netherlands', 'New Zealand',
+    'Nigeria', 'Norway', 'Pakistan', 'Peru', 'Philippines', 'Poland',
+    'Portugal', 'Qatar', 'Romania', 'Russia', 'Saudi Arabia', 'Singapore',
+    'Slovakia', 'Slovenia', 'South Africa', 'South Korea', 'Spain', 'Sri Lanka',
+    'Sweden', 'Switzerland', 'Thailand', 'Turkey', 'Ukraine', 'United Arab Emirates',
+    'United Kingdom', 'United States', 'Uruguay', 'Venezuela', 'Vietnam'
+  ]
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null)
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
@@ -45,42 +69,33 @@ export default function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setIsLoading(true)
-
-    if (!formRef.current) {
-      console.error("Form reference is null")
-      toast.error("An error occurred. Please try again.")
-      setIsLoading(false)
-      return
-    }
+    setIsSubmitting(true)
+    setSubmitStatus(null)
 
     try {
-      console.log("Attempting to send email...")
-      const response = await emailjs.sendForm(
-        "service_8moo2xe", // Your EmailJS service ID
-        "template_qbbd4de", // Your EmailJS template ID
-        formRef.current, // The form element
-        "hlwUJ7O3Zyky0ZpCL", // Your EmailJS public key
-      )
-      console.log("EmailJS Response:", response)
-      toast.success("Message sent successfully!")
-      // Reset form fields
-      setName("")
-      setEmail("")
-      setPhone("")
-      setSubject("")
-      setMessage("")
-    } catch (error) {
-      console.error("EmailJS Error:", error)
-      if (error.text) {
-        toast.error(`Failed to send message: ${error.text}`)
-      } else if (error.message) {
-        toast.error(`Failed to send message: ${error.message}`)
+      const response = await fetch('http://localhost:8282/api/inquiries/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        setSubmitStatus({ type: 'success', message: result.message || 'Message sent successfully!' })
+        setFormData({ name: '', email: '', phoneNumber: '', country: '', message: '' })
+        toast.success('Message sent successfully!')
       } else {
-        toast.error("Failed to send message. Please try again later.")
+        setSubmitStatus({ type: 'error', message: 'Failed to submit message. Please try again.' })
+        toast.error('Failed to send message. Please try again.')
       }
+    } catch (error) {
+      setSubmitStatus({ type: 'error', message: 'Network error. Please check your connection and try again.' })
+      toast.error('Network error. Please check your connection and try again.')
     } finally {
-      setIsLoading(false)
+      setIsSubmitting(false)
     }
   }
 
@@ -164,10 +179,10 @@ export default function ContactForm() {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Your Name"
+                  placeholder="Your Full Name"
                   className="w-full p-4 border border-blue-100/50 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all duration-300 bg-white/80 backdrop-blur-sm"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={formData.name}
+                  onChange={handleInputChange}
                   required
                 />
               </motion.div>
@@ -179,44 +194,53 @@ export default function ContactForm() {
                 <input
                   type="email"
                   name="email"
-                  placeholder="Email"
+                  placeholder="Email Address"
                   className="w-full p-4 border border-orange-100/50 rounded-xl focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition-all duration-300 bg-white/80 backdrop-blur-sm"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={formData.email}
+                  onChange={handleInputChange}
                   required
                 />
               </motion.div>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}  
-            >
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Your Phone Number"
-                className="w-full p-4 border border-blue-100/50 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all duration-300 bg-white/80 backdrop-blur-sm"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}         
-              />
-            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}  
+              >
+                <input
+                  type="tel"
+                  name="phoneNumber"
+                  placeholder="Your Phone Number"
+                  className="w-full p-4 border border-blue-100/50 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all duration-300 bg-white/80 backdrop-blur-sm"
+                  value={formData.phoneNumber}
+                  onChange={handleInputChange}
+                  required         
+                />
+              </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              <input
-                type="text"
-                name="subject"
-                placeholder="Type Your Subject"
-                className="w-full p-4 border border-orange-100/50 rounded-xl focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition-all duration-300 bg-white/80 backdrop-blur-sm"
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
-              />
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
+                <select
+                  name="country"
+                  className="w-full p-4 border border-orange-100/50 rounded-xl focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition-all duration-300 bg-white/80 backdrop-blur-sm appearance-none cursor-pointer"
+                  value={formData.country}
+                  onChange={handleInputChange}
+                  required
+                >
+                  <option value="">Select your country</option>
+                  {countries.map((country) => (
+                    <option key={country} value={country}>
+                      {country}
+                    </option>
+                  ))}
+                </select>
+              </motion.div>
+            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -225,13 +249,27 @@ export default function ContactForm() {
             >
               <textarea
                 name="message"
-                placeholder="Type Your Message..."
+                placeholder="Tell us about your requirements..."
                 className="w-full p-4 border border-blue-100/50 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all duration-300 bg-white/80 backdrop-blur-sm h-32 resize-none"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                value={formData.message}
+                onChange={handleInputChange}
                 required
               ></textarea>
             </motion.div>
+
+            {submitStatus && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`p-4 rounded-xl text-sm font-medium ${
+                  submitStatus.type === 'success' 
+                    ? 'bg-green-50 text-green-700 border border-green-200' 
+                    : 'bg-red-50 text-red-700 border border-red-200'
+                }`}
+              >
+                {submitStatus.message}
+              </motion.div>
+            )}
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -241,11 +279,11 @@ export default function ContactForm() {
               <motion.button
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-500 to-orange-500 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                disabled={isLoading}
+                disabled={isSubmitting}
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >
-                {isLoading ? (
+                {isSubmitting ? (
                   <span className="flex items-center justify-center space-x-2">
                     <motion.div
                       className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
