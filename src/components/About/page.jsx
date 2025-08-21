@@ -171,8 +171,8 @@ const About = () => {
                 variants={itemVariants}
               >
                 With a proven track record of success, we have successfully completed over{" "}
-                <span className="text-orange-600 font-bold text-xl">250 projects</span> for more than{" "}
-                <span className="text-orange-600 font-bold text-xl">180 clients</span>, delivering impactful results
+                <span className="text-orange-600 font-bold text-xl">250+ projects</span> for more than{" "}
+                <span className="text-orange-600 font-bold text-xl">180+ clients</span>, delivering impactful results
                 through our insight-driven strategies.
               </motion.p>
             </motion.div>

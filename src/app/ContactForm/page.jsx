@@ -191,7 +191,7 @@ export default function ContactForm() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.5 }}  
             >
               <input
                 type="tel"
@@ -199,7 +199,7 @@ export default function ContactForm() {
                 placeholder="Your Phone Number"
                 className="w-full p-4 border border-blue-100/50 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all duration-300 bg-white/80 backdrop-blur-sm"
                 value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                onChange={(e) => setPhone(e.target.value)}         
               />
             </motion.div>
 

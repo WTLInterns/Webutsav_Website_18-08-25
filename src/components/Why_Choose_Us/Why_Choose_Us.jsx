@@ -112,7 +112,7 @@ export default function WhyChooseUs() {
             </motion.h2>
             <motion.p className="text-lg text-gray-600 leading-relaxed" variants={itemVariants}>
             When you work with{" "}
-              <span className="text-orange-600 font-semibold">WebUtsav Pvt Ltd,</span> you don’t just get a service—you get a partnership. Here’s why international businesses trust us
+              <span className="text-orange-600 font-semibold">WebUtsav Pvt Ltd,</span> you don’t just get a service you get a partnership. Here’s why international businesses trust us
             </motion.p>
           </div>
 

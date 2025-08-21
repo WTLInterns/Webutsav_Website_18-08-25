@@ -84,7 +84,7 @@ export default function ContactPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-white/90 font-semibold text-xl md:text-2xl mb-4"
             >
-              — Contact Us
+              Contact Us
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -132,7 +132,7 @@ export default function ContactPage() {
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
               <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
-                💡 Ready to transform your digital presence? Get in touch with our experts today.
+                Ready to transform your digital presence? Get in touch with our experts today.
               </p>
             </motion.div>
 

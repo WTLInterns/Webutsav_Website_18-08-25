@@ -166,7 +166,7 @@ export default function BlogPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-white/90 font-semibold text-xl md:text-2xl mb-4"
             >
-              — Blog Grid
+              Blog Grid
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 30 }}

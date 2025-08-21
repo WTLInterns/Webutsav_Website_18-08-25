@@ -13,7 +13,7 @@ const products = [
     title: 'ManagifyHR',
     category: 'HR Management',
     link: 'https://managifyhr.com/',
-    image: '/images/HRM Logo.png',
+    image: '/images/hrm-logo.jpeg',
     description: 'A comprehensive HR management solution for modern businesses. Streamline your workforce management with advanced features.',
   },
   {
@@ -27,7 +27,7 @@ const products = [
     title: 'Route Budget',
     category: 'Fleet Management',
     link: 'https://routebudget.com',
-    image: '/images/Route Budget.jpg',
+    image: '/images/Rlogo.png',
     description: 'Route planning and budgeting made easy for logistics teams. Optimize your fleet operations and reduce costs.',
   },
   {
@@ -124,7 +124,7 @@ export default function ProductsPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white/90 font-semibold text-xl md:text-2xl mb-4"
           >
-            — Our Products
+            Our Products
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -172,7 +172,7 @@ export default function ProductsPage() {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
             <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
-              💡 Innovative solutions designed to transform your business operations and drive success.
+               Innovative solutions designed to transform your business operations and drive success.
             </p>
           </motion.div>
 

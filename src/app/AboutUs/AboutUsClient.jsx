@@ -1086,7 +1086,7 @@ export default function AboutUs() {
     }
   }, [])
 
-  const h2Text = "— About Us"    
+  const h2Text = "About Us"    
   const pText = "Transforming Businesses With Innovative Technology!"
 
   useEffect(() => {
@@ -1408,7 +1408,7 @@ export default function AboutUs() {
                       About <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Webutsav</span>
                     </h2>
             <p className="text-gray-700 text-center mb-6 mt-6 max-w-3xl text-2xl mx-auto">
-              Founded with a vision to empower businesses with technology, WebUtsav Pvt Ltd started as a small team of tech enthusiasts. Over the years, our dedication to quality and client success has earned us the trust of 300+ clients across 12+ countries.
+              Founded with a vision to empower businesses with technology, WebUtsav Pvt Ltd started as a small team of tech enthusiasts. Over the years, our dedication to quality and client success has earned us the trust of 250+ clients across 12+ countries.
             </p>
           </div>
         </section>
@@ -1576,6 +1576,234 @@ export default function AboutUs() {
             </div>
           </div>
         </section>
+
+
+
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+          <div className="max-w-6xl mx-auto px-6">
+            <motion.h2
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl font-bold text-center text-gray-800 mb-12"
+            >
+              
+            </motion.h2>
+            <p className="text-xl text-gray-700 mb-12 mt-0 text-center max-w-3xl mx-auto">
+              Our talented team is the backbone of Webutsav. We encourage adding high-quality photos of our team
+              members, along with their names and designations, to showcase the expertise behind our success.
+            </p>
+            <TeamTabs />
+          </div>
+        </section>
+
+        {/* CEO Section - Matches the image */}
+        <section className="py-16 bg-white">
+          <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-3xl overflow-hidden shadow-xl">
+              <div className="grid md:grid-cols-2">
+                {/* Text Content */}
+                <div className="p-10 md:p-12 lg:p-14 flex flex-col justify-between">
+                  <div>
+                    <h2 className="text-3xl font-bold text-gray-800 mb-2">Digitally Speaking</h2>
+                    <h3 className="text-xl font-medium text-gray-600 mb-6">From the CEO's Desk</h3>
+                    <p className="text-gray-600 mb-8 leading-relaxed">
+                      Everywhere in the business world, the power of digital disruptions has been providing a transformative edge to those who understand them. One would hence assume that IT service pioneers with a knack for digital know-how should be the leading transformers of their own environments.
+                    </p>
+                    <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-orange-500 text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300">
+                      Explore More →
+                    </button>
+                  </div>
+                  <div className="mt-8">
+                    {/* <p className="text-sm text-gray-500 mb-1">600 × 800</p> */}
+                    <p className="text-xl font-bold text-gray-800">DH pathan</p>
+                    <p className="text-base text-gray-600">CEO and MD</p>
+                  </div>
+                </div>
+                
+                {/* Image Section */}
+    <div className="flex items-center justify-center p-8">
+      <img 
+        src="images/PathanSir2.jpeg" 
+        alt="DH Pathan - CEO and MD" 
+        className="w-full h-auto max-h-[500px] object-cover rounded-xl"
+      />
+    </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+        {/* Case Studies Section */}
+<section className="py-16 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+  {/* Background Elements */}
+  <div className="absolute inset-0">
+    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50/30 via-orange-50/20 to-transparent"></div>
+  </div>
+
+  <div className="max-w-6xl mx-auto relative z-10">
+    <motion.h2 
+      className="text-2xl md:text-3xl font-bold text-center mb-2"
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      Case Studies – <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Global Impact</span> in Action
+    </motion.h2>
+    <motion.h4 
+      className="text-lg text-center mb-12 mt-6 text-gray-700 font-medium"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+    >
+      Real-world success stories from UAE, UK, and USA.
+    </motion.h4>
+    
+    {/* Case Studies Cards */}
+<div className="mb-16">
+  <div className="flex justify-center space-x-4">
+    {[
+      {
+        country: 'India',
+        title: 'India E-commerce Brand',
+        desc: '150% revenue growth in 8 months through digital marketing strategies.',
+        img: '/images/India.png',
+      },
+      {
+        country: 'UAE',
+        title: 'UAE E-commerce Brand',
+        desc: '170% sales increase in 6 months via SEO, Google Ads & social media.',
+        img: '/images/UAE.png',
+      },
+      {
+        country: 'UK',
+        title: 'UK Travel Agency',
+        desc: '220% booking boost in 4 months with local SEO strategy.',
+        img: '/images/UK2.png',
+      },
+      {
+        country: 'USA',
+        title: 'US Tech Startup',
+        desc: '35% cost reduction & higher engagement with cross-platform mobile app.',
+        img: '/images/USA.png',
+      }
+    ].map((cs, idx) => (
+      <motion.div
+        key={cs.title}
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.15 * idx, ease: 'easeOut' }}
+        className="relative bg-white rounded-xl shadow-md overflow-hidden flex flex-col h-full border border-blue-100/30 hover:border-orange-200/50 transition-all duration-300 w-64 flex-shrink-0"
+      >
+        {/* Image section */}
+        <div className="relative h-28 w-full overflow-hidden">
+          {/* Country flag badge */}
+          <div className="absolute top-2 left-2 bg-white rounded-md px-2 py-1 shadow-sm z-10">
+            <span className="font-semibold text-blue-700 text-xs">{cs.country}</span>
+          </div>
+          
+          {/* Main image with dark overlay */}
+          <div className="absolute inset-0 ">
+            <img 
+              src={cs.img} 
+              alt={cs.title} 
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0"></div>
+          </div>
+        </div>
+
+        {/* Content section */}
+        <div className="p-5 flex-1">
+          <h3 className="font-bold text-lg text-blue-600 mb-1">{cs.title}</h3>
+          <p className="text-gray-600 text-xs leading-relaxed mb-2">{cs.desc}</p>
+          <div className="mt-auto">
+            {/* <button className="text-blue-600 font-medium text-xs hover:text-blue-800 transition-colors flex items-center">
+              Read more
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </button> */}
+          </div>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</div>
+            
+            {/* Our Work Process Timeline */}
+            <motion.h3 
+              className="text-2xl md:text-3xl font-bold text-center mb-2 mt-24"
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              Our Work Process – From <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Idea to Impact</span>
+            </motion.h3>
+            
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-8">
+              {[
+                {
+                  title: 'Research',
+                  desc: 'Understanding goals & market.',
+                },
+                {
+                  title: 'Ideate',
+                  desc: 'Tailored solution strategy.',
+                },
+                {
+                  title: 'Develop',
+                  desc: 'Designing & coding the project.',
+                },
+                {
+                  title: 'Launch & Optimize',
+                  desc: 'Deploy & continuously improve.',
+                },
+              ].map((step, idx, arr) => (
+                <motion.div
+                  key={step.title}
+                  initial={{ opacity: 0, x: idx % 2 === 0 ? -60 : 60 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7, delay: 0.12 * idx, ease: 'easeOut' }}
+                  className="flex flex-col items-center relative w-full md:w-1/4"
+                >
+                  {/* Connector line */}
+                  {idx !== 0 && (
+                    <span className="hidden md:block absolute -left-1/2 top-8 w-full h-0.5 border-t-2 border-dashed border-blue-400 z-0" style={{left: '-50%', width: '100%'}}></span>
+                  )}
+                  {/* Mobile vertical connector */}
+                  {idx !== 0 && (
+                    <span className="block md:hidden absolute -top-4 left-1/2 h-8 w-0.5 border-l-2 border-dashed border-blue-400 z-0" style={{top: '-2rem', left: '50%'}}></span>
+                  )}
+                  <div className="z-10 flex flex-col items-center">
+                    <span className={`w-12 h-12 flex items-center justify-center rounded-full font-bold text-lg shadow mb-3 ${
+                      idx % 2 === 0 
+                        ? "bg-gradient-to-br from-blue-500 to-blue-600 text-white" 
+                        : "bg-gradient-to-br from-orange-500 to-orange-600 text-white"
+                    }`}>
+                      {idx+1}
+                    </span>
+                    <span className="font-bold text-lg text-gray-800 mb-1 text-center">{step.title}</span>
+                    <span className="text-gray-500 text-sm text-center">{step.desc}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+
+
+
 
         <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-6xl mx-auto px-6">
@@ -1838,6 +2066,9 @@ export default function AboutUs() {
                   <h4 className="font-semibold text-lg">Cutting-Edge Technology</h4>
                   <p className="text-gray-600 mt-2">From AI integrations to cloud-based apps, we stay ahead.</p>
                 </motion.div>
+
+
+                
                 
                 {/* Feature 5 */}
                 <motion.div 
@@ -1961,144 +2192,7 @@ export default function AboutUs() {
           </div>
         </section>
 
-        {/* Case Studies Section */}
-        <section className="py-16 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-          {/* Background Elements */}
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50/30 via-orange-50/20 to-transparent"></div>
-          </div>
-
-          <div className="max-w-6xl mx-auto relative z-10">
-            <motion.h2 
-              className="text-2xl md:text-3xl font-bold text-center mb-2"
-              initial={{ opacity: 0, y: -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              Case Studies – <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Global Impact</span> in Action
-            </motion.h2>
-            <motion.h4 
-              className="text-lg text-center mb-12 text-gray-700 font-medium"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Real-world success stories from UAE, UK, and USA.
-            </motion.h4>
-            
-            {/* Case Studies Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {[
-                {
-                  country: 'UAE',
-                  flag: (
-                    <span className="absolute top-4 right-4"><img src="https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/ae.svg" alt="UAE" className="w-6 h-6 rounded-full shadow" /></span>
-                  ),
-                  title: 'UAE E-commerce Brand',
-                  desc: '170% sales increase in 6 months via SEO, Google Ads & social media.',
-                  img: 'https://placehold.co/400x160?text=UAE+E-commerce',
-                },
-                {
-                  country: 'UK',
-                  flag: (
-                    <span className="absolute top-4 right-4"><img src="https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/gb.svg" alt="UK" className="w-6 h-6 rounded-full shadow" /></span>
-                  ),
-                  title: 'UK Travel Agency',
-                  desc: '220% booking boost in 4 months with local SEO strategy.',
-                  img: 'https://placehold.co/400x160?text=UK+Travel',
-                },
-                {
-                  country: 'USA',
-                  flag: (
-                    <span className="absolute top-4 right-4"><img src="https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/us.svg" alt="USA" className="w-6 h-6 rounded-full shadow" /></span>
-                  ),
-                  title: 'US Tech Startup',
-                  desc: '35% cost reduction & higher engagement with cross-platform mobile app.',
-                  img: 'https://placehold.co/400x160?text=US+Tech',
-                }
-              ].map((cs, idx) => (
-                <motion.div
-                  key={cs.title}
-                  initial={{ opacity: 0, y: 60 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7, delay: 0.15 * idx, ease: 'easeOut' }}
-                  className="relative bg-white rounded-2xl shadow-lg p-6 flex flex-col h-full border border-blue-100/30 hover:border-orange-200/50 transition-all duration-300"
-                >
-                  <div className="relative mb-4">
-                    <img src={cs.img} alt={cs.title} className="h-40 w-full object-cover rounded-xl shadow-md" />
-                    {cs.flag}
-                  </div>
-                  <h3 className="font-bold text-xl text-blue-600 mb-2">{cs.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{cs.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-            
-            {/* Our Work Process Timeline */}
-            <motion.h3 
-              className="text-2xl md:text-3xl font-bold text-center mb-2"
-              initial={{ opacity: 0, y: -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              Our Work Process – From <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Idea to Impact</span>
-            </motion.h3>
-            
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-8">
-              {[
-                {
-                  title: 'Research',
-                  desc: 'Understanding goals & market.',
-                },
-                {
-                  title: 'Ideate',
-                  desc: 'Tailored solution strategy.',
-                },
-                {
-                  title: 'Develop',
-                  desc: 'Designing & coding the project.',
-                },
-                {
-                  title: 'Launch & Optimize',
-                  desc: 'Deploy & continuously improve.',
-                },
-              ].map((step, idx, arr) => (
-                <motion.div
-                  key={step.title}
-                  initial={{ opacity: 0, x: idx % 2 === 0 ? -60 : 60 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7, delay: 0.12 * idx, ease: 'easeOut' }}
-                  className="flex flex-col items-center relative w-full md:w-1/4"
-                >
-                  {/* Connector line */}
-                  {idx !== 0 && (
-                    <span className="hidden md:block absolute -left-1/2 top-8 w-full h-0.5 border-t-2 border-dashed border-blue-400 z-0" style={{left: '-50%', width: '100%'}}></span>
-                  )}
-                  {/* Mobile vertical connector */}
-                  {idx !== 0 && (
-                    <span className="block md:hidden absolute -top-4 left-1/2 h-8 w-0.5 border-l-2 border-dashed border-blue-400 z-0" style={{top: '-2rem', left: '50%'}}></span>
-                  )}
-                  <div className="z-10 flex flex-col items-center">
-                    <span className={`w-12 h-12 flex items-center justify-center rounded-full font-bold text-lg shadow mb-3 ${
-                      idx % 2 === 0 
-                        ? "bg-gradient-to-br from-blue-500 to-blue-600 text-white" 
-                        : "bg-gradient-to-br from-orange-500 to-orange-600 text-white"
-                    }`}>
-                      {idx+1}
-                    </span>
-                    <span className="font-bold text-lg text-gray-800 mb-1 text-center">{step.title}</span>
-                    <span className="text-gray-500 text-sm text-center">{step.desc}</span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+      
       </div>
     </>
   )
