@@ -341,7 +341,7 @@ const InquiryModal = ({ isOpen, onClose }) => {
     setSubmitStatus(null)
 
     try {
-      const response = await fetch('http://localhost:8282/api/inquiries/submit', {
+      const response = await fetch('https://api.webutsav.com/api/inquiries/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
